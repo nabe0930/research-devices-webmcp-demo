@@ -2,12 +2,12 @@
 
 Evidence-aware instrument comparison through four bounded, read-only WebMCP tools.
 
-## Publication-ready release candidate
+## Verified public release
 
-- Planned live demo URL (not yet verified): https://research-devices-webmcp-demo.vercel.app/
-- Planned public repository URL (not yet verified): https://github.com/nabe0930/research-devices-webmcp-demo
+- Live demo: https://research-devices-webmcp-demo.vercel.app/
+- Public repository: https://github.com/nabe0930/research-devices-webmcp-demo
 
-This isolated WebMCP Challenge candidate has not been published or deployed by the local transformation. The npm package remains `private: true` to prevent registry publication; the candidate source code is licensed under MIT.
+Read-only verification at 2026-08-30T10:23:07.206Z byte-compared the published repository and every deployed file, checked the deployed security headers, and ran the four-tool Native WebMCP discovery-and-execution smoke journey with `webmcp-evals@0.0.4` against a WebMCP-enabled Chrome (`chrome://flags/#enable-webmcp-testing` set to Enabled); it discovered 4 tools and executed 4. Reproduce that run with `npm run eval:webmcp:smoke` as described in `docs/TESTING.md`, and see `release-manifest.json` for the recorded counts and hashes. The npm package remains `private: true` to prevent registry publication; the source code is licensed under MIT.
 
 ## What it demonstrates
 
