@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
+  "datasetKind": "fully_synthetic_price_scenarios",
+  "licenseStatus": "applied",
+  "observations": [
+    {
+      "id": "price-rd-syn-qpcr-a-01",
+      "productId": "rd-syn-qpcr-a",
+      "scenarioMarket": "JP",
+      "currency": "JPY",
+      "basis": "synthetic_scenario_price",
+      "amount": 4800000,
+      "configuration": "standard_demo_configuration",
+      "conditionsEn": "Invented scenario value for demonstrating comparable observations; not an offer or quote.",
+      "conditionsJa": "比較可能な観測値を実演するための架空シナリオ値であり、販売価格または見積ではありません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-a-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-qpcr-a-02",
+      "productId": "rd-syn-qpcr-a",
+      "scenarioMarket": "JP",
+      "currency": "JPY",
+      "basis": "synthetic_scenario_price",
+      "amount": 5100000,
+      "configuration": "standard_demo_configuration",
+      "conditionsEn": "Second invented scenario value for deriving a bounded demonstration range; not an offer or quote.",
+      "conditionsJa": "対象限定のデモレンジを算出するための2件目の架空シナリオ値であり、販売価格または見積ではありません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-a-02",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-qpcr-b-01",
+      "productId": "rd-syn-qpcr-b",
+      "scenarioMarket": "JP",
+      "currency": "JPY",
+      "basis": "synthetic_scenario_price",
+      "amount": 6900000,
+      "configuration": "standard_demo_configuration",
+      "conditionsEn": "Invented single reference value; it must not be presented as a market range.",
+      "conditionsJa": "架空の単一参考値であり、市場価格レンジとして表示してはいけません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-b-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-qpcr-c-01",
+      "productId": "rd-syn-qpcr-c",
+      "scenarioMarket": "JP",
+      "currency": "JPY",
+      "basis": "synthetic_scenario_range",
+      "minAmount": 8200000,
+      "maxAmount": 9000000,
+      "configuration": "high_throughput_demo_configuration",
+      "conditionsEn": "Invented source-stated range for range-handling demonstrations; not an offer or quote.",
+      "conditionsJa": "レンジ処理を実演するための架空の明示レンジであり、販売価格または見積ではありません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-c-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-qpcr-d-01",
+      "productId": "rd-syn-qpcr-d",
+      "scenarioMarket": "JP",
+      "currency": "JPY",
+      "basis": "synthetic_scenario_starting_at",
+      "amount": 2400000,
+      "configuration": "compact_demo_configuration",
+      "conditionsEn": "Invented starting-at value; no upper bound is implied.",
+      "conditionsJa": "架空の開始値であり、上限価格を示すものではありません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-d-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-microvolume-a-01",
+      "productId": "rd-syn-microvolume-a",
+      "scenarioMarket": "US",
+      "currency": "USD",
+      "basis": "synthetic_scenario_price",
+      "amount": 9800,
+      "configuration": "absorbance_demo_configuration",
+      "conditionsEn": "Invented single reference value; no currency conversion is permitted.",
+      "conditionsJa": "架空の単一参考値であり、通貨換算は行いません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-microvolume-a-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-microvolume-b-01",
+      "productId": "rd-syn-microvolume-b",
+      "scenarioMarket": "US",
+      "currency": "USD",
+      "basis": "synthetic_scenario_price",
+      "amount": 14200,
+      "configuration": "multimode_demo_configuration",
+      "conditionsEn": "Invented single reference value; no currency conversion is permitted.",
+      "conditionsJa": "架空の単一参考値であり、通貨換算は行いません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-microvolume-b-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-cell-counter-a-01",
+      "productId": "rd-syn-cell-counter-a",
+      "scenarioMarket": "US",
+      "currency": "USD",
+      "basis": "synthetic_scenario_price",
+      "amount": 4500,
+      "configuration": "brightfield_demo_configuration",
+      "conditionsEn": "Invented single reference value for demonstration only.",
+      "conditionsJa": "デモ専用の架空の単一参考値です。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-cell-counter-a-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    },
+    {
+      "id": "price-rd-syn-cell-counter-b-01",
+      "productId": "rd-syn-cell-counter-b",
+      "scenarioMarket": "US",
+      "currency": "USD",
+      "basis": "synthetic_scenario_range",
+      "minAmount": 7900,
+      "maxAmount": 8600,
+      "configuration": "dual_fluorescence_demo_configuration",
+      "conditionsEn": "Invented historical scenario range for discontinued-status demonstrations; not an availability claim.",
+      "conditionsJa": "販売終了状態を実演するための架空の過去シナリオレンジであり、提供状況を示しません。",
+      "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-cell-counter-b-01",
+      "authoredDate": "2026-08-30",
+      "confidence": "synthetic_authored"
+    }
+  ],
+  "limitations": {
+    "en": [
+      "All amounts, ranges, markets, configurations, and conditions are fictional.",
+      "Values are not offers, quotes, procurement evidence, historical transactions, or market prices.",
+      "Currencies and price bases must remain separate; no conversion is performed."
+    ],
+    "ja": [
+      "金額、レンジ、市場、構成、条件はすべて架空です。",
+      "販売価格、見積、調達根拠、取引履歴、または市場価格ではありません。",
+      "通貨と価格basisは分離したまま扱い、換算しません。"
+    ]
+  },
+  "license": "CC-BY-4.0"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "research-devices-webmcp-synthetic-demo",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node scripts/check-source.mjs",
+    "check:dist": "node scripts/check-dist.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "postbuild": "npm run check:dist",
+    "dev": "node scripts/dev-server.mjs",
+    "verify": "npm run check && npm test && npm run build && npm run check",
+    "eval:webmcp:smoke": "npx --yes webmcp-evals@0.0.4 --chrome-channel chrome smoke --url http://127.0.0.1:4173/ja/ --evals tests/webmcp-evals.json --verbose --reporter console"
+  }
+}

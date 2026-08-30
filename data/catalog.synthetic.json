@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
+  "datasetKind": "fully_synthetic_challenge_dataset",
+  "licenseStatus": "applied",
+  "manufacturers": [
+    {
+      "id": "rd-synthetic-lab",
+      "nameEn": "Research-Devices Synthetic Lab",
+      "nameJa": "Research-Devices 合成データラボ",
+      "websitePath": "/data-notice/",
+      "synthetic": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "qpcr",
+      "nameEn": "qPCR systems",
+      "nameJa": "qPCR装置",
+      "specSchema": [
+        {
+          "sectionId": "performance",
+          "nameEn": "Performance",
+          "nameJa": "性能",
+          "specs": [
+            {
+              "key": "sample_capacity_wells",
+              "labelEn": "Sample capacity",
+              "labelJa": "サンプル容量",
+              "type": "number",
+              "unit": "wells"
+            },
+            {
+              "key": "reaction_volume_min_ul",
+              "labelEn": "Minimum reaction volume",
+              "labelJa": "最小反応液量",
+              "type": "number",
+              "unit": "µL"
+            },
+            {
+              "key": "reaction_volume_max_ul",
+              "labelEn": "Maximum reaction volume",
+              "labelJa": "最大反応液量",
+              "type": "number",
+              "unit": "µL"
+            },
+            {
+              "key": "detection_channels",
+              "labelEn": "Detection channels",
+              "labelJa": "検出チャンネル数",
+              "type": "number"
+            },
+            {
+              "key": "multiplex_targets",
+              "labelEn": "Maximum multiplex targets",
+              "labelJa": "最大マルチプレックス数",
+              "type": "number"
+            },
+            {
+              "key": "max_ramp_rate_c_per_s",
+              "labelEn": "Maximum ramp rate",
+              "labelJa": "最大昇降温速度",
+              "type": "number",
+              "unit": "°C/s"
+            }
+          ]
+        },
+        {
+          "sectionId": "workflow",
+          "nameEn": "Workflow",
+          "nameJa": "ワークフロー",
+          "specs": [
+            {
+              "key": "audit_trail",
+              "labelEn": "Audit trail mode",
+              "labelJa": "監査証跡モード",
+              "type": "boolean"
+            },
+            {
+              "key": "remote_monitoring",
+              "labelEn": "Remote monitoring",
+              "labelJa": "遠隔モニタリング",
+              "type": "boolean"
+            },
+            {
+              "key": "width_cm",
+              "labelEn": "Width",
+              "labelJa": "幅",
+              "type": "number",
+              "unit": "cm"
+            },
+            {
+              "key": "mass_kg",
+              "labelEn": "Mass",
+              "labelJa": "質量",
+              "type": "number",
+              "unit": "kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microvolume-analysis",
+      "nameEn": "Microvolume analysis",
+      "nameJa": "微量分析装置",
+      "specSchema": [
+        {
+          "sectionId": "measurement",
+          "nameEn": "Measurement",
+          "nameJa": "測定",
+          "specs": [
+            {
+              "key": "sample_volume_min_ul",
+              "labelEn": "Minimum sample volume",
+              "labelJa": "最小サンプル量",
+              "type": "number",
+              "unit": "µL"
+            },
+            {
+              "key": "sample_volume_max_ul",
+              "labelEn": "Maximum sample volume",
+              "labelJa": "最大サンプル量",
+              "type": "number",
+              "unit": "µL"
+            },
+            {
+              "key": "absorbance_min_nm",
+              "labelEn": "Minimum absorbance wavelength",
+              "labelJa": "吸光波長下限",
+              "type": "number",
+              "unit": "nm"
+            },
+            {
+              "key": "absorbance_max_nm",
+              "labelEn": "Maximum absorbance wavelength",
+              "labelJa": "吸光波長上限",
+              "type": "number",
+              "unit": "nm"
+            },
+            {
+              "key": "fluorescence_modes",
+              "labelEn": "Fluorescence modes",
+              "labelJa": "蛍光モード数",
+              "type": "number"
+            },
+            {
+              "key": "measurement_time_s",
+              "labelEn": "Nominal measurement time",
+              "labelJa": "公称測定時間",
+              "type": "number",
+              "unit": "s"
+            },
+            {
+              "key": "automatic_pathlength",
+              "labelEn": "Automatic pathlength control",
+              "labelJa": "自動光路長制御",
+              "type": "boolean"
+            },
+            {
+              "key": "width_cm",
+              "labelEn": "Width",
+              "labelJa": "幅",
+              "type": "number",
+              "unit": "cm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automated-cell-counting",
+      "nameEn": "Automated cell counting",
+      "nameJa": "自動セルカウンター",
+      "specSchema": [
+        {
+          "sectionId": "analysis",
+          "nameEn": "Analysis",
+          "nameJa": "解析",
+          "specs": [
+            {
+              "key": "imaging_mode",
+              "labelEn": "Imaging mode",
+              "labelJa": "撮像モード",
+              "type": "enum"
+            },
+            {
+              "key": "particle_size_min_um",
+              "labelEn": "Minimum particle size",
+              "labelJa": "最小粒径",
+              "type": "number",
+              "unit": "µm"
+            },
+            {
+              "key": "particle_size_max_um",
+              "labelEn": "Maximum particle size",
+              "labelJa": "最大粒径",
+              "type": "number",
+              "unit": "µm"
+            },
+            {
+              "key": "analysis_time_s",
+              "labelEn": "Nominal analysis time",
+              "labelJa": "公称解析時間",
+              "type": "number",
+              "unit": "s"
+            },
+            {
+              "key": "sample_volume_ul",
+              "labelEn": "Sample volume",
+              "labelJa": "サンプル量",
+              "type": "number",
+              "unit": "µL"
+            },
+            {
+              "key": "autofocus",
+              "labelEn": "Autofocus",
+              "labelJa": "オートフォーカス",
+              "type": "boolean"
+            },
+            {
+              "key": "viability_channels",
+              "labelEn": "Viability channels",
+              "labelJa": "生死判定チャンネル数",
+              "type": "number"
+            },
+            {
+              "key": "width_cm",
+              "labelEn": "Width",
+              "labelJa": "幅",
+              "type": "number",
+              "unit": "cm"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "rd-syn-qpcr-a",
+      "name": "RD-SYN qPCR A",
+      "nameJa": "RD-SYN qPCR A（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "qpcr",
+      "catalogNumber": "RD-SYN-QA-096",
+      "status": "active",
+      "summaryEn": "A fictional 96-well, four-channel qPCR record for bounded search and normalized comparison demonstrations.",
+      "summaryJa": "対象限定検索と正規化比較を実演するための、架空の96ウェル・4チャンネルqPCRレコードです。",
+      "specs": {
+        "sample_capacity_wells": 96,
+        "reaction_volume_min_ul": 10,
+        "reaction_volume_max_ul": 50,
+        "detection_channels": 4,
+        "multiplex_targets": 4,
+        "max_ramp_rate_c_per_s": 4.5,
+        "audit_trail": false,
+        "remote_monitoring": false,
+        "width_cm": 32,
+        "mass_kg": 18
+      },
+      "paths": {
+        "product": "/devices/rd-syn-qpcr-a/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-a-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-a",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-qpcr-b",
+      "name": "RD-SYN qPCR B",
+      "nameJa": "RD-SYN qPCR B（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "qpcr",
+      "catalogNumber": "RD-SYN-QB-096",
+      "status": "active",
+      "summaryEn": "A fictional 96-well, six-channel qPCR record with audit and remote workflow features.",
+      "summaryJa": "監査証跡と遠隔ワークフロー機能を持つ、架空の96ウェル・6チャンネルqPCRレコードです。",
+      "specs": {
+        "sample_capacity_wells": 96,
+        "reaction_volume_min_ul": 5,
+        "reaction_volume_max_ul": 50,
+        "detection_channels": 6,
+        "multiplex_targets": 6,
+        "max_ramp_rate_c_per_s": 6,
+        "audit_trail": true,
+        "remote_monitoring": true,
+        "width_cm": 36,
+        "mass_kg": 22
+      },
+      "paths": {
+        "product": "/devices/rd-syn-qpcr-b/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-b-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-b",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-qpcr-c",
+      "name": "RD-SYN qPCR 384",
+      "nameJa": "RD-SYN qPCR 384（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "qpcr",
+      "catalogNumber": "RD-SYN-QC-384",
+      "status": "active",
+      "summaryEn": "A fictional 384-well qPCR record for demonstrating high-throughput search and comparison conditions.",
+      "summaryJa": "高スループット条件の検索と比較を実演するための、架空の384ウェルqPCRレコードです。",
+      "specs": {
+        "sample_capacity_wells": 384,
+        "reaction_volume_min_ul": 5,
+        "reaction_volume_max_ul": 20,
+        "detection_channels": 6,
+        "multiplex_targets": 6,
+        "max_ramp_rate_c_per_s": 4.5,
+        "audit_trail": true,
+        "remote_monitoring": true,
+        "width_cm": 45,
+        "mass_kg": 34
+      },
+      "paths": {
+        "product": "/devices/rd-syn-qpcr-c/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-c-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-c",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-qpcr-d",
+      "name": "RD-SYN qPCR Compact",
+      "nameJa": "RD-SYN qPCR Compact（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "qpcr",
+      "catalogNumber": "RD-SYN-QD-048",
+      "status": "active",
+      "summaryEn": "A fictional compact 48-well qPCR record for demonstrating footprint and starting-price conditions.",
+      "summaryJa": "設置面積と開始価格条件を実演するための、架空の小型48ウェルqPCRレコードです。",
+      "specs": {
+        "sample_capacity_wells": 48,
+        "reaction_volume_min_ul": 10,
+        "reaction_volume_max_ul": 30,
+        "detection_channels": 4,
+        "multiplex_targets": 4,
+        "max_ramp_rate_c_per_s": 3.5,
+        "audit_trail": false,
+        "remote_monitoring": false,
+        "width_cm": 24,
+        "mass_kg": 9
+      },
+      "paths": {
+        "product": "/devices/rd-syn-qpcr-d/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-d-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-d",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-microvolume-a",
+      "name": "RD-SYN Microvolume A",
+      "nameJa": "RD-SYN Microvolume A（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "microvolume-analysis",
+      "catalogNumber": "RD-SYN-MA-001",
+      "status": "active",
+      "summaryEn": "A fictional absorbance-only microvolume record for category filtering and same-category comparison.",
+      "summaryJa": "カテゴリ絞り込みと同一カテゴリ比較を実演するための、架空の吸光専用微量分析レコードです。",
+      "specs": {
+        "sample_volume_min_ul": 1,
+        "sample_volume_max_ul": 2,
+        "absorbance_min_nm": 190,
+        "absorbance_max_nm": 850,
+        "fluorescence_modes": 0,
+        "measurement_time_s": 5,
+        "automatic_pathlength": true,
+        "width_cm": 20
+      },
+      "paths": {
+        "product": "/devices/rd-syn-microvolume-a/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-microvolume-a-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-microvolume-a",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-microvolume-b",
+      "name": "RD-SYN Microvolume B",
+      "nameJa": "RD-SYN Microvolume B（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "microvolume-analysis",
+      "catalogNumber": "RD-SYN-MB-001",
+      "status": "active",
+      "summaryEn": "A fictional absorbance-and-fluorescence microvolume record for modality trade-off demonstrations.",
+      "summaryJa": "測定モードの条件差を実演するための、架空の吸光・蛍光対応微量分析レコードです。",
+      "specs": {
+        "sample_volume_min_ul": 0.5,
+        "sample_volume_max_ul": 10,
+        "absorbance_min_nm": 190,
+        "absorbance_max_nm": 850,
+        "fluorescence_modes": 2,
+        "measurement_time_s": 7,
+        "automatic_pathlength": true,
+        "width_cm": 24
+      },
+      "paths": {
+        "product": "/devices/rd-syn-microvolume-b/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-microvolume-b-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-microvolume-b",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-cell-counter-a",
+      "name": "RD-SYN Cell Counter A",
+      "nameJa": "RD-SYN Cell Counter A（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "automated-cell-counting",
+      "catalogNumber": "RD-SYN-CA-001",
+      "status": "active",
+      "summaryEn": "A fictional brightfield cell-counting record for active-status and modality demonstrations.",
+      "summaryJa": "現行状態と撮像モードの条件差を実演するための、架空の明視野セルカウンターレコードです。",
+      "specs": {
+        "imaging_mode": "brightfield",
+        "particle_size_min_um": 10,
+        "particle_size_max_um": 50,
+        "analysis_time_s": 30,
+        "sample_volume_ul": 20,
+        "autofocus": true,
+        "viability_channels": 0,
+        "width_cm": 22
+      },
+      "paths": {
+        "product": "/devices/rd-syn-cell-counter-a/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-cell-counter-a-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-cell-counter-a",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification values; not a real product or performance claim."
+        ],
+        "ja": [
+          "架空の仕様値であり、実在製品または性能表示ではありません。"
+        ]
+      }
+    },
+    {
+      "id": "rd-syn-cell-counter-b",
+      "name": "RD-SYN Cell Counter B",
+      "nameJa": "RD-SYN Cell Counter B（合成デモ）",
+      "manufacturerId": "rd-synthetic-lab",
+      "categoryId": "automated-cell-counting",
+      "catalogNumber": "RD-SYN-CB-001",
+      "status": "discontinued",
+      "summaryEn": "A fictional discontinued dual-fluorescence cell-counting record for lifecycle filtering demonstrations.",
+      "summaryJa": "ライフサイクル絞り込みを実演するための、架空の販売終了・2蛍光セルカウンターレコードです。",
+      "specs": {
+        "imaging_mode": "brightfield_plus_dual_fluorescence",
+        "particle_size_min_um": 5,
+        "particle_size_max_um": 60,
+        "analysis_time_s": 45,
+        "sample_volume_ul": 20,
+        "autofocus": true,
+        "viability_channels": 2,
+        "width_cm": 28
+      },
+      "paths": {
+        "product": "/devices/rd-syn-cell-counter-b/",
+        "catalogSource": "/data/catalog.synthetic.json",
+        "priceSource": "/sources/synthetic-price-scenarios/#price-rd-syn-cell-counter-b-01",
+        "literatureSource": "/sources/synthetic-methods-corpus/#signal-rd-syn-cell-counter-b",
+        "dataNotice": "/data-notice/"
+      },
+      "limitations": {
+        "en": [
+          "Fictional specification and lifecycle values; not a real product or availability claim."
+        ],
+        "ja": [
+          "架空の仕様・ライフサイクル値であり、実在製品または提供状況を示しません。"
+        ]
+      }
+    }
+  ],
+  "limitations": {
+    "en": [
+      "All manufacturer, product, catalog-number, lifecycle, and specification records are fictional.",
+      "Values are designed only to exercise search and normalized comparison behavior."
+    ],
+    "ja": [
+      "メーカー、製品、カタログ番号、ライフサイクル、仕様の全レコードは架空です。",
+      "値は検索と正規化比較の動作を実演する目的だけで作成されています。"
+    ]
+  },
+  "license": "CC-BY-4.0"
+}

@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
+  "datasetKind": "entrant_authored_synthetic_methods_corpus",
+  "licenseStatus": "applied",
+  "countSemanticsEn": "mentionRecordCount is the number of entrant-authored synthetic methods records whose mentionedProductIds array contains the synthetic product ID.",
+  "countSemanticsJa": "mentionRecordCountは、合成製品IDをmentionedProductIds配列に含む、応募者作成の合成メソッドレコード数です。",
+  "corpus": {
+    "id": "rd-synthetic-methods-corpus-v1",
+    "nameEn": "Research-Devices Synthetic Methods Corpus v1",
+    "nameJa": "Research-Devices 合成メソッドコーパス v1",
+    "authoredDate": "2026-08-30",
+    "sourcePath": "/sources/synthetic-methods-corpus/",
+    "synthetic": true
+  },
+  "records": [
+    {
+      "id": "rdm-001",
+      "titleEn": "Synthetic methods note 01: 96-well screening baseline",
+      "titleJa": "合成メソッドノート01：96ウェルスクリーニング基準",
+      "summaryEn": "A fictional workflow note comparing two synthetic 96-well records under a shared baseline.",
+      "summaryJa": "2つの合成96ウェルレコードを共通基準で比較する架空ワークフローノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-001"
+    },
+    {
+      "id": "rdm-002",
+      "titleEn": "Synthetic methods note 02: throughput scaling comparison",
+      "titleJa": "合成メソッドノート02：スループット拡張比較",
+      "summaryEn": "A fictional workflow note comparing two 96-well records with one 384-well record.",
+      "summaryJa": "2つの96ウェル合成レコードと1つの384ウェル合成レコードを比較する架空ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-b",
+        "rd-syn-qpcr-c"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-002"
+    },
+    {
+      "id": "rdm-003",
+      "titleEn": "Synthetic methods note 03: compact-lab amplification workflow",
+      "titleJa": "合成メソッドノート03：小規模ラボ増幅ワークフロー",
+      "summaryEn": "A fictional workflow note contrasting two 96-well records with a compact record.",
+      "summaryJa": "2つの96ウェル合成レコードと小型合成レコードを対比する架空ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-b",
+        "rd-syn-qpcr-d"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-003"
+    },
+    {
+      "id": "rdm-004",
+      "titleEn": "Synthetic methods note 04: multi-channel assay scenario",
+      "titleJa": "合成メソッドノート04：多チャンネルアッセイシナリオ",
+      "summaryEn": "A fictional scenario note covering three synthetic amplification records.",
+      "summaryJa": "3つの合成増幅装置レコードを扱う架空シナリオノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-b",
+        "rd-syn-qpcr-c"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-004"
+    },
+    {
+      "id": "rdm-005",
+      "titleEn": "Synthetic methods note 05: mixed-capacity workflow",
+      "titleJa": "合成メソッドノート05：容量混在ワークフロー",
+      "summaryEn": "A fictional note comparing small, standard, and high-throughput capacities.",
+      "summaryJa": "小型、標準、高スループット容量を比較する架空ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-c",
+        "rd-syn-qpcr-d"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-005"
+    },
+    {
+      "id": "rdm-006",
+      "titleEn": "Synthetic methods note 06: two-device verification run",
+      "titleJa": "合成メソッドノート06：2装置検証ラン",
+      "summaryEn": "A fictional verification note for two synthetic 96-well records.",
+      "summaryJa": "2つの合成96ウェルレコードを対象とする架空検証ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-qpcr-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-006"
+    },
+    {
+      "id": "rdm-007",
+      "titleEn": "Synthetic methods note 07: amplification and absorbance handoff",
+      "titleJa": "合成メソッドノート07：増幅・吸光測定引き継ぎ",
+      "summaryEn": "A fictional cross-category handoff between one amplification and one absorbance record.",
+      "summaryJa": "増幅レコードと吸光測定レコード間の架空カテゴリ横断引き継ぎです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-a",
+        "rd-syn-microvolume-a"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-007"
+    },
+    {
+      "id": "rdm-008",
+      "titleEn": "Synthetic methods note 08: multimode quantification handoff",
+      "titleJa": "合成メソッドノート08：マルチモード定量引き継ぎ",
+      "summaryEn": "A fictional workflow note linking one amplification and two microvolume records.",
+      "summaryJa": "1つの増幅レコードと2つの微量分析レコードを結ぶ架空ワークフローノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-b",
+        "rd-syn-microvolume-a",
+        "rd-syn-microvolume-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-008"
+    },
+    {
+      "id": "rdm-009",
+      "titleEn": "Synthetic methods note 09: high-throughput and microvolume check",
+      "titleJa": "合成メソッドノート09：高スループット・微量分析確認",
+      "summaryEn": "A fictional cross-category note for one high-throughput and one microvolume record.",
+      "summaryJa": "高スループットと微量分析の合成レコード各1件を扱う架空カテゴリ横断ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-c",
+        "rd-syn-microvolume-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-009"
+    },
+    {
+      "id": "rdm-010",
+      "titleEn": "Synthetic methods note 10: amplification and cell-count handoff",
+      "titleJa": "合成メソッドノート10：増幅・セルカウント引き継ぎ",
+      "summaryEn": "A fictional handoff note joining a compact amplification record and a cell-count record.",
+      "summaryJa": "小型増幅レコードとセルカウントレコードを結ぶ架空引き継ぎノートです。",
+      "mentionedProductIds": [
+        "rd-syn-qpcr-d",
+        "rd-syn-cell-counter-a"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-010"
+    },
+    {
+      "id": "rdm-011",
+      "titleEn": "Synthetic methods note 11: cell-counting mode comparison",
+      "titleJa": "合成メソッドノート11：セルカウントモード比較",
+      "summaryEn": "A fictional note comparing brightfield and dual-fluorescence counting modes.",
+      "summaryJa": "明視野と2蛍光のカウントモードを比較する架空ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-cell-counter-a",
+        "rd-syn-cell-counter-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-011"
+    },
+    {
+      "id": "rdm-012",
+      "titleEn": "Synthetic methods note 12: microvolume mode comparison",
+      "titleJa": "合成メソッドノート12：微量分析モード比較",
+      "summaryEn": "A fictional note comparing absorbance-only and multimode microvolume records.",
+      "summaryJa": "吸光専用とマルチモードの微量分析レコードを比較する架空ノートです。",
+      "mentionedProductIds": [
+        "rd-syn-microvolume-a",
+        "rd-syn-microvolume-b"
+      ],
+      "authoredDate": "2026-08-30",
+      "sourcePath": "/sources/synthetic-methods-corpus/#rdm-012"
+    }
+  ],
+  "signals": [
+    {
+      "productId": "rd-syn-qpcr-a",
+      "mentionRecordCount": 7,
+      "sourceRecordIds": [
+        "rdm-001",
+        "rdm-002",
+        "rdm-003",
+        "rdm-004",
+        "rdm-005",
+        "rdm-006",
+        "rdm-007"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-a",
+      "productPath": "/devices/rd-syn-qpcr-a/"
+    },
+    {
+      "productId": "rd-syn-qpcr-b",
+      "mentionRecordCount": 6,
+      "sourceRecordIds": [
+        "rdm-001",
+        "rdm-002",
+        "rdm-003",
+        "rdm-004",
+        "rdm-006",
+        "rdm-008"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-b",
+      "productPath": "/devices/rd-syn-qpcr-b/"
+    },
+    {
+      "productId": "rd-syn-qpcr-c",
+      "mentionRecordCount": 4,
+      "sourceRecordIds": [
+        "rdm-002",
+        "rdm-004",
+        "rdm-005",
+        "rdm-009"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-c",
+      "productPath": "/devices/rd-syn-qpcr-c/"
+    },
+    {
+      "productId": "rd-syn-qpcr-d",
+      "mentionRecordCount": 3,
+      "sourceRecordIds": [
+        "rdm-003",
+        "rdm-005",
+        "rdm-010"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-qpcr-d",
+      "productPath": "/devices/rd-syn-qpcr-d/"
+    },
+    {
+      "productId": "rd-syn-microvolume-a",
+      "mentionRecordCount": 3,
+      "sourceRecordIds": [
+        "rdm-007",
+        "rdm-008",
+        "rdm-012"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-microvolume-a",
+      "productPath": "/devices/rd-syn-microvolume-a/"
+    },
+    {
+      "productId": "rd-syn-microvolume-b",
+      "mentionRecordCount": 3,
+      "sourceRecordIds": [
+        "rdm-008",
+        "rdm-009",
+        "rdm-012"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-microvolume-b",
+      "productPath": "/devices/rd-syn-microvolume-b/"
+    },
+    {
+      "productId": "rd-syn-cell-counter-a",
+      "mentionRecordCount": 2,
+      "sourceRecordIds": [
+        "rdm-010",
+        "rdm-011"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-cell-counter-a",
+      "productPath": "/devices/rd-syn-cell-counter-a/"
+    },
+    {
+      "productId": "rd-syn-cell-counter-b",
+      "mentionRecordCount": 1,
+      "sourceRecordIds": [
+        "rdm-011"
+      ],
+      "status": "synthetic_corpus_signal",
+      "corpusSourcePath": "/sources/synthetic-methods-corpus/#signal-rd-syn-cell-counter-b",
+      "productPath": "/devices/rd-syn-cell-counter-b/"
+    }
+  ],
+  "limitations": {
+    "en": [
+      "The corpus and every record in it are fictional and entrant-authored.",
+      "Mention counts are not publication counts, citation counts, unique-paper counts, or evidence of real-world use.",
+      "The signal exists only to demonstrate structured provenance and bounded interpretation."
+    ],
+    "ja": [
+      "コーパスとその全レコードは架空であり、応募者が作成したものです。",
+      "言及件数は出版物数、引用数、重複排除済み論文数、または実利用の根拠ではありません。",
+      "このシグナルは構造化された出典と対象限定の解釈を実演するためだけに存在します。"
+    ]
+  },
+  "license": "CC-BY-4.0"
+}

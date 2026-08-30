@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "profileId": "rd-webmcp-submission-synthetic",
+  "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
+  "datasetKind": "fully_synthetic_challenge_dataset",
+  "languageCoverage": [
+    "en",
+    "ja"
+  ],
+  "sourceFiles": [
+    "data/catalog.synthetic.json",
+    "data/prices.synthetic.json",
+    "data/literature.synthetic.json"
+  ],
+  "counts": {
+    "products": 8,
+    "categories": 3,
+    "manufacturers": 1,
+    "schemaAlignedSpecCells": 72,
+    "priceObservations": 9,
+    "priceProducts": 8,
+    "literatureSignals": 8,
+    "corpusRecords": 12
+  },
+  "publicationBoundary": {
+    "fullySynthetic": true,
+    "thirdPartyProductDataIncluded": false,
+    "thirdPartyProductMarksIncluded": false,
+    "thirdPartyProductUrlsIncluded": false,
+    "memberDataIncluded": false,
+    "userGeneratedContentIncluded": false,
+    "externalImagesIncluded": false,
+    "externalScriptsIncluded": false
+  },
+  "licenseStatus": "applied",
+  "limitations": {
+    "en": [
+      "This profile contains fictional demonstration records only.",
+      "It is not a source of real specifications, prices, publications, citations, or verified laboratory use."
+    ],
+    "ja": [
+      "このプロファイルには架空のデモ用レコードのみが含まれます。",
+      "実在する仕様、価格、出版物、引用、または研究室での実利用を示すデータではありません。"
+    ]
+  },
+  "licenses": {
+    "code": "MIT",
+    "data": "CC-BY-4.0"
+  }
+}

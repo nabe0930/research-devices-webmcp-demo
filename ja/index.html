@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="架空データだけを使用する、読み取り専用の研究機器比較WebMCPデモ。" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    />
+    <title>Research-Devices WebMCP 合成データデモ</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">メインコンテンツへ移動</a>
+    <header class="site-header">
+      <a class="brand" href="/ja/" aria-label="Research-Devices WebMCP ホーム">
+        <span class="brand-mark" aria-hidden="true">RD</span>
+        <span><strong>Research-Devices</strong><small>WebMCP 合成データデモ</small></span>
+      </a>
+      <nav aria-label="言語">
+        <a href="/">English</a>
+        <a aria-current="page" href="/ja/">日本語</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">WEBMCP · 読み取り専用4ツール · 完全な架空データ</p>
+          <h1 id="hero-title">ブラウザAIが、ページを読むだけでなく機器候補を構造化して調査する。</h1>
+          <p class="lede">
+            このページは、対象限定検索、正規化比較、架空価格シナリオ、合成メソッドコーパスの
+            4機能をブラウザのWebMCP APIへ登録します。ページ内チャットボットではありません。
+          </p>
+          <div class="status-strip" role="status" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-native-status>Native WebMCP対応状況を確認中…</span>
+          </div>
+          <p class="dataset-status" data-dataset-status>合成データを準備しています…</p>
+        </div>
+        <aside class="prompt-card" aria-label="ブラウザAIへの依頼例">
+          <span>ブラウザAIへの依頼例</span>
+          <blockquote>
+            RD-SYN qPCR AとBを、正規化仕様、架空のJPY価格シナリオ、合成メソッドコーパスの
+            シグナルで比較してください。各レコードが候補に残る条件を説明し、すべての出典を示してください。
+          </blockquote>
+          <p>Native呼び出しでは、この文章のスクレイピングではなく構造化JSON入力を使います。</p>
+        </aside>
+      </section>
+
+      <section class="metrics shell" aria-label="データ概要">
+        <article><strong>4</strong><span>WebMCPツール</span></article>
+        <article><strong data-product-count>8</strong><span>架空機器</span></article>
+        <article><strong data-category-count>3</strong><span>汎用カテゴリ</span></article>
+        <article><strong data-corpus-count>12</strong><span>合成メソッドレコード</span></article>
+      </section>
+
+      <section class="journey shell" aria-labelledby="journey-title">
+        <div class="section-heading">
+          <p class="eyebrow">構造化されたエージェントの調査フロー</p>
+          <h2 id="journey-title">1つの候補比較を、4回の確認可能な呼び出しで実行</h2>
+          <p>
+            下のボタンは、同じ検証済み契約とハンドラーをローカル確認します。ブラウザAIが
+            Native WebMCP経由で実行した呼び出しだけが、下部のNative証跡へ記録されます。
+          </p>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <span class="step">01 · 検索</span>
+            <h3><code>search_devices</code></h3>
+            <p>8件の対象限定合成レコードを、テキスト、カテゴリ、作成者ラベル、状態から検索します。</p>
+            <code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code>
+            <button type="button" data-run-tool="search_devices">検索結果を確認</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">02 · 正規化</span>
+            <h3><code>compare_devices</code></h3>
+            <p>同一カテゴリの値を宣言済みスキーマへ整列し、欠損値と製品順を保持します。</p>
+            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <button type="button" data-run-tool="compare_devices">仕様比較を確認</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">03 · 価格コンテキスト</span>
+            <h3><code>get_price_range</code></h3>
+            <p>架空の通貨・価格basis・構成を分離し、存在しないレンジを推測しません。</p>
+            <code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code>
+            <button type="button" data-run-tool="get_price_range">価格シナリオを確認</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">04 · メソッドシグナル</span>
+            <h3><code>get_literature_signal</code></h3>
+            <p>応募者が作成した12件の架空レコード内の言及を、明確な意味づけとともに数えます。</p>
+            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <button type="button" data-run-tool="get_literature_signal">コーパスシグナルを確認</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="console shell" aria-labelledby="console-title">
+        <div class="console-head">
+          <div>
+            <p class="eyebrow">ローカル契約インスペクター</p>
+            <h2 id="console-title" data-output-title>4つの呼び出しから選択してください</h2>
+          </div>
+          <span>同一の検証済みハンドラー · LLMシミュレーションなし</span>
+        </div>
+        <div class="console-grid">
+          <section aria-labelledby="input-title"><h3 id="input-title">構造化入力</h3><pre data-output-input>{}</pre></section>
+          <section aria-labelledby="output-title"><h3 id="output-title">対象限定の結果</h3><pre data-output>{ "status": "waiting" }</pre></section>
+        </div>
+      </section>
+
+      <section class="evidence shell" aria-labelledby="evidence-title">
+        <div>
+          <p class="eyebrow">NATIVE WEBMCP証跡</p>
+          <h2 id="evidence-title">登録と実行を混同しない</h2>
+          <p data-native-log>このページセッションではNative WebMCPのexecute callbackはまだ実行されていません。</p>
+          <p class="evidence-note">
+            この欄は登録ツールが受け取ったcallbackだけを記録します。どのAIやブラウザ機能が呼び出したかは断定しません。
+          </p>
+        </div>
+        <div class="counter" aria-label="Native execute callback回数">
+          <strong data-native-count>0</strong><span>確認済みcallback</span>
+        </div>
+        <ol class="event-list" data-native-events aria-live="polite"></ol>
+      </section>
+
+      <section class="boundary shell" aria-labelledby="boundary-title">
+        <div class="section-heading">
+          <p class="eyebrow">出典と安全境界</p>
+          <h2 id="boundary-title">意図的に狭くした公開範囲</h2>
+        </div>
+        <div class="boundary-grid">
+          <article><h3>含めるもの</h3><p>架空機器8件、架空価格観測9件、架空メソッドレコード12件、同一オリジンに生成した出典ページ。</p></article>
+          <article><h3>含めないもの</h3><p>本番データ、会員レコード、投稿、アカウント、解析、Cookie、永続化、任意ネットワーク取得、製品画像、第三者製品商標。</p></article>
+          <article><h3>解釈上の制限</h3><p>構造化した根拠処理のデモであり、実仕様、販売価格、出版物、購入推奨、または研究室での実利用を示しません。</p></article>
+        </div>
+        <nav class="source-links" aria-label="合成出典ページ">
+          <a href="/sources/synthetic-price-scenarios/">価格シナリオ</a>
+          <a href="/sources/synthetic-methods-corpus/">メソッドコーパス</a>
+          <a href="/data-notice/">合成データ通知</a>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>Research-Devices WebMCP Challenge デモ</span>
+      <span>読み取り専用 · 静的 · 完全な架空データ</span>
+    </footer>
+  </body>
+</html>

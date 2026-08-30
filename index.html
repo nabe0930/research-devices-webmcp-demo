@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A fully synthetic, read-only WebMCP demonstration for evidence-aware research-device comparison."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    />
+    <title>Research-Devices WebMCP Synthetic Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Research-Devices WebMCP home">
+        <span class="brand-mark" aria-hidden="true">RD</span>
+        <span><strong>Research-Devices</strong><small>WebMCP synthetic demo</small></span>
+      </a>
+      <nav aria-label="Language">
+        <a aria-current="page" href="/">English</a>
+        <a href="/ja/" lang="ja">日本語</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">WEBMCP · FOUR READ-ONLY TOOLS · FULLY SYNTHETIC DATA</p>
+          <h1 id="hero-title">A browser agent can investigate an instrument shortlist—not just read a web page.</h1>
+          <p class="lede">
+            The page registers bounded search, normalized comparison, fictional price-scenario,
+            and synthetic methods-corpus functions with the browser’s WebMCP API. It is not an
+            embedded chatbot.
+          </p>
+          <div class="status-strip" role="status" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-native-status>Checking Native WebMCP support…</span>
+          </div>
+          <p class="dataset-status" data-dataset-status>Preparing the synthetic snapshot…</p>
+        </div>
+        <aside class="prompt-card" aria-label="Example browser-agent request">
+          <span>Ask the browser agent</span>
+          <blockquote>
+            Compare RD-SYN qPCR A and B using normalized specifications, fictional JPY price
+            scenarios, and the synthetic methods-corpus signal. Explain when each record would
+            remain on a shortlist and cite every source.
+          </blockquote>
+          <p>Native calls use structured JSON inputs rather than scraping this prose.</p>
+        </aside>
+      </section>
+
+      <section class="metrics shell" aria-label="Dataset summary">
+        <article><strong>4</strong><span>WebMCP tools</span></article>
+        <article><strong data-product-count>8</strong><span>fictional devices</span></article>
+        <article><strong data-category-count>3</strong><span>generic categories</span></article>
+        <article><strong data-corpus-count>12</strong><span>synthetic methods records</span></article>
+      </section>
+
+      <section class="journey shell" aria-labelledby="journey-title">
+        <div class="section-heading">
+          <p class="eyebrow">STRUCTURED AGENT JOURNEY</p>
+          <h2 id="journey-title">One shortlist, four inspectable calls</h2>
+          <p>
+            Use these buttons to inspect the same validated handlers locally. Only calls made by a
+            WebMCP-enabled browser agent appear in the separate Native evidence panel below.
+          </p>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <span class="step">01 · DISCOVER</span>
+            <h3><code>search_devices</code></h3>
+            <p>Search eight bounded synthetic records by text, category, author label, and status.</p>
+            <code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code>
+            <button type="button" data-run-tool="search_devices">Inspect search result</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">02 · NORMALIZE</span>
+            <h3><code>compare_devices</code></h3>
+            <p>Align same-category values to a declared schema; preserve nulls and product order.</p>
+            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <button type="button" data-run-tool="compare_devices">Inspect comparison</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">03 · PRICE CONTEXT</span>
+            <h3><code>get_price_range</code></h3>
+            <p>Keep fictional currencies, bases, and configurations separate. Never invent a range.</p>
+            <code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code>
+            <button type="button" data-run-tool="get_price_range">Inspect price scenarios</button>
+          </article>
+          <article class="tool-card">
+            <span class="step">04 · METHODS SIGNAL</span>
+            <h3><code>get_literature_signal</code></h3>
+            <p>Count mentions in twelve entrant-authored fictional records with explicit semantics.</p>
+            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <button type="button" data-run-tool="get_literature_signal">Inspect corpus signal</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="console shell" aria-labelledby="console-title">
+        <div class="console-head">
+          <div>
+            <p class="eyebrow">LOCAL CONTRACT INSPECTOR</p>
+            <h2 id="console-title" data-output-title>Select one of the four calls</h2>
+          </div>
+          <span>Same validated handler · no LLM simulation</span>
+        </div>
+        <div class="console-grid">
+          <section aria-labelledby="input-title">
+            <h3 id="input-title">Structured input</h3>
+            <pre data-output-input>{}</pre>
+          </section>
+          <section aria-labelledby="output-title">
+            <h3 id="output-title">Bounded result</h3>
+            <pre data-output>{ "status": "waiting" }</pre>
+          </section>
+        </div>
+      </section>
+
+      <section class="evidence shell" aria-labelledby="evidence-title">
+        <div>
+          <p class="eyebrow">NATIVE WEBMCP EVIDENCE</p>
+          <h2 id="evidence-title">Registration is not execution</h2>
+          <p data-native-log>
+            No Native WebMCP execute callback has run in this page session.
+          </p>
+          <p class="evidence-note">
+            This panel records only callbacks received by registered tools. It does not claim to
+            identify which agent or browser feature initiated a call.
+          </p>
+        </div>
+        <div class="counter" aria-label="Native execute callback count">
+          <strong data-native-count>0</strong><span>observed callbacks</span>
+        </div>
+        <ol class="event-list" data-native-events aria-live="polite"></ol>
+      </section>
+
+      <section class="boundary shell" aria-labelledby="boundary-title">
+        <div class="section-heading">
+          <p class="eyebrow">PROVENANCE AND SAFETY</p>
+          <h2 id="boundary-title">A deliberately narrow public boundary</h2>
+        </div>
+        <div class="boundary-grid">
+          <article><h3>Included</h3><p>Eight fictional device records, nine fictional price observations, twelve fictional methods records, and generated same-origin source pages.</p></article>
+          <article><h3>Excluded</h3><p>Production data, member records, user content, accounts, analytics, cookies, persistence, arbitrary network requests, product images, and third-party product marks.</p></article>
+          <article><h3>Interpretation</h3><p>Results are demonstrations of structured evidence handling—not specifications, offers, publications, purchasing recommendations, or proof of laboratory use.</p></article>
+        </div>
+        <nav class="source-links" aria-label="Synthetic source pages">
+          <a href="/sources/synthetic-price-scenarios/">Price scenarios</a>
+          <a href="/sources/synthetic-methods-corpus/">Methods corpus</a>
+          <a href="/data-notice/">Synthetic data notice</a>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>Research-Devices WebMCP challenge demo</span>
+      <span>Read-only · static · fully synthetic</span>
+    </footer>
+  </body>
+</html>

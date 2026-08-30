@@ -1,0 +1,42 @@
+[
+  {
+    "name": "RD-SYN qPCR A and B synthetic evidence journey",
+    "messages": [
+      {
+        "role": "user",
+        "type": "message",
+        "content": "Find RD-SYN qPCR A and RD-SYN qPCR B. Compare their normalized fictional specifications, inspect their fictional JPY price scenarios, and retrieve their synthetic methods-corpus mention signals with sources and limitations."
+      }
+    ],
+    "expectedCall": [
+      {
+        "functionName": "search_devices",
+        "arguments": {
+          "query": { "$contains": "RD-SYN" }
+        }
+      },
+      {
+        "unordered": [
+          {
+            "functionName": "compare_devices",
+            "arguments": {
+              "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"]
+            }
+          },
+          {
+            "functionName": "get_price_range",
+            "arguments": {
+              "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"]
+            }
+          },
+          {
+            "functionName": "get_literature_signal",
+            "arguments": {
+              "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
