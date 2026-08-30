@@ -20,7 +20,7 @@
         <span><strong>Research-Devices</strong><small>WebMCP 合成データデモ</small></span>
       </a>
       <nav aria-label="言語">
-        <a href="/">English</a>
+        <a href="/" lang="en">English</a>
         <a aria-current="page" href="/ja/">日本語</a>
       </nav>
     </header>
@@ -31,8 +31,13 @@
           <p class="eyebrow">WEBMCP · 読み取り専用4ツール · 完全な架空データ</p>
           <h1 id="hero-title">ブラウザAIが、ページを読むだけでなく機器候補を構造化して調査する。</h1>
           <p class="lede">
-            このページは、対象限定検索、正規化比較、架空価格シナリオ、合成メソッドコーパスの
-            4機能をブラウザのWebMCP APIへ登録します。ページ内チャットボットではありません。
+            機器選定とは、書式の異なる仕様、基準の異なる価格、そして根拠に見えて根拠ではない
+            発見シグナルを突き合わせる作業です。ページを読むことしかできないAIが最初に誤るのが、
+            この突き合わせです。
+          </p>
+          <p class="lede lede-sub">
+            そこで本ページは、その突き合わせ自体を4つの型付き関数としてブラウザのWebMCP APIへ
+            登録します。ページ内チャットボットではありません。
           </p>
           <ul class="tool-chips" aria-label="登録済みWebMCPツール">
             <li><code>search_devices</code></li>
@@ -44,21 +49,25 @@
             <span class="status-dot" aria-hidden="true"></span>
             <span data-native-status>Native WebMCP対応状況を確認中…</span>
           </div>
-          <p class="browser-hint">
-            Native実行には、最新版<strong>ChatGPTデスクトップアプリの内蔵ブラウザ</strong>で本ページを開き、
-            <strong>Settings › Browser › Permissions › Enable site tools</strong> を有効にします。
-            Chromeでローカル確認する場合は <code>chrome://flags/#enable-webmcp-testing</code> を有効にして
-            再起動してください。提供状況はロールアウトにより異なるため、
-            <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">公式セットアップ</a>も確認してください。
-            WebMCP非対応でも本ページと下の確認ボタンは動作します。
-          </p>
+          <details class="browser-setup">
+            <summary>Native WebMCP対応ブラウザの設定</summary>
+            <p class="browser-hint">
+              最新版<strong>ChatGPTデスクトップアプリの内蔵ブラウザ</strong>で本ページを開き、
+              <strong>Settings › Browser › Permissions › Enable site tools</strong> を有効にします。
+              Chromeでローカル確認する場合は <code>chrome://flags/#enable-webmcp-testing</code> を有効にして
+              再起動してください。提供状況はロールアウトにより異なるため、
+              <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">公式セットアップ</a>も確認してください。
+              WebMCP非対応でも下のボタンは同じハンドラーをローカル実行します。
+            </p>
+          </details>
           <p class="dataset-status" data-dataset-status>合成データを準備しています…</p>
         </div>
         <aside class="prompt-card" aria-label="ブラウザAIへの依頼例">
           <span>ブラウザAIへの依頼例</span>
           <blockquote>
-            RD-SYN qPCR AとBを、正規化仕様、架空のJPY価格シナリオ、合成メソッドコーパスの
-            シグナルで比較してください。各レコードが候補に残る条件を説明し、すべての出典を示してください。
+            96ウェル・6色マルチプレックス・GLP監査証跡・予算600万円以内を条件として、架空の
+            RD-SYN qPCR AとBを比較してください。正規化仕様、合成JPY価格シナリオ、合成メソッド
+            コーパスを使い、トレードオフとすべての出典を示してください。
           </blockquote>
           <p>Native呼び出しでは、この文章のスクレイピングではなく構造化JSON入力を使います。</p>
         </aside>
@@ -71,13 +80,35 @@
         <article><strong data-corpus-count>12</strong><span>合成メソッドレコード</span></article>
       </section>
 
+      <section class="brief shell" aria-labelledby="brief-title">
+        <div>
+          <p class="eyebrow">検討条件</p>
+          <h2 id="brief-title">それ自体では決着しない選定</h2>
+          <p>
+            96ウェルのqPCR装置を、<strong>6色マルチプレックス</strong>・<strong>GLP監査証跡あり</strong>・
+            <strong>予算600万円以内</strong>で選定する。候補は架空レコード2件。数値はすべてデモ用の
+            架空値ですが、そこで生じる対立は、この仕組みが可視化しようとしている対立そのものです。
+          </p>
+          <p class="brief-summary">
+            4条件をすべて満たす候補はありません。Bは機能条件を満たし、Aだけが架空の予算上限に収まります。
+          </p>
+        </div>
+        <ul class="brief-reqs">
+          <li><span>96ウェル</span><strong>両方が該当</strong></li>
+          <li><span>6色マルチプレックス</span><strong>Bのみ</strong></li>
+          <li><span>GLP監査証跡</span><strong>Bのみ</strong></li>
+          <li><span>600万円以内</span><strong>Aのみ</strong></li>
+        </ul>
+      </section>
+
       <section class="journey shell" aria-labelledby="journey-title">
         <div class="section-heading">
           <p class="eyebrow">構造化されたエージェントの調査フロー</p>
           <h2 id="journey-title">1つの候補比較を、4回の確認可能な呼び出しで実行</h2>
           <p>
-            下のボタンは、同じ検証済み契約とハンドラーをローカル確認します。ブラウザAIが
-            Native WebMCP経由で実行した呼び出しだけが、下部のNative証跡へ記録されます。
+            順に実行し、各結果の上に出る平易な読み取りを確認してください。下のボタンは同じ検証済み
+            契約とハンドラーをローカル実行します。ブラウザAIがNative WebMCP経由で実行した
+            呼び出しだけが、下部のNative証跡へ記録されます。
           </p>
         </div>
         <div class="tool-grid">
@@ -116,13 +147,43 @@
         <div class="console-head">
           <div>
             <p class="eyebrow">ローカル契約インスペクター</p>
-            <h2 id="console-title" data-output-title>4つの呼び出しから選択してください</h2>
+            <h2 id="console-title" data-output-title tabindex="-1">4つの呼び出しから選択してください</h2>
           </div>
           <span>同一の検証済みハンドラー · LLMシミュレーションなし</span>
         </div>
         <div class="console-grid">
           <section aria-labelledby="input-title"><h3 id="input-title">構造化入力</h3><pre data-output-input>{}</pre></section>
-          <section aria-labelledby="output-title"><h3 id="output-title">対象限定の結果</h3><pre data-output>{ "status": "waiting" }</pre></section>
+          <section aria-labelledby="output-title"><h3 id="output-title">対象限定の結果</h3><p class="output-note" data-output-note role="status" aria-live="polite" aria-atomic="true">いずれかの呼び出しを実行すると、その構造化結果が上の検討条件にとって何を意味するかを表示します。</p><pre data-output>{ "status": "waiting" }</pre></section>
+        </div>
+      </section>
+
+      <section class="contrast shell" aria-labelledby="contrast-title">
+        <div class="section-heading">
+          <p class="eyebrow">なぜ関数化が効くのか</p>
+          <h2 id="contrast-title">同じ事実が、値に付いているか離れているか</h2>
+        </div>
+        <div class="contrast-grid">
+          <article class="contrast-before">
+            <h3>ページを読んだ場合</h3>
+            <p>
+              限定条件はすべて公開されています。ただし文章として、レコードページ・価格シナリオ
+              ページ・メソッドコーパスに分散し、しかも2言語で書かれています。690万円を正しく扱うには、
+              AIは「単一観測はレンジではない」という注記を見つけ、それがその数値に適用されAの2件には
+              適用されないと判断し、さらに「No / なし」という語を真偽値へ変換しなければなりません。
+              どの段階も、静かに失敗しうる推測です。
+            </p>
+            <p class="contrast-verdict">結果：限定条件が値と別に流通し、脱落しても誰も報告しない。</p>
+          </article>
+          <article class="contrast-after">
+            <h3><code>get_price_range</code> と <code>compare_devices</code> を呼んだ場合</h3>
+            <p>
+              限定条件が値に固定されて届きます。<code>basis</code>、<code>configuration</code>、
+              導出元の観測リスト、そして <code>rangeStatus: "single_observation"</code>。
+              690万円が自分の限界を自ら申告します。監査証跡は解釈が必要な語ではなく、
+              型付きの <code>false</code> として返ります。
+            </p>
+            <p class="contrast-verdict">結果：不確実性が、受け渡しの過程で失われない。</p>
+          </article>
         </div>
       </section>
 
@@ -132,11 +193,12 @@
           <h2 id="evidence-title">登録と実行を混同しない</h2>
           <p data-native-log>このページセッションではNative WebMCPのexecute callbackはまだ実行されていません。</p>
           <p class="evidence-note">
-            この欄は登録ツールが受け取ったcallbackだけを記録します。どのAIやブラウザ機能が呼び出したかは断定しません。
+            この欄は登録ツールが受け取ったcallbackだけを記録します。上のローカル確認ボタンでは
+            この回数は増えません。どのAIやブラウザ機能が呼び出したかは断定しません。
           </p>
         </div>
-        <div class="counter" aria-label="Native execute callback回数">
-          <strong data-native-count>0</strong><span>確認済みcallback</span>
+        <div class="counter" aria-label="ブラウザAIによるNative execute callback回数" role="status" aria-live="polite">
+          <strong data-native-count>—</strong><span>ブラウザAI実行</span>
         </div>
         <ol class="event-list" data-native-events aria-live="polite"></ol>
       </section>

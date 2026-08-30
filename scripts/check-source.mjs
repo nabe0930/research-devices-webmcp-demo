@@ -330,6 +330,30 @@ for (const path of await listFiles(root)) {
   }
 }
 
+const [englishHome, japaneseHome, applicationSource, stylesheet] = await Promise.all([
+  readFile(resolve(root, "index.html"), "utf8"),
+  readFile(resolve(root, "ja/index.html"), "utf8"),
+  readFile(resolve(root, "src/app.js"), "utf8"),
+  readFile(resolve(root, "styles.css"), "utf8"),
+]);
+for (const [label, html] of [["English", englishHome], ["Japanese", japaneseHome]]) {
+  if (!/class="browser-setup"/.test(html) || !/data-output-note role="status" aria-live="polite" aria-atomic="true"/.test(html)) {
+    throw new Error(`${label} home must keep the compact setup disclosure and accessible live result summary.`);
+  }
+  if (!/data-native-count>—<\/strong>/.test(html) || !/local inspection|ローカル確認/.test(html)) {
+    throw new Error(`${label} home must distinguish local inspection from Native WebMCP callbacks.`);
+  }
+}
+if (/\ba real range\b|実在のレンジ|range you can actually reason about|根拠として扱えるレンジ/i.test(applicationSource)) {
+  throw new Error("Synthetic price copy must never imply an observed real-world range.");
+}
+if (!applicationSource.includes("two fictional observations") || !applicationSource.includes("架空観測2件")) {
+  throw new Error("Synthetic price copy must state the fictional observation basis in both languages.");
+}
+if (!stylesheet.includes(".contrast-before .contrast-verdict { color: #8a570e; }") || stylesheet.includes("#a96f18")) {
+  throw new Error("The contrast verdict must keep its WCAG AA-safe color.");
+}
+
 if (releaseManifest) {
   const readme = await readFile(resolve(root, "README.md"), "utf8");
   const testing = await readFile(resolve(root, "docs", "TESTING.md"), "utf8");

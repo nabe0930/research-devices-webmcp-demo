@@ -34,9 +34,13 @@
           <p class="eyebrow">WEBMCP · FOUR READ-ONLY TOOLS · FULLY SYNTHETIC DATA</p>
           <h1 id="hero-title">A browser agent can investigate an instrument shortlist—not just read a web page.</h1>
           <p class="lede">
-            The page registers bounded search, normalized comparison, fictional price-scenario,
-            and synthetic methods-corpus functions with the browser’s WebMCP API. It is not an
-            embedded chatbot.
+            Choosing an instrument means reconciling specifications written in different formats,
+            prices quoted on different bases, and discovery signals that look like evidence but
+            are not. That reconciliation is what an agent gets wrong when it can only read a page.
+          </p>
+          <p class="lede lede-sub">
+            So this page hands the agent the reconciliation itself: four typed functions registered
+            with the browser’s WebMCP API. It is not an embedded chatbot.
           </p>
           <ul class="tool-chips" aria-label="Registered WebMCP tools">
             <li><code>search_devices</code></li>
@@ -48,22 +52,26 @@
             <span class="status-dot" aria-hidden="true"></span>
             <span data-native-status>Checking Native WebMCP support…</span>
           </div>
-          <p class="browser-hint">
-            To run these tools natively, open this page in the latest <strong>ChatGPT desktop app’s
-            built-in browser</strong> and enable <strong>Settings › Browser › Permissions › Enable
-            site tools</strong>. For local Chrome testing, enable
-            <code>chrome://flags/#enable-webmcp-testing</code> and restart Chrome. Availability can
-            vary by rollout; see the <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">official setup guide</a>.
-            Without WebMCP, the page still works and the buttons below run the same handlers.
-          </p>
+          <details class="browser-setup">
+            <summary>Native WebMCP browser setup</summary>
+            <p class="browser-hint">
+              Open this page in the latest <strong>ChatGPT desktop app’s built-in browser</strong> and
+              enable <strong>Settings › Browser › Permissions › Enable site tools</strong>. For local
+              Chrome testing, enable <code>chrome://flags/#enable-webmcp-testing</code> and restart
+              Chrome. Availability can vary by rollout; see the
+              <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">official setup guide</a>.
+              Without WebMCP, the buttons below still run the same handlers locally.
+            </p>
+          </details>
           <p class="dataset-status" data-dataset-status>Preparing the synthetic snapshot…</p>
         </div>
         <aside class="prompt-card" aria-label="Example browser-agent request">
           <span>Ask the browser agent</span>
           <blockquote>
-            Compare RD-SYN qPCR A and B using normalized specifications, fictional JPY price
-            scenarios, and the synthetic methods-corpus signal. Explain when each record would
-            remain on a shortlist and cite every source.
+            A lab needs 96 wells, 6-colour multiplex, a GLP audit trail, and a ceiling of ¥6,000,000.
+            Compare fictional RD-SYN qPCR A and B using normalized specifications, synthetic JPY
+            price scenarios, and the synthetic methods-corpus signal. Explain the trade-off and cite
+            every source.
           </blockquote>
           <p>Native calls use structured JSON inputs rather than scraping this prose.</p>
         </aside>
@@ -76,12 +84,36 @@
         <article><strong data-corpus-count>12</strong><span>synthetic methods records</span></article>
       </section>
 
+      <section class="brief shell" aria-labelledby="brief-title">
+        <div>
+          <p class="eyebrow">THE BRIEF</p>
+          <h2 id="brief-title">A decision that does not resolve itself</h2>
+          <p>
+            A lab needs a 96-well qPCR instrument for <strong>6-colour multiplex</strong>, with a
+            <strong>GLP audit trail</strong>, under a <strong>¥6,000,000</strong> ceiling. Two
+            fictional records are in play. Every fact below is demonstration data, but the conflict
+            between them is exactly the one this tooling exists to expose.
+          </p>
+          <p class="brief-summary">
+            Neither record meets all four constraints: B carries the capability requirements, while
+            A alone fits the synthetic budget ceiling.
+          </p>
+        </div>
+        <ul class="brief-reqs">
+          <li><span>96-well format</span><strong>both qualify</strong></li>
+          <li><span>6-colour multiplex</span><strong>only B</strong></li>
+          <li><span>GLP audit trail</span><strong>only B</strong></li>
+          <li><span>Under ¥6,000,000</span><strong>only A</strong></li>
+        </ul>
+      </section>
+
       <section class="journey shell" aria-labelledby="journey-title">
         <div class="section-heading">
           <p class="eyebrow">STRUCTURED AGENT JOURNEY</p>
           <h2 id="journey-title">One shortlist, four inspectable calls</h2>
           <p>
-            Use these buttons to inspect the same validated handlers locally. Only calls made by a
+            Run the calls in order and read the plain-language reading above each result. These
+            buttons inspect the same validated handlers locally. Only calls made by a
             WebMCP-enabled browser agent appear in the separate Native evidence panel below.
           </p>
         </div>
@@ -121,7 +153,7 @@
         <div class="console-head">
           <div>
             <p class="eyebrow">LOCAL CONTRACT INSPECTOR</p>
-            <h2 id="console-title" data-output-title>Select one of the four calls</h2>
+            <h2 id="console-title" data-output-title tabindex="-1">Select one of the four calls</h2>
           </div>
           <span>Same validated handler · no LLM simulation</span>
         </div>
@@ -132,8 +164,45 @@
           </section>
           <section aria-labelledby="output-title">
             <h3 id="output-title">Bounded result</h3>
+            <p class="output-note" data-output-note role="status" aria-live="polite" aria-atomic="true">
+              Run a call to see what the structured result means for the brief above.
+            </p>
             <pre data-output>{ "status": "waiting" }</pre>
           </section>
+        </div>
+      </section>
+
+      <section class="contrast shell" aria-labelledby="contrast-title">
+        <div class="section-heading">
+          <p class="eyebrow">WHY THE FUNCTIONS MATTER</p>
+          <h2 id="contrast-title">The same facts, attached or detached</h2>
+        </div>
+        <div class="contrast-grid">
+          <article class="contrast-before">
+            <h3>Reading the pages</h3>
+            <p>
+              Every qualifier is published — but as prose, spread across the record page, the
+              price-scenario page, and the methods corpus, in two languages. To use ¥6,900,000
+              correctly the agent must find the footnote stating that a single observation is not a
+              range, decide it applies to that figure and not to A's two, and separately map the
+              words “No / <span lang="ja">なし</span>” into a boolean. Each step is an inference that can fail quietly.
+            </p>
+            <p class="contrast-verdict">
+              Result: the qualifiers travel separately from the values, and nothing reports when one
+              is dropped.
+            </p>
+          </article>
+          <article class="contrast-after">
+            <h3>Calling <code>get_price_range</code> and <code>compare_devices</code></h3>
+            <p>
+              The qualifier arrives fastened to the value: <code>basis</code>,
+              <code>configuration</code>, the observation list it was derived from, and
+              <code>rangeStatus: "single_observation"</code> — so ¥6,900,000 states its own limit.
+              The audit trail comes back as a typed <code>false</code> rather than a word to
+              interpret.
+            </p>
+            <p class="contrast-verdict">Result: the uncertainty survives the handoff.</p>
+          </article>
         </div>
       </section>
 
@@ -145,12 +214,13 @@
             No Native WebMCP execute callback has run in this page session.
           </p>
           <p class="evidence-note">
-            This panel records only callbacks received by registered tools. It does not claim to
-            identify which agent or browser feature initiated a call.
+            This panel records only callbacks received by registered tools. The local inspection
+            buttons above never increment this counter. It does not claim to identify which agent or
+            browser feature initiated a call.
           </p>
         </div>
-        <div class="counter" aria-label="Native execute callback count">
-          <strong data-native-count>0</strong><span>observed callbacks</span>
+        <div class="counter" aria-label="Browser-agent Native execute callback count" role="status" aria-live="polite">
+          <strong data-native-count>—</strong><span>browser-agent callbacks</span>
         </div>
         <ol class="event-list" data-native-events aria-live="polite"></ol>
       </section>
