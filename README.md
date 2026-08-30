@@ -2,12 +2,12 @@
 
 Evidence-aware instrument comparison through four bounded, read-only WebMCP tools.
 
-## Verified public release
+## Publication-ready release candidate
 
-- Live demo: https://research-devices-webmcp-demo.vercel.app/
-- Public repository: https://github.com/nabe0930/research-devices-webmcp-demo
+- Planned live demo URL (not yet verified): https://research-devices-webmcp-demo.vercel.app/
+- Planned public repository URL (not yet verified): https://github.com/nabe0930/research-devices-webmcp-demo
 
-The public repository, deployed static files, security headers, and four Native WebMCP tool executions were read-only verified at 2026-08-30T00:50:21.890Z. The npm package remains `private: true` to prevent registry publication; the source code is licensed under MIT.
+This isolated WebMCP Challenge candidate has not been published or deployed by the local transformation. The npm package remains `private: true` to prevent registry publication; the candidate source code is licensed under MIT.
 
 ## What it demonstrates
 
@@ -19,6 +19,14 @@ The bilingual static application registers four functions with `document.modelCo
 - `get_literature_signal` reports mentions in a twelve-record, entrant-authored synthetic methods corpus.
 
 Every result includes a concise summary, stable same-origin record URLs, source pages, the dataset version, and explicit limitations. Missing values remain missing. No tool declares a universal winner or makes a purchasing decision.
+
+## Why WebMCP rather than a server-side MCP server
+
+The same four functions could be served by a remote MCP server. Three properties appear only when the page itself is the tool provider:
+
+- **No integration step.** The capability travels with the URL. A researcher opens the page and the agent can already call typed functions: nothing to deploy, no key to issue, no connector to install.
+- **One shared surface.** The human and the agent are looking at the same document. The evidence panel records each `execute` callback, its input, and its bounded result inside the page the researcher is already reading, so agent activity stays auditable where the work happens instead of in a separate log.
+- **Provenance the human can click.** Every `productUrl` and source link handed to the agent is a same-origin page of this site. The agent's citation and the researcher's next click resolve to the same document.
 
 ## Representative journey
 
@@ -34,6 +42,17 @@ The result provides conditional shortlist guidance while clearly stating that ev
 ## Native WebMCP evidence
 
 The guided preview uses the same contracts and domain handlers, but it does not invoke an LLM or browser agent. A separate evidence panel reports registration status during setup; its execution trace and callback counters change only when a registered Native WebMCP `execute` callback runs. It reports what the page can verify: registrations, executed tool names, callback count, inputs, results, and limitations. It does not claim to identify the caller.
+
+## Browser requirements for Native WebMCP
+
+Native WebMCP is exposed by a supporting browser only. Use either:
+
+- the latest **ChatGPT desktop app's built-in browser**, with **Settings > Browser > Permissions > Enable site tools** enabled; or
+- Chrome for local API testing, with `chrome://flags/#enable-webmcp-testing` set to Enabled, followed by a browser restart.
+
+Site-tools availability varies by rollout, model, and workspace. Follow the current [OpenAI Site tools guide](https://learn.chatgpt.com/docs/webmcp). Chrome documents its origin trial separately from local flag-based testing in the [official WebMCP guide](https://developer.chrome.com/docs/ai/webmcp).
+
+In any other browser the site still renders, and the on-page inspector buttons run the same validated handlers. No tool is registered and the Native evidence panel stays empty. An empty panel there is the correct result for a non-WebMCP browser, not a failure.
 
 ## Local setup
 
@@ -82,6 +101,8 @@ The dataset exists only to demonstrate WebMCP contracts and provenance handling.
 Research-Devices and its human-facing equipment-information service existed before the challenge. The production application and its catalog, hosting, DNS, authentication, databases, and member functions are not included or modified.
 
 The challenge-period work is the separate WebMCP application: four tool contracts and handlers, bounded schemas, runtime guards, synthetic release profile, bilingual console, guided workflow, structured trace, static security boundary, and WebMCP evaluation cases.
+
+Development of this application began on 2026-08-29 and the dedicated public repository was created on 2026-08-30. Both dates fall inside the August 25 - September 3, 2026 submission window, so every commit in this repository is challenge-period work. The repository history starts at the published snapshot because the application was developed in a separate private workspace and published once its verification passed.
 
 ## Licenses
 

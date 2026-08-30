@@ -15,6 +15,7 @@
     "postbuild": "npm run check:dist",
     "dev": "node scripts/dev-server.mjs",
     "verify": "npm run check && npm test && npm run build && npm run check",
-    "eval:webmcp:smoke": "npx --yes webmcp-evals@0.0.4 --chrome-channel chrome smoke --url http://127.0.0.1:4173/ja/ --evals tests/webmcp-evals.json --verbose --reporter console"
+    "eval:webmcp:smoke": "npx --yes webmcp-evals@0.0.4 --chrome-channel chrome smoke --url http://127.0.0.1:4173/ --evals tests/webmcp-evals.json --verbose --reporter console",
+    "eval:webmcp:smoke:ja": "npx --yes webmcp-evals@0.0.4 --chrome-channel chrome smoke --url http://127.0.0.1:4173/ja/ --evals tests/webmcp-evals.json --verbose --reporter console"
   }
 }

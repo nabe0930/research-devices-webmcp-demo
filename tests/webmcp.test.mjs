@@ -19,6 +19,9 @@ test("exactly four bounded read-only WebMCP definitions are exposed", () => {
   assert.equal(definitions.length, 4);
   for (const definition of definitions) {
     assert.equal(definition.annotations.readOnlyHint, true);
+    assert.equal(definition.annotations.destructiveHint, false);
+    assert.equal(definition.annotations.idempotentHint, true);
+    assert.equal(definition.annotations.openWorldHint, false);
     assert.equal(definition.annotations.untrustedContentHint, true);
     assert.equal(definition.inputSchema.additionalProperties, false);
     assert.match(definition.description, /synthetic|fictional/i);
@@ -44,6 +47,42 @@ test("registration uses document.modelContext-compatible registerTool calls", as
   assert.match(calls[0].definition.title, /合成/);
   registration.dispose();
   assert.ok(calls.every((call) => call.options.signal.aborted));
+});
+
+test("registration never depends on the dataset fetch", async () => {
+  // The page registers before it loads data, so a slow or failing snapshot fetch can
+  // never leave a WebMCP browser with zero registered tools.
+  let loaderCalls = 0;
+  const failingLoader = () => {
+    loaderCalls += 1;
+    return Promise.reject(new Error("dataset unavailable"));
+  };
+  const registered = [];
+  const registration = await registerWebMCPTools({
+    modelContext: {
+      async registerTool(definition) {
+        registered.push(definition.name);
+      },
+    },
+    handlers: createToolHandlers(failingLoader),
+    origin,
+  });
+  assert.equal(registration.supported, true);
+  assert.deepEqual(registered, [...TOOL_NAMES]);
+  assert.equal(loaderCalls, 0);
+  registration.dispose();
+});
+
+test("a failed dataset fetch surfaces per call instead of blocking registration", async () => {
+  const definitions = createToolDefinitions(createToolHandlers(() => Promise.reject(new Error("dataset unavailable"))), {
+    origin,
+    outputProfile: "agent",
+  });
+  assert.equal(definitions.length, 4);
+  await assert.rejects(
+    () => definitions[0].execute({ query: "RD-SYN qPCR" }),
+    /dataset unavailable/,
+  );
 });
 
 test("unsupported browsers fail closed without registering a substitute", async () => {

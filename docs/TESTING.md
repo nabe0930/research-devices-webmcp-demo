@@ -1,8 +1,20 @@
 # Research-Devices WebMCP — Testing Instructions
 
+## Step 0 — Get a WebMCP-capable browser
+
+Native WebMCP is exposed by a supporting browser only. Pick one:
+
+- **ChatGPT desktop app.** Update to the latest version, open its built-in browser, and enable **Settings > Browser > Permissions > Enable site tools**. Current model and workspace availability is listed in the [OpenAI Site tools guide](https://learn.chatgpt.com/docs/webmcp).
+- **Chrome local testing.** Open `chrome://flags/#enable-webmcp-testing`, set the flag to Enabled, and restart Chrome. Chrome documents its origin trial separately in the [official WebMCP guide](https://developer.chrome.com/docs/ai/webmcp).
+
+Verification that the browser is ready: open the developer console on any page and evaluate
+`typeof document.modelContext?.registerTool`. The expected value is `function`. If it is
+`undefined`, the browser does not expose WebMCP and steps 1-5 below cannot pass; the on-page
+inspector buttons will still run the same handlers, but that is not Native WebMCP execution.
+
 ## Live WebMCP test
 
-Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository and Native WebMCP checks completed 2026-08-30T00:50:21.890Z). For deterministic local verification, the loopback workflow below remains available.
+Use the planned live URL below only after deployment verification. For deterministic local verification, start the local server in the next section and use its loopback URL.
 
 1. Open https://research-devices-webmcp-demo.vercel.app/ in the challenge-provided WebMCP-enabled browser environment.
 2. Confirm that the page reports four registered tools:
@@ -43,6 +55,12 @@ With the local server running, execute the deterministic Native WebMCP smoke jou
 
 ```bash
 npm run eval:webmcp:smoke
+```
+
+The same journey against the Japanese page:
+
+```bash
+npm run eval:webmcp:smoke:ja
 ```
 
 Expected result:

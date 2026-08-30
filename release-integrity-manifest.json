@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "kind": "synthetic_public_verified_candidate",
+  "kind": "synthetic_public_release_candidate",
   "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
   "licenseStatus": "applied",
-  "fileCount": 52,
+  "fileCount": 51,
   "files": [
     {
       "path": ".gitignore",
@@ -12,8 +12,8 @@
     },
     {
       "path": "DATA-NOTICE.md",
-      "bytes": 1799,
-      "sha256": "e7e9c6a0c8adf996036572c93150945eda8f9f9d92b8fd0666fbd9ed621dc536"
+      "bytes": 1830,
+      "sha256": "6ee755d55730442c7957b41f7396d41abb6216ed6ccffbc75f6e11f311dae99c"
     },
     {
       "path": "LICENSE",
@@ -22,18 +22,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4671,
-      "sha256": "a3190befe4b7374510563b23e8853c9e366ff2d60e4c0125bba51dd307889feb"
-    },
-    {
-      "path": "approved-release-integrity-manifest.json",
-      "bytes": 12933,
-      "sha256": "c8289b0bd8d24e9243dd039e54518208ce4e000d672ab8cbebdb6b8edc72958b"
+      "bytes": 6970,
+      "sha256": "02d09b41fae0932ab526915ba1b11b3f656e3dce14adaca00cf5a11f42e2f9c4"
     },
     {
       "path": "approved-review-manifest.json",
-      "bytes": 19855,
-      "sha256": "c6452d10bfd472ced8bce9f159504caab0997631a80112f8a782d2d185c321c2"
+      "bytes": 19858,
+      "sha256": "d2ea95f15f60e07669a1cad35feaae6be70af68a856a4657e44bbc25d30e95a6"
     },
     {
       "path": "assets/data-notice.css",
@@ -122,28 +117,28 @@
     },
     {
       "path": "docs/TESTING.md",
-      "bytes": 2534,
-      "sha256": "61d784483124a7def2d0a7908b3f7cca61c0831399063992044c744bc22bbbfd"
+      "bytes": 3565,
+      "sha256": "44948988e2a9eeb90425e29be8a55c8ed8e9ea20e0d81e49b8fb16a0edd69d43"
     },
     {
       "path": "index.html",
-      "bytes": 8617,
-      "sha256": "941829acb4392b2b123c84a800a8d8b7752e9c41de57f40b7b984e3321f5e39f"
+      "bytes": 9876,
+      "sha256": "c73e55b74912d97f605b983f37fb363b3fc5dcefb547a5a5f647fe5f30536fb5"
     },
     {
       "path": "ja/index.html",
-      "bytes": 9111,
-      "sha256": "db51ab4eba59e13bdc9229dd9272b6222305c92aba7129b6d3815848ddde065a"
+      "bytes": 10514,
+      "sha256": "14e4be8853d896361d8e80a4573369154c89d3932c8effb41247bfd74f15db00"
     },
     {
       "path": "package.json",
-      "bytes": 710,
-      "sha256": "b12c5d978c29d323e837967c99da60b59b50c25cd8149106361fd43a3078e50a"
+      "bytes": 890,
+      "sha256": "50452f3eebc64e5ce37ba3e078e39f9a49332a492eef839a6c43b99aa7914cb8"
     },
     {
       "path": "release-manifest.json",
-      "bytes": 1173,
-      "sha256": "126b178f4bc16cd79b446b539c4bce841d55d7a60fbfa4f6938265228e6ebbaa"
+      "bytes": 521,
+      "sha256": "1b221ebf88ed1c2f6c02f0cd9700c18f71a0c68a40a8f34924007a1a340fd7cf"
     },
     {
       "path": "scripts/build-contract.mjs",
@@ -197,8 +192,8 @@
     },
     {
       "path": "src/app.js",
-      "bytes": 7942,
-      "sha256": "5b3730d0507343ee59ebc95fed840af46e5cd838d01b0c3e0e0f887ccc11c649"
+      "bytes": 8357,
+      "sha256": "be3f6d702f945d900e623fe18c0bc2602ac405b04a1112f3bcf8a12d3205eef7"
     },
     {
       "path": "src/data-store.js",
@@ -212,13 +207,13 @@
     },
     {
       "path": "src/webmcp.js",
-      "bytes": 13907,
-      "sha256": "0e079a21077ec217be39c67c073c50457d8c376e13a3de71b22add6204a63b80"
+      "bytes": 13981,
+      "sha256": "e0da38f21be6405bcf9f92aa5abf66f3d9a5188ae4cadc34cd3721596eedb929"
     },
     {
       "path": "styles.css",
-      "bytes": 10237,
-      "sha256": "0e9cf48537504118f63de82c6f7bc7589cefab4a44f4f64a666443fa97823b59"
+      "bytes": 11263,
+      "sha256": "90f6ccd1a03385d5929d4d1c7aaf854a1be9b53078976f02075a3629e57d0515"
     },
     {
       "path": "tests/dist-check.test.mjs",
@@ -257,8 +252,8 @@
     },
     {
       "path": "tests/webmcp.test.mjs",
-      "bytes": 6953,
-      "sha256": "35a9f37c54df159a012763b4276f28e9b30abd85c61f2683c6f220a7f151f255"
+      "bytes": 8347,
+      "sha256": "33a47aadfb928bbd52cb2129182652bea707c4e3421f4e42fe4d0cf806c96db4"
     },
     {
       "path": "vercel.json",
@@ -266,7 +261,7 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "a449a81ef861080486dabbda5731dbd9b7056803c29bf487f580aab34809c9cb",
+  "contentSha256": "4af4b256a330cadb030909204d79104fd8df19ef398faffbe6265186a7a5cdb2",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -356,13 +351,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 8617,
-      "sha256": "941829acb4392b2b123c84a800a8d8b7752e9c41de57f40b7b984e3321f5e39f"
+      "bytes": 9876,
+      "sha256": "c73e55b74912d97f605b983f37fb363b3fc5dcefb547a5a5f647fe5f30536fb5"
     },
     {
       "path": "ja/index.html",
-      "bytes": 9111,
-      "sha256": "db51ab4eba59e13bdc9229dd9272b6222305c92aba7129b6d3815848ddde065a"
+      "bytes": 10514,
+      "sha256": "14e4be8853d896361d8e80a4573369154c89d3932c8effb41247bfd74f15db00"
     },
     {
       "path": "sources/synthetic-methods-corpus/index.html",
@@ -376,8 +371,8 @@
     },
     {
       "path": "src/app.js",
-      "bytes": 7942,
-      "sha256": "5b3730d0507343ee59ebc95fed840af46e5cd838d01b0c3e0e0f887ccc11c649"
+      "bytes": 8357,
+      "sha256": "be3f6d702f945d900e623fe18c0bc2602ac405b04a1112f3bcf8a12d3205eef7"
     },
     {
       "path": "src/data-store.js",
@@ -391,13 +386,13 @@
     },
     {
       "path": "src/webmcp.js",
-      "bytes": 13907,
-      "sha256": "0e079a21077ec217be39c67c073c50457d8c376e13a3de71b22add6204a63b80"
+      "bytes": 13981,
+      "sha256": "e0da38f21be6405bcf9f92aa5abf66f3d9a5188ae4cadc34cd3721596eedb929"
     },
     {
       "path": "styles.css",
-      "bytes": 10237,
-      "sha256": "0e9cf48537504118f63de82c6f7bc7589cefab4a44f4f64a666443fa97823b59"
+      "bytes": 11263,
+      "sha256": "90f6ccd1a03385d5929d4d1c7aaf854a1be9b53078976f02075a3629e57d0515"
     },
     {
       "path": "vercel.json",
@@ -405,6 +400,6 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "5f13adbce8cdae8fe481ee9af11629c800066879497d087f5ca47e8fc2f9a4e0",
-  "approvalSha256": "13901f31b6b3745c10be6cda25673aac3c97de1692339441375c053f4439b289"
+  "distSha256": "0a368ffe5f0c4de87d4c107830aa6d2da40390ea590026b714e9ffc74315413c",
+  "approvalSha256": "730078614fdacb01d250956526bba818c160ecfa5271993d26d20bc818c22181"
 }

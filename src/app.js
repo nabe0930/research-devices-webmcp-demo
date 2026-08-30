@@ -119,15 +119,42 @@ function showError(error) {
   });
 }
 
+async function registerNative(handlers) {
+  nativeRegistration = await registerWebMCPTools({
+    handlers,
+    onActivity: appendNativeActivity,
+    locale,
+    origin: location.origin,
+  });
+  if (nativeRegistration.supported) {
+    nativeRegisteredTools = nativeRegistration.registeredTools.length;
+    nativeStatus.textContent = copy.nativeReady;
+    nativeStatus.dataset.state = "ready";
+    nativeLog.textContent = copy.nativeSummary(
+      nativeRegisteredTools,
+      nativeExecutedTools.size,
+      nativeExecutions,
+    );
+  } else {
+    nativeStatus.textContent = copy.nativeUnavailable;
+    nativeStatus.dataset.state = "unavailable";
+    nativeLog.textContent = copy.noNativeCalls;
+  }
+}
+
 async function initialize() {
   datasetStatus.textContent = copy.loading;
-  const data = await loadDemoData();
-  productCount.textContent = String(data.profile.counts.products);
-  categoryCount.textContent = String(data.profile.counts.categories);
-  corpusCount.textContent = String(data.profile.counts.corpusRecords);
-  datasetStatus.textContent = `${copy.ready} · ${data.datasetVersion}`;
 
-  const handlers = createToolHandlers(() => Promise.resolve(data));
+  // Registration must not depend on the dataset fetch. `createToolHandlers()` uses the
+  // cached lazy loader, so each execute callback resolves the snapshot on first use and
+  // a slow or failed fetch can never leave the page with zero registered tools.
+  const handlers = createToolHandlers();
+  const nativeTask = registerNative(handlers).catch(() => {
+    nativeStatus.textContent = copy.nativeFailed;
+    nativeStatus.dataset.state = "error";
+    nativeLog.textContent = copy.noNativeCalls;
+  });
+
   const localDefinitions = new Map(
     createToolDefinitions(handlers, {
       locale,
@@ -167,32 +194,16 @@ async function initialize() {
     });
   }
 
-  nativeRegistration = await registerWebMCPTools({
-    handlers,
-    onActivity: appendNativeActivity,
-    locale,
-    origin: location.origin,
-  });
-  if (nativeRegistration.supported) {
-    nativeRegisteredTools = nativeRegistration.registeredTools.length;
-    nativeStatus.textContent = copy.nativeReady;
-    nativeStatus.dataset.state = "ready";
-    nativeLog.textContent = copy.nativeSummary(
-      nativeRegisteredTools,
-      nativeExecutedTools.size,
-      nativeExecutions,
-    );
-  } else {
-    nativeStatus.textContent = copy.nativeUnavailable;
-    nativeStatus.dataset.state = "unavailable";
-    nativeLog.textContent = copy.noNativeCalls;
-  }
+  const data = await loadDemoData();
+  productCount.textContent = String(data.profile.counts.products);
+  categoryCount.textContent = String(data.profile.counts.categories);
+  corpusCount.textContent = String(data.profile.counts.corpusRecords);
+  datasetStatus.textContent = `${copy.ready} · ${data.datasetVersion}`;
+  await nativeTask;
 }
 
 initialize().catch((error) => {
   datasetStatus.textContent = error instanceof Error ? error.message : copy.failed;
-  nativeStatus.textContent = copy.nativeFailed;
-  nativeStatus.dataset.state = "error";
   showError(error);
 });
 

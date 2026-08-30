@@ -38,10 +38,24 @@
             and synthetic methods-corpus functions with the browser’s WebMCP API. It is not an
             embedded chatbot.
           </p>
+          <ul class="tool-chips" aria-label="Registered WebMCP tools">
+            <li><code>search_devices</code></li>
+            <li><code>compare_devices</code></li>
+            <li><code>get_price_range</code></li>
+            <li><code>get_literature_signal</code></li>
+          </ul>
           <div class="status-strip" role="status" aria-live="polite">
             <span class="status-dot" aria-hidden="true"></span>
             <span data-native-status>Checking Native WebMCP support…</span>
           </div>
+          <p class="browser-hint">
+            To run these tools natively, open this page in the latest <strong>ChatGPT desktop app’s
+            built-in browser</strong> and enable <strong>Settings › Browser › Permissions › Enable
+            site tools</strong>. For local Chrome testing, enable
+            <code>chrome://flags/#enable-webmcp-testing</code> and restart Chrome. Availability can
+            vary by rollout; see the <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">official setup guide</a>.
+            Without WebMCP, the page still works and the buttons below run the same handlers.
+          </p>
           <p class="dataset-status" data-dataset-status>Preparing the synthetic snapshot…</p>
         </div>
         <aside class="prompt-card" aria-label="Example browser-agent request">
@@ -161,6 +175,11 @@
 
     <footer class="site-footer shell">
       <span>Research-Devices WebMCP challenge demo</span>
+      <nav class="footer-links" aria-label="Project resources">
+        <a href="https://github.com/nabe0930/research-devices-webmcp-demo" rel="noreferrer">Source code</a>
+        <a href="https://youtu.be/v6tu7RhrECA" rel="noreferrer">Demo video</a>
+        <a href="/data-notice/">Synthetic data notice</a>
+      </nav>
       <span>Read-only · static · fully synthetic</span>
     </footer>
   </body>

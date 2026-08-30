@@ -12,6 +12,9 @@ export const AGENT_OUTPUT_MAX_CHARS = 1_500;
 
 const annotations = Object.freeze({
   readOnlyHint: true,
+  destructiveHint: false,
+  idempotentHint: true,
+  openWorldHint: false,
   untrustedContentHint: true,
 });
 
