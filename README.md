@@ -2,12 +2,12 @@
 
 Evidence-aware instrument comparison through four bounded, read-only WebMCP tools.
 
-## Publication-ready release candidate
+## Verified public release
 
-- Planned live demo URL (not yet verified): https://research-devices-webmcp-demo.vercel.app/
-- Planned public repository URL (not yet verified): https://github.com/nabe0930/research-devices-webmcp-demo
+- Live demo: https://research-devices-webmcp-demo.vercel.app/
+- Public repository: https://github.com/nabe0930/research-devices-webmcp-demo
 
-This isolated WebMCP Challenge candidate has not been published or deployed by the local transformation. The npm package remains `private: true` to prevent registry publication; the candidate source code is licensed under MIT.
+The public repository, deployed static files, security headers, and four Native WebMCP tool executions were read-only verified at 2026-08-30T00:50:21.890Z. The npm package remains `private: true` to prevent registry publication; the source code is licensed under MIT.
 
 ## What it demonstrates
 

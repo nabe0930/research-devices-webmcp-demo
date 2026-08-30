@@ -2,7 +2,7 @@
 
 ## Live WebMCP test
 
-Use the planned live URL below only after deployment verification. For deterministic local verification, start the local server in the next section and use its loopback URL.
+Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository and Native WebMCP checks completed 2026-08-30T00:50:21.890Z). For deterministic local verification, the loopback workflow below remains available.
 
 1. Open https://research-devices-webmcp-demo.vercel.app/ in the challenge-provided WebMCP-enabled browser environment.
 2. Confirm that the page reports four registered tools:
