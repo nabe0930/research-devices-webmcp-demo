@@ -24,16 +24,16 @@ const copy = {
     noteIdle: "Run a call to see what the structured result means for the brief above.",
     notes: {
       search_devices:
-        "Four qPCR records match, and RD-SYN qPCR A and B are the two active candidates for the brief. Nothing is ranked yet — this call only establishes the shortlist and where each record came from.",
+        "Four qPCR records match. The bounded request returns RD-SYN qPCR A and B by stable ID and preserves where each record came from. Nothing is ranked or selected yet.",
       compare_devices:
-        "B carries the brief on capability: 6 detection channels against A's 4, and audit_trail is a typed true where A is a typed false. Neither field is blank, so the agent cannot mistake the audit trail for a value it may guess.",
+        "Both records have 96 wells. B has 6 detection channels and supports up to 6 multiplex targets, against A's 4 and 4. audit_trail is a typed true for B and false for A; neither value is missing.",
       get_price_range:
         "A summarises two fictional observations, producing a bounded synthetic span of ¥4,800,000–5,100,000 under the ¥6,000,000 ceiling. B rests on one fictional observation at ¥6,900,000 — rangeStatus says single_observation, so it is a point, not a market price, and it breaches the ceiling.",
       get_literature_signal:
-        "A appears in 7 of the 12 fictional methods records and B in 6. That is corpus frequency and nothing more: it is not citations, not validation, and it must not be allowed to overturn the audit-trail requirement.",
+        "A is named in 7 of the 12 fictional research records created for this demo and B in 6. These are device-name mention counts, not papers, citations, validation, or verified use, and they do not resolve the capability-budget trade-off.",
     },
     verdict:
-      "No universal winner. If the GLP audit trail is a hard requirement, only B qualifies and the budget has to move — on the strength of one fictional price observation. If it is negotiable, A fits the ceiling with a bounded span derived from two fictional observations, and loses 6-colour multiplex. The tools surface that trade-off; the researcher decides it.",
+      "No record meets every constraint. B satisfies the six-channel, six-target, and audit_trail: true fields, but its single fictional price observation is ¥6,900,000, above the ceiling. A fits the ceiling based on two fictional observations, but has four channels, four maximum targets, and audit_trail: false. The tools expose the trade-off; the researcher decides.",
   },
   ja: {
     loading: "対象限定の合成データを読み込んでいます…",
@@ -55,16 +55,16 @@ const copy = {
     noteIdle: "いずれかの呼び出しを実行すると、その構造化結果が上の検討条件にとって何を意味するかを表示します。",
     notes: {
       search_devices:
-        "qPCRレコードは4件該当し、うちRD-SYN qPCR AとBが検討条件に対する現行候補です。この時点では順位付けは行わず、候補範囲と各レコードの出所を確定させるだけです。",
+        "qPCRレコードは4件該当します。対象限定の依頼により、RD-SYN qPCR AとBを安定IDで返し、各レコードの出所を保持します。この時点では順位付けも選定も行いません。",
       compare_devices:
-        "性能面ではBが条件を満たします。検出チャンネルは6対4、audit_trailはBが型付きのtrue、Aが型付きのfalseです。どちらも空欄ではないため、AIが監査証跡を推測してよい欠損と誤認できません。",
+        "両方とも96ウェルです。Bは検出チャンネル数6・最大マルチプレックス数6、Aは4・4です。audit_trailはBが型付きのtrue、Aがfalseで、いずれも欠損ではありません。",
       get_price_range:
         "Aは架空観測2件の要約なので、480〜510万円は予算600万円以内に収まる対象限定の合成価格幅です。Bは690万円の架空観測1件のみで、rangeStatusはsingle_observation。レンジではなく単一の点であり、かつ予算を超過します。",
       get_literature_signal:
-        "Aは架空メソッドレコード12件中7件、Bは6件に出現します。これはコーパス内の出現頻度にすぎません。引用数でも妥当性検証でもなく、監査証跡の要件を覆す根拠にしてはいけません。",
+        "Aはこのデモ用に作成した架空研究記録12件中7件、Bは6件で機器名が言及されています。論文数、引用数、妥当性検証、実利用の証拠ではなく、機能と予算のトレードオフを解消する基準でもありません。",
     },
     verdict:
-      "普遍的な勝者はいません。GLP監査証跡が必須要件なら、条件を満たすのはBだけで、予算を動かす必要があります。しかもその判断材料は架空価格観測1件です。監査証跡が交渉可能なら、Aは予算内に収まり、架空観測2件から導出した対象限定の価格幅を持ちますが、6色マルチプレックスを失います。ツールはこのトレードオフを可視化するだけで、決めるのは研究者です。",
+      "すべての条件を満たす候補はありません。Bは検出6チャンネル・最大6ターゲット・audit_trail: trueを満たしますが、架空価格は単一観測の690万円で予算超過です。Aは架空観測2件に基づく480万〜510万円で予算内ですが、検出4チャンネル・最大4ターゲット・audit_trail: falseです。ツールはこの対立を可視化し、最終判断は研究者が行います。",
   },
 }[locale];
 

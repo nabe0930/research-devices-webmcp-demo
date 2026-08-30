@@ -2,13 +2,13 @@
 
 ## License status
 
-The synthetic JSON and generated dataset content in this candidate are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Source code, tests, and build logic are licensed separately under MIT. Public demo: https://research-devices-webmcp-demo.vercel.app/
+The synthetic JSON and generated dataset content in this candidate are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Source code, tests, and build logic are licensed separately under MIT. Planned public demo URL (not yet verified): https://research-devices-webmcp-demo.vercel.app/
 
 ## Covered data
 
-The candidate contains eight fictional device records, nine fictional price observations, twelve entrant-authored fictional methods records, and eight mention signals derived from those records.
+The candidate contains eight fictional device records, nine fictional price observations, twelve entrant-authored fictional research records, and eight device-name mention counts derived from those records.
 
-Every manufacturer label, device label, catalog number, specification value, price value, methods record, and source page was authored by Research-Devices solely for this demonstration.
+Every manufacturer label, device label, catalog number, specification value, price value, research record, and source page was authored by Research-Devices solely for this demonstration.
 
 ## Synthetic status
 
@@ -19,7 +19,7 @@ No third-party product data, product photographs, logos, datasheet text, manufac
 ## License boundary
 
 - Source code, tests, and build logic: MIT License.
-- Synthetic JSON and generated device, price-scenario, and methods-corpus content: Creative Commons Attribution 4.0 International.
+- Synthetic JSON and generated device, price-scenario, and fictional research-record content: Creative Commons Attribution 4.0 International.
 
 Canonical CC BY 4.0 license terms: https://creativecommons.org/licenses/by/4.0/
 

@@ -111,7 +111,7 @@ test("price currency filter never converts unavailable records", async () => {
   assert.equal(result.items[0].groups.length, 0);
 });
 
-test("synthetic methods signal is derived from the twelve-record corpus", async () => {
+test("device-name mention counts are derived from twelve fictional research records", async () => {
   const result = await tools.get_literature_signal({
     productIds: ["rd-syn-qpcr-a", "rd-syn-qpcr-b"],
   });

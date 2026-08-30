@@ -5,7 +5,7 @@
       {
         "role": "user",
         "type": "message",
-        "content": "Find RD-SYN qPCR A and RD-SYN qPCR B. Compare their normalized fictional specifications, inspect their fictional JPY price scenarios, and retrieve their synthetic methods-corpus mention signals with sources and limitations."
+        "content": "Compare fictional RD-SYN qPCR A and B for 96 wells, 6 detection channels, up to 6 multiplex targets, audit_trail true, and a JPY 6,000,000 ceiling. Use normalized specifications, fictional JPY price scenarios, and device-name mention counts from twelve fictional research records, with sources and limitations."
       }
     ],
     "expectedCall": [

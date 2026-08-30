@@ -39,6 +39,10 @@
             そこで本ページは、その突き合わせ自体を4つの型付き関数としてブラウザのWebMCP APIへ
             登録します。ページ内チャットボットではありません。
           </p>
+          <p class="lede lede-sub">
+            別運用のResearch-Devices本番サービスは1,500件を超える研究機器情報を整理しています。
+            この公開デモは本番カタログを公開せず、架空8件だけで、将来公開データへ適用できる構造を示します。
+          </p>
           <ul class="tool-chips" aria-label="登録済みWebMCPツール">
             <li><code>search_devices</code></li>
             <li><code>compare_devices</code></li>
@@ -65,9 +69,10 @@
         <aside class="prompt-card" aria-label="ブラウザAIへの依頼例">
           <span>ブラウザAIへの依頼例</span>
           <blockquote>
-            96ウェル・6色マルチプレックス・GLP監査証跡・予算600万円以内を条件として、架空の
-            RD-SYN qPCR AとBを比較してください。正規化仕様、合成JPY価格シナリオ、合成メソッド
-            コーパスを使い、トレードオフとすべての出典を示してください。
+            96ウェル、検出チャンネル数6、最大マルチプレックス数6、<code>audit_trail=true</code>、
+            予算600万円以内を条件として、架空のRD-SYN qPCR AとBを比較してください。正規化仕様、
+            架空のJPY価格シナリオ、このデモ用に作成した12件の架空研究記録内の機器名言及数を使い、
+            トレードオフとすべての出典を示してください。
           </blockquote>
           <p>Native呼び出しでは、この文章のスクレイピングではなく構造化JSON入力を使います。</p>
         </aside>
@@ -77,7 +82,7 @@
         <article><strong>4</strong><span>WebMCPツール</span></article>
         <article><strong data-product-count>8</strong><span>架空機器</span></article>
         <article><strong data-category-count>3</strong><span>汎用カテゴリ</span></article>
-        <article><strong data-corpus-count>12</strong><span>合成メソッドレコード</span></article>
+        <article><strong data-corpus-count>12</strong><span>架空研究記録</span></article>
       </section>
 
       <section class="brief shell" aria-labelledby="brief-title">
@@ -85,8 +90,9 @@
           <p class="eyebrow">検討条件</p>
           <h2 id="brief-title">それ自体では決着しない選定</h2>
           <p>
-            96ウェルのqPCR装置を、<strong>6色マルチプレックス</strong>・<strong>GLP監査証跡あり</strong>・
-            <strong>予算600万円以内</strong>で選定する。候補は架空レコード2件。数値はすべてデモ用の
+            96ウェルのqPCR装置を、<strong>検出チャンネル数6</strong>・<strong>最大マルチプレックス数6</strong>・
+            <strong><code>audit_trail=true</code></strong>・<strong>予算600万円以内</strong>で選定する。
+            候補は架空レコード2件。数値はすべてデモ用の
             架空値ですが、そこで生じる対立は、この仕組みが可視化しようとしている対立そのものです。
           </p>
           <p class="brief-summary">
@@ -95,8 +101,8 @@
         </div>
         <ul class="brief-reqs">
           <li><span>96ウェル</span><strong>両方が該当</strong></li>
-          <li><span>6色マルチプレックス</span><strong>Bのみ</strong></li>
-          <li><span>GLP監査証跡</span><strong>Bのみ</strong></li>
+          <li><span>検出6チャンネル／最大6ターゲット</span><strong>Bのみ</strong></li>
+          <li><span><code>audit_trail=true</code></span><strong>Bのみ</strong></li>
           <li><span>600万円以内</span><strong>Aのみ</strong></li>
         </ul>
       </section>
@@ -107,8 +113,8 @@
           <h2 id="journey-title">1つの候補比較を、4回の確認可能な呼び出しで実行</h2>
           <p>
             順に実行し、各結果の上に出る平易な読み取りを確認してください。下のボタンは同じ検証済み
-            契約とハンドラーをローカル実行します。ブラウザAIがNative WebMCP経由で実行した
-            呼び出しだけが、下部のNative証跡へ記録されます。
+            契約とハンドラーをローカル実行します。登録ツールがNative WebMCP経由で受け取った
+            execute callbackだけが、下部のNative証跡へ記録されます。呼出元はこの欄だけでは特定しません。
           </p>
         </div>
         <div class="tool-grid">
@@ -134,11 +140,11 @@
             <button type="button" data-run-tool="get_price_range">価格シナリオを確認</button>
           </article>
           <article class="tool-card">
-            <span class="step">04 · メソッドシグナル</span>
+            <span class="step">04 · 記録内の言及数</span>
             <h3><code>get_literature_signal</code></h3>
-            <p>応募者が作成した12件の架空レコード内の言及を、明確な意味づけとともに数えます。</p>
+            <p>このデモ用に作成した12件の架空研究記録内で、機器名が言及された件数を数えます。</p>
             <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
-            <button type="button" data-run-tool="get_literature_signal">コーパスシグナルを確認</button>
+            <button type="button" data-run-tool="get_literature_signal">機器名言及数を確認</button>
           </article>
         </div>
       </section>
@@ -167,7 +173,7 @@
             <h3>ページを読んだ場合</h3>
             <p>
               限定条件はすべて公開されています。ただし文章として、レコードページ・価格シナリオ
-              ページ・メソッドコーパスに分散し、しかも2言語で書かれています。690万円を正しく扱うには、
+              ページ・架空研究記録の一覧に分散し、しかも2言語で書かれています。690万円を正しく扱うには、
               AIは「単一観測はレンジではない」という注記を見つけ、それがその数値に適用されAの2件には
               適用されないと判断し、さらに「No / なし」という語を真偽値へ変換しなければなりません。
               どの段階も、静かに失敗しうる推測です。
@@ -197,8 +203,8 @@
             この回数は増えません。どのAIやブラウザ機能が呼び出したかは断定しません。
           </p>
         </div>
-        <div class="counter" aria-label="ブラウザAIによるNative execute callback回数" role="status" aria-live="polite">
-          <strong data-native-count>—</strong><span>ブラウザAI実行</span>
+        <div class="counter" aria-label="登録ツールが受け取ったNative execute callback回数" role="status" aria-live="polite">
+          <strong data-native-count>—</strong><span>登録ツールのcallback</span>
         </div>
         <ol class="event-list" data-native-events aria-live="polite"></ol>
       </section>
@@ -209,13 +215,13 @@
           <h2 id="boundary-title">意図的に狭くした公開範囲</h2>
         </div>
         <div class="boundary-grid">
-          <article><h3>含めるもの</h3><p>架空機器8件、架空価格観測9件、架空メソッドレコード12件、同一オリジンに生成した出典ページ。</p></article>
+          <article><h3>含めるもの</h3><p>架空機器8件、架空価格観測9件、架空研究記録12件、同一オリジンに生成した出典ページ。</p></article>
           <article><h3>含めないもの</h3><p>本番データ、会員レコード、投稿、アカウント、解析、Cookie、永続化、任意ネットワーク取得、製品画像、第三者製品商標。</p></article>
           <article><h3>解釈上の制限</h3><p>構造化した根拠処理のデモであり、実仕様、販売価格、出版物、購入推奨、または研究室での実利用を示しません。</p></article>
         </div>
         <nav class="source-links" aria-label="合成出典ページ">
           <a href="/sources/synthetic-price-scenarios/">価格シナリオ</a>
-          <a href="/sources/synthetic-methods-corpus/">メソッドコーパス</a>
+          <a href="/sources/synthetic-methods-corpus/">架空研究記録</a>
           <a href="/data-notice/">合成データ通知</a>
         </nav>
       </section>
@@ -225,7 +231,7 @@
       <span>Research-Devices WebMCP Challenge デモ</span>
       <nav class="footer-links" aria-label="プロジェクト関連リンク">
         <a href="https://github.com/nabe0930/research-devices-webmcp-demo" rel="noreferrer">ソースコード</a>
-        <a href="https://youtu.be/XUHtKikJtRs" rel="noreferrer">デモ動画</a>
+        <a href="https://youtu.be/VMb-7vmZe-E" rel="noreferrer">デモ動画</a>
         <a href="/data-notice/">合成データ通知</a>
       </nav>
       <span>読み取り専用 · 静的 · 完全な架空データ</span>

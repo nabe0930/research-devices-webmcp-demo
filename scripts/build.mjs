@@ -21,6 +21,20 @@ async function exists(path) {
   }
 }
 
+async function moveDirectory(source, destination) {
+  try {
+    await rename(source, destination);
+  } catch (error) {
+    if (error?.code !== "EXDEV") throw error;
+    await cp(source, destination, {
+      recursive: true,
+      force: false,
+      errorOnExist: true,
+    });
+    await rm(source, { recursive: true, force: true });
+  }
+}
+
 await validateCandidateData();
 await rm(staging, { recursive: true, force: true });
 await mkdir(staging, { recursive: true });
@@ -63,7 +77,7 @@ if (await exists(target)) {
   const backup = resolve(backupDirectory, `${basename(root)}-dist.bak-${timestamp}`);
   if (await exists(backup)) throw new Error(`Build backup already exists: ${backup}`);
   await mkdir(backupDirectory, { recursive: true });
-  await rename(target, backup);
+  await moveDirectory(target, backup);
 }
-await rename(staging, target);
+await moveDirectory(staging, target);
 console.log(`synthetic build: PASS files=${files.length}`);

@@ -325,7 +325,7 @@ export function createToolHandlers(dataLoader = loadDemoData) {
         };
       });
       return {
-        summary: `Synthetic methods-corpus signals are available for ${items.filter((item) => item.available).length} of ${items.length} requested records.`,
+        summary: `Device-name mention counts are available for ${items.filter((item) => item.available).length} of ${items.length} requested records.`,
         products: products.map((product) => productReference(product, data)),
         items,
         sources: [...new Set(items.flatMap((item) => [item.productUrl, item.sourceUrl].filter(Boolean)))],

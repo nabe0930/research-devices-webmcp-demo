@@ -3,12 +3,12 @@
   "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
   "datasetKind": "entrant_authored_synthetic_methods_corpus",
   "licenseStatus": "applied",
-  "countSemanticsEn": "mentionRecordCount is the number of entrant-authored synthetic methods records whose mentionedProductIds array contains the synthetic product ID.",
-  "countSemanticsJa": "mentionRecordCountは、合成製品IDをmentionedProductIds配列に含む、応募者作成の合成メソッドレコード数です。",
+  "countSemanticsEn": "mentionRecordCount is the number of fictional research records created for this demo whose mentionedProductIds array contains the fictional product ID.",
+  "countSemanticsJa": "mentionRecordCountは、このデモ用に作成した架空研究記録のうち、mentionedProductIds配列に架空製品IDを含む記録数です。",
   "corpus": {
     "id": "rd-synthetic-methods-corpus-v1",
-    "nameEn": "Research-Devices Synthetic Methods Corpus v1",
-    "nameJa": "Research-Devices 合成メソッドコーパス v1",
+    "nameEn": "Research-Devices Fictional Research Records v1",
+    "nameJa": "Research-Devices 架空研究記録 v1",
     "authoredDate": "2026-08-30",
     "sourcePath": "/sources/synthetic-methods-corpus/",
     "synthetic": true
@@ -16,8 +16,8 @@
   "records": [
     {
       "id": "rdm-001",
-      "titleEn": "Synthetic methods note 01: 96-well screening baseline",
-      "titleJa": "合成メソッドノート01：96ウェルスクリーニング基準",
+      "titleEn": "Fictional research record 01: 96-well screening baseline",
+      "titleJa": "架空研究記録01：96ウェルスクリーニング基準",
       "summaryEn": "A fictional workflow note comparing two synthetic 96-well records under a shared baseline.",
       "summaryJa": "2つの合成96ウェルレコードを共通基準で比較する架空ワークフローノートです。",
       "mentionedProductIds": [
@@ -29,8 +29,8 @@
     },
     {
       "id": "rdm-002",
-      "titleEn": "Synthetic methods note 02: throughput scaling comparison",
-      "titleJa": "合成メソッドノート02：スループット拡張比較",
+      "titleEn": "Fictional research record 02: throughput scaling comparison",
+      "titleJa": "架空研究記録02：スループット拡張比較",
       "summaryEn": "A fictional workflow note comparing two 96-well records with one 384-well record.",
       "summaryJa": "2つの96ウェル合成レコードと1つの384ウェル合成レコードを比較する架空ノートです。",
       "mentionedProductIds": [
@@ -43,8 +43,8 @@
     },
     {
       "id": "rdm-003",
-      "titleEn": "Synthetic methods note 03: compact-lab amplification workflow",
-      "titleJa": "合成メソッドノート03：小規模ラボ増幅ワークフロー",
+      "titleEn": "Fictional research record 03: compact-lab amplification workflow",
+      "titleJa": "架空研究記録03：小規模ラボ増幅ワークフロー",
       "summaryEn": "A fictional workflow note contrasting two 96-well records with a compact record.",
       "summaryJa": "2つの96ウェル合成レコードと小型合成レコードを対比する架空ノートです。",
       "mentionedProductIds": [
@@ -57,8 +57,8 @@
     },
     {
       "id": "rdm-004",
-      "titleEn": "Synthetic methods note 04: multi-channel assay scenario",
-      "titleJa": "合成メソッドノート04：多チャンネルアッセイシナリオ",
+      "titleEn": "Fictional research record 04: multi-channel assay scenario",
+      "titleJa": "架空研究記録04：多チャンネルアッセイシナリオ",
       "summaryEn": "A fictional scenario note covering three synthetic amplification records.",
       "summaryJa": "3つの合成増幅装置レコードを扱う架空シナリオノートです。",
       "mentionedProductIds": [
@@ -71,8 +71,8 @@
     },
     {
       "id": "rdm-005",
-      "titleEn": "Synthetic methods note 05: mixed-capacity workflow",
-      "titleJa": "合成メソッドノート05：容量混在ワークフロー",
+      "titleEn": "Fictional research record 05: mixed-capacity workflow",
+      "titleJa": "架空研究記録05：容量混在ワークフロー",
       "summaryEn": "A fictional note comparing small, standard, and high-throughput capacities.",
       "summaryJa": "小型、標準、高スループット容量を比較する架空ノートです。",
       "mentionedProductIds": [
@@ -85,8 +85,8 @@
     },
     {
       "id": "rdm-006",
-      "titleEn": "Synthetic methods note 06: two-device verification run",
-      "titleJa": "合成メソッドノート06：2装置検証ラン",
+      "titleEn": "Fictional research record 06: two-device verification run",
+      "titleJa": "架空研究記録06：2装置検証ラン",
       "summaryEn": "A fictional verification note for two synthetic 96-well records.",
       "summaryJa": "2つの合成96ウェルレコードを対象とする架空検証ノートです。",
       "mentionedProductIds": [
@@ -98,8 +98,8 @@
     },
     {
       "id": "rdm-007",
-      "titleEn": "Synthetic methods note 07: amplification and absorbance handoff",
-      "titleJa": "合成メソッドノート07：増幅・吸光測定引き継ぎ",
+      "titleEn": "Fictional research record 07: amplification and absorbance handoff",
+      "titleJa": "架空研究記録07：増幅・吸光測定引き継ぎ",
       "summaryEn": "A fictional cross-category handoff between one amplification and one absorbance record.",
       "summaryJa": "増幅レコードと吸光測定レコード間の架空カテゴリ横断引き継ぎです。",
       "mentionedProductIds": [
@@ -111,8 +111,8 @@
     },
     {
       "id": "rdm-008",
-      "titleEn": "Synthetic methods note 08: multimode quantification handoff",
-      "titleJa": "合成メソッドノート08：マルチモード定量引き継ぎ",
+      "titleEn": "Fictional research record 08: multimode quantification handoff",
+      "titleJa": "架空研究記録08：マルチモード定量引き継ぎ",
       "summaryEn": "A fictional workflow note linking one amplification and two microvolume records.",
       "summaryJa": "1つの増幅レコードと2つの微量分析レコードを結ぶ架空ワークフローノートです。",
       "mentionedProductIds": [
@@ -125,8 +125,8 @@
     },
     {
       "id": "rdm-009",
-      "titleEn": "Synthetic methods note 09: high-throughput and microvolume check",
-      "titleJa": "合成メソッドノート09：高スループット・微量分析確認",
+      "titleEn": "Fictional research record 09: high-throughput and microvolume check",
+      "titleJa": "架空研究記録09：高スループット・微量分析確認",
       "summaryEn": "A fictional cross-category note for one high-throughput and one microvolume record.",
       "summaryJa": "高スループットと微量分析の合成レコード各1件を扱う架空カテゴリ横断ノートです。",
       "mentionedProductIds": [
@@ -138,8 +138,8 @@
     },
     {
       "id": "rdm-010",
-      "titleEn": "Synthetic methods note 10: amplification and cell-count handoff",
-      "titleJa": "合成メソッドノート10：増幅・セルカウント引き継ぎ",
+      "titleEn": "Fictional research record 10: amplification and cell-count handoff",
+      "titleJa": "架空研究記録10：増幅・セルカウント引き継ぎ",
       "summaryEn": "A fictional handoff note joining a compact amplification record and a cell-count record.",
       "summaryJa": "小型増幅レコードとセルカウントレコードを結ぶ架空引き継ぎノートです。",
       "mentionedProductIds": [
@@ -151,8 +151,8 @@
     },
     {
       "id": "rdm-011",
-      "titleEn": "Synthetic methods note 11: cell-counting mode comparison",
-      "titleJa": "合成メソッドノート11：セルカウントモード比較",
+      "titleEn": "Fictional research record 11: cell-counting mode comparison",
+      "titleJa": "架空研究記録11：セルカウントモード比較",
       "summaryEn": "A fictional note comparing brightfield and dual-fluorescence counting modes.",
       "summaryJa": "明視野と2蛍光のカウントモードを比較する架空ノートです。",
       "mentionedProductIds": [
@@ -164,8 +164,8 @@
     },
     {
       "id": "rdm-012",
-      "titleEn": "Synthetic methods note 12: microvolume mode comparison",
-      "titleJa": "合成メソッドノート12：微量分析モード比較",
+      "titleEn": "Fictional research record 12: microvolume mode comparison",
+      "titleJa": "架空研究記録12：微量分析モード比較",
       "summaryEn": "A fictional note comparing absorbance-only and multimode microvolume records.",
       "summaryJa": "吸光専用とマルチモードの微量分析レコードを比較する架空ノートです。",
       "mentionedProductIds": [
@@ -281,12 +281,12 @@
   ],
   "limitations": {
     "en": [
-      "The corpus and every record in it are fictional and entrant-authored.",
+      "The collection and every record in it are fictional and entrant-authored.",
       "Mention counts are not publication counts, citation counts, unique-paper counts, or evidence of real-world use.",
       "The signal exists only to demonstrate structured provenance and bounded interpretation."
     ],
     "ja": [
-      "コーパスとその全レコードは架空であり、応募者が作成したものです。",
+      "この一覧とその全レコードは架空であり、応募者が作成したものです。",
       "言及件数は出版物数、引用数、重複排除済み論文数、または実利用の根拠ではありません。",
       "このシグナルは構造化された出典と対象限定の解釈を実演するためだけに存在します。"
     ]

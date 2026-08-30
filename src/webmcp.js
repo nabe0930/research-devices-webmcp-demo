@@ -134,10 +134,10 @@ const metadata = Object.freeze({
       "Retrieve fictional price observations grouped by original currency, basis, and configuration. Values are not offers, quotes, procurement evidence, or market prices.",
   },
   get_literature_signal: {
-    en: "Get synthetic methods-corpus signal",
-    ja: "合成メソッドコーパスのシグナルを確認",
+    en: "Get fictional research-record mention counts",
+    ja: "架空研究記録内の機器名言及数を確認",
     description:
-      "Retrieve entrant-authored synthetic methods-record mention signals with same-origin provenance and explicit interpretation limits.",
+      "Retrieve device-name mention counts from twelve fictional research records created for this demo, with same-origin provenance and explicit interpretation limits.",
   },
 });
 

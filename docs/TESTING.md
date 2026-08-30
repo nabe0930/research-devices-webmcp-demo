@@ -14,7 +14,7 @@ inspector buttons will still run the same handlers, but that is not Native WebMC
 
 ## Live WebMCP test
 
-Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository and Native WebMCP checks completed 2026-08-30T10:23:07.206Z). For deterministic local verification, the loopback workflow below remains available.
+Use the planned live URL below only after deployment verification. For deterministic local verification, start the local server in the next section and use its loopback URL.
 
 1. Open https://research-devices-webmcp-demo.vercel.app/ in the challenge-provided WebMCP-enabled browser environment.
 2. Confirm that the page reports four registered tools:
@@ -24,16 +24,16 @@ Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository 
    - `get_literature_signal`
 3. Give the browser agent this exact request:
 
-> Compare RD-SYN qPCR A and RD-SYN qPCR B. Use all four Research-Devices tools to find the records, compare their normalized specifications, retrieve their demo price observations and entrant-authored synthetic methods-corpus mention signals, include record URLs and sources, and explain which requirements favor each instrument. Preserve every data limitation and do not choose a universal winner.
+> Compare fictional RD-SYN qPCR A and B for a 96-well workflow requiring 6 detection channels, support for up to 6 multiplex targets, `audit_trail: true`, and a ¥6,000,000 ceiling. Use all four Research-Devices tools, normalized specifications, fictional JPY price scenarios, and device-name mention counts from twelve fictional research records created for this demo. Include record URLs and every source, preserve every limitation, and explain the trade-off.
 
 4. Confirm that the agent invokes all four tools and returns:
    - both demonstration records;
    - normalized specification differences;
    - price observations kept separate by currency and basis;
-   - entrant-authored synthetic methods-corpus mention signals labeled as neither papers, citations, nor verified use;
+   - device-name mention counts from twelve fictional research records, labeled as neither papers, citations, nor verified use;
    - record URLs, sources, dataset version, and limitations;
    - conditional guidance without an automatic winner.
-5. Inspect the Native WebMCP evidence panel. Native callbacks must be shown separately from human interactions and the guided preview.
+5. Inspect the Native WebMCP evidence panel after the request. It should show four callbacks and all four registered tool names, separately from human interactions and the guided preview. The panel proves callback receipt but does not identify the caller.
 
 ## Deterministic local verification
 
