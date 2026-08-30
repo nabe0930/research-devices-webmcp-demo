@@ -256,8 +256,8 @@
     },
     {
       "path": "scripts/finalize-public-release.mjs",
-      "bytes": 29301,
-      "sha256": "e3772a24b28758e590b3923b5f22bd832c9a911d6d72fd2fa768663dcc55f4d7"
+      "bytes": 29567,
+      "sha256": "9cd87f07c5080b997fd4b289bf38d80b63b8fe08e6e3bfaa4a7e811e5f60f2f7"
     },
     {
       "path": "scripts/prepare-public-release.mjs",
@@ -276,8 +276,8 @@
     },
     {
       "path": "submission-profile/PUBLICATION-RUNBOOK.md",
-      "bytes": 8967,
-      "sha256": "ab7040edec0b035d7348423ea0656280bd7309c918b277f80df690e6cb04c60c"
+      "bytes": 9026,
+      "sha256": "167f16edbbd304ee7639ba53ed2393da312dc75f4a8d6341e55cb10e58a39087"
     },
     {
       "path": "submission-profile/TESTING.md",
@@ -450,7 +450,7 @@
       "sha256": "d1ea1ddbe86149e1372b93fa474f60b8a8b5dc33cc8ef4c8fa15ffc455c9d47a"
     }
   ],
-  "sourceInputSha256": "7486fdeadaabf04afe04676a93104ce69a2f1fa4859d1cd2bff12672c6dcb514",
+  "sourceInputSha256": "da80e324d0e1e1932e6d006ca68d5303a7f6ac4c1bf6a4c7db9702562d54b6d7",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -590,5 +590,5 @@
     }
   ],
   "distSha256": "f3f64074b708895b30387c363f748f02529c5265751b8ff762f2a1c43359e740",
-  "approvalSha256": "4f91c639f9d10bafe387c9822b06392c2bf7e8674c16e7bbfdc28d7b2baedf93"
+  "approvalSha256": "d3b080c4a792d89038dbf04b9dac062fefe544ea956a224bcb3f25f36914eb0e"
 }

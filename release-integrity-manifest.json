@@ -28,7 +28,7 @@
     {
       "path": "approved-review-manifest.json",
       "bytes": 19855,
-      "sha256": "0f422df86b280585aee5978d6f0c12e57a39907710d44ad0c225f5c350e00c61"
+      "sha256": "c6452d10bfd472ced8bce9f159504caab0997631a80112f8a782d2d185c321c2"
     },
     {
       "path": "assets/data-notice.css",
@@ -138,7 +138,7 @@
     {
       "path": "release-manifest.json",
       "bytes": 521,
-      "sha256": "f9149b2f5835e693bb1bf8e48a80da9d05e8f43cd2e875c263580c212ff3614a"
+      "sha256": "b1682e5d1dabcc6e0d9ff52214e4612bd7c63618b3bcc178f2e248fc8f803aa0"
     },
     {
       "path": "scripts/build-contract.mjs",
@@ -261,7 +261,7 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "426207ed1286923098869d519df4294ad9782cbcc1b30edae771220e816059b4",
+  "contentSha256": "6d40e09b539158dd100d218e88937742f9127f24fdd05c2e14b8b137ed069e05",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -401,5 +401,5 @@
     }
   ],
   "distSha256": "5f13adbce8cdae8fe481ee9af11629c800066879497d087f5ca47e8fc2f9a4e0",
-  "approvalSha256": "e74ea385c2890c7a341d194706fb06ce5b51644a92b23e79d44fb064e1d2d68c"
+  "approvalSha256": "adb6e2bf55003541aeeb8c4f9f920ab5ef2860a745661d84536ee71766e37067"
 }
