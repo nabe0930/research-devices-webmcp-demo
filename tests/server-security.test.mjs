@@ -50,6 +50,7 @@ test("source JSON remains same-origin and old or private paths return 404", asyn
   }
   for (const path of [
     "/package.json",
+    "/vercel.json",
     "/README.md",
     "/scripts/build.mjs",
     "/tests/domain.test.mjs",

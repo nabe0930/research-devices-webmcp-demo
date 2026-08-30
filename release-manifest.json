@@ -3,7 +3,7 @@
   "artifactState": "public_ready",
   "liveVerification": "not_performed",
   "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
-  "approvedReviewCandidateSha256": "6535bf3e551eaa07ed868f7cc99275b1f4a0cfb580b016d4799ce2874a7f02ed",
+  "approvedReviewCandidateSha256": "59183cb16fa0bc74304bddc5edf237d6b19d6f4867cf2eedd3a750f425de62c0",
   "demoUrl": "https://research-devices-webmcp-demo.vercel.app/",
   "repositoryUrl": "https://github.com/nabe0930/research-devices-webmcp-demo",
   "codeLicense": "MIT",

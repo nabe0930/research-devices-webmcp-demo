@@ -127,8 +127,8 @@
     },
     {
       "path": "scripts/build-contract.mjs",
-      "bytes": 1243,
-      "sha256": "3aae2cfe03045753dacaf86ad7b7eff67e73e56769e0294c03851b4556540fff"
+      "bytes": 1225,
+      "sha256": "7723418d2fa59b3186ba0eaa1bd13daeeb12a9ee264c6e077d2daa244dff9a99"
     },
     {
       "path": "scripts/build.mjs",
@@ -227,8 +227,8 @@
     },
     {
       "path": "tests/server-security.test.mjs",
-      "bytes": 3063,
-      "sha256": "a3fe3fbcba5c561b76f9295a4227d3c02176381c0543ab66172267f28dc4fe90"
+      "bytes": 3083,
+      "sha256": "2bf171f3d68b51d174f9d31ad6ab135dfd27d7c874e674b227faf81febe6a1a5"
     },
     {
       "path": "tests/webmcp-evals.json",
@@ -246,7 +246,7 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "1935d44684c6241f17d8535c9a784be1ebf3992ea0452a7fdfa9c0054d201a01",
+  "contentSha256": "776e7f608972aec6c82475226a6a54aac93f7ec9acab00bd2d1df9e5de3e5345",
   "sourceInputCount": 40,
   "sourceInputs": [
     {
@@ -257,7 +257,7 @@
     {
       "path": "scripts/finalize-public-release.mjs",
       "bytes": 29895,
-      "sha256": "697263423c04204ec34e32eefc2dbe9f94d527c46cac1d79e715dcb3ac794288"
+      "sha256": "f42b671a6af117aefa4c72eae21ce10524f64e351442292fa5612413b4d260e9"
     },
     {
       "path": "scripts/prepare-public-release.mjs",
@@ -276,8 +276,8 @@
     },
     {
       "path": "submission-profile/PUBLICATION-RUNBOOK.md",
-      "bytes": 9337,
-      "sha256": "9ac2d138077e9d0a2a93b8ede1e4d8381368a7b46e70d19485935e7884c93701"
+      "bytes": 9489,
+      "sha256": "5df4a366d3a3c97530b5e4947020da2d79583e279203a595034b4681e04963e2"
     },
     {
       "path": "submission-profile/TESTING.md",
@@ -321,8 +321,8 @@
     },
     {
       "path": "submission-profile/runtime/scripts/build-contract.mjs",
-      "bytes": 1243,
-      "sha256": "3aae2cfe03045753dacaf86ad7b7eff67e73e56769e0294c03851b4556540fff"
+      "bytes": 1225,
+      "sha256": "7723418d2fa59b3186ba0eaa1bd13daeeb12a9ee264c6e077d2daa244dff9a99"
     },
     {
       "path": "submission-profile/runtime/scripts/build.mjs",
@@ -411,8 +411,8 @@
     },
     {
       "path": "submission-profile/runtime/tests/server-security.test.mjs",
-      "bytes": 3063,
-      "sha256": "a3fe3fbcba5c561b76f9295a4227d3c02176381c0543ab66172267f28dc4fe90"
+      "bytes": 3083,
+      "sha256": "2bf171f3d68b51d174f9d31ad6ab135dfd27d7c874e674b227faf81febe6a1a5"
     },
     {
       "path": "submission-profile/runtime/tests/webmcp-evals.json",
@@ -450,8 +450,8 @@
       "sha256": "d1ea1ddbe86149e1372b93fa474f60b8a8b5dc33cc8ef4c8fa15ffc455c9d47a"
     }
   ],
-  "sourceInputSha256": "e652abb466593e8b0a5d5258558c8203bfe449cf6ab2164a0e03c6fb03a132bf",
-  "distFileCount": 27,
+  "sourceInputSha256": "54076b88cf344ca2a7c8d4e0042956deb93ae2381a99182c71538ff3724c3627",
+  "distFileCount": 26,
   "distFiles": [
     {
       "path": "assets/data-notice.css",
@@ -582,13 +582,8 @@
       "path": "styles.css",
       "bytes": 14261,
       "sha256": "928a6c9c04209c5dd781e726909aacc3cdfaff7b05095cfcad547138cf047cc3"
-    },
-    {
-      "path": "vercel.json",
-      "bytes": 674,
-      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "b24ef55db9247b252f2cfde0bb98f012eaf9d171e6c96bb7385402ca400987a4",
-  "approvalSha256": "6535bf3e551eaa07ed868f7cc99275b1f4a0cfb580b016d4799ce2874a7f02ed"
+  "distSha256": "1c894c143376cc6a21685734b8d42dbde8c644443a20001a8e12a02d550103b6",
+  "approvalSha256": "59183cb16fa0bc74304bddc5edf237d6b19d6f4867cf2eedd3a750f425de62c0"
 }

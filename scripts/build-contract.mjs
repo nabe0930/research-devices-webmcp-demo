@@ -2,7 +2,6 @@ const staticFiles = [
   "index.html",
   "ja/index.html",
   "styles.css",
-  "vercel.json",
   "src/app.js",
   "src/data-store.js",
   "src/tools.js",
@@ -37,4 +36,3 @@ export function buildFilesForCatalog(catalog) {
     ...[...ids].map((id) => `devices/${id}/index.html`),
   ].sort();
 }
-

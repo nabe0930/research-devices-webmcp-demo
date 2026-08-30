@@ -27,8 +27,8 @@
     },
     {
       "path": "approved-review-manifest.json",
-      "bytes": 19864,
-      "sha256": "07c30e9be21523719990ba3dfe2a0ebae67101464f3071dd7b2f7546e5b7b78e"
+      "bytes": 19719,
+      "sha256": "73907aa8c50424c6e16e2101488f0cab774bca04c65b5ecf853a73026d799f6b"
     },
     {
       "path": "assets/data-notice.css",
@@ -138,12 +138,12 @@
     {
       "path": "release-manifest.json",
       "bytes": 521,
-      "sha256": "ebed597b06e3e10546937378c432a3985bae012593c4287d47576fd2b5541697"
+      "sha256": "d4d3268adb671aeaf92a8b9cfa5f6935c42ff79aeeab808b0a5b15f7f42dcbd6"
     },
     {
       "path": "scripts/build-contract.mjs",
-      "bytes": 1243,
-      "sha256": "3aae2cfe03045753dacaf86ad7b7eff67e73e56769e0294c03851b4556540fff"
+      "bytes": 1225,
+      "sha256": "7723418d2fa59b3186ba0eaa1bd13daeeb12a9ee264c6e077d2daa244dff9a99"
     },
     {
       "path": "scripts/build.mjs",
@@ -242,8 +242,8 @@
     },
     {
       "path": "tests/server-security.test.mjs",
-      "bytes": 3063,
-      "sha256": "a3fe3fbcba5c561b76f9295a4227d3c02176381c0543ab66172267f28dc4fe90"
+      "bytes": 3083,
+      "sha256": "2bf171f3d68b51d174f9d31ad6ab135dfd27d7c874e674b227faf81febe6a1a5"
     },
     {
       "path": "tests/webmcp-evals.json",
@@ -261,8 +261,8 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "9a8c16c226afabe87f785bb58f9cef7550296600764f0342c565a6714725e256",
-  "distFileCount": 27,
+  "contentSha256": "6e3ee4bd9220973c05450e8ed8405a94262e97d5e2cf9afaaa371593aa9fec78",
+  "distFileCount": 26,
   "distFiles": [
     {
       "path": "assets/data-notice.css",
@@ -393,13 +393,8 @@
       "path": "styles.css",
       "bytes": 14261,
       "sha256": "928a6c9c04209c5dd781e726909aacc3cdfaff7b05095cfcad547138cf047cc3"
-    },
-    {
-      "path": "vercel.json",
-      "bytes": 674,
-      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "2ac96b3f17be05edaa149cb62077b0b6f6115abe31fcbd24e30922b215bc3849",
-  "approvalSha256": "35145988b186844eab2e8b39c101f42b36d7737795a76e9817374792f5c73322"
+  "distSha256": "eddf6093ee1b9ee0850ba4f8714490b2368b4aae9417ac23824cac5026646951",
+  "approvalSha256": "40642c1019d745ddb4e5be5cf845b78509a08514c8ac8af65d6f544012f08502"
 }
