@@ -28,7 +28,7 @@
     {
       "path": "approved-review-manifest.json",
       "bytes": 19864,
-      "sha256": "a2a95a5db1e21bcf860cd17a00103ea38dc48121cee15a770ff32b814c5a6de7"
+      "sha256": "07c30e9be21523719990ba3dfe2a0ebae67101464f3071dd7b2f7546e5b7b78e"
     },
     {
       "path": "assets/data-notice.css",
@@ -123,12 +123,12 @@
     {
       "path": "index.html",
       "bytes": 13795,
-      "sha256": "004812a23eb98d89720e4df0d0ae416eae966ab5adcd0cdfd0cfe7079d1432ea"
+      "sha256": "e713c20b965b23ae386869142fecf68dba86e5de54d352eb2d2458a1b4eaeb6c"
     },
     {
       "path": "ja/index.html",
       "bytes": 14793,
-      "sha256": "d592820c8cd4c293a092b2332cab11d10b572beb197bcf8c11cd878d5da211c2"
+      "sha256": "b622ae646d9bd31e28433d02ea7f668e3eb9a54c76d9413f72bb960f34f20619"
     },
     {
       "path": "package.json",
@@ -138,7 +138,7 @@
     {
       "path": "release-manifest.json",
       "bytes": 521,
-      "sha256": "bd6879cb24d0416f98740ac8cf2bb7e6f11daa02e025ef2a5d977bcea7d62336"
+      "sha256": "ebed597b06e3e10546937378c432a3985bae012593c4287d47576fd2b5541697"
     },
     {
       "path": "scripts/build-contract.mjs",
@@ -261,7 +261,7 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "e5bc844af15172c5256eb7ebe6f596a015c85696aaac7ca1bc473dee191d59ef",
+  "contentSha256": "9a8c16c226afabe87f785bb58f9cef7550296600764f0342c565a6714725e256",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -352,12 +352,12 @@
     {
       "path": "index.html",
       "bytes": 13795,
-      "sha256": "004812a23eb98d89720e4df0d0ae416eae966ab5adcd0cdfd0cfe7079d1432ea"
+      "sha256": "e713c20b965b23ae386869142fecf68dba86e5de54d352eb2d2458a1b4eaeb6c"
     },
     {
       "path": "ja/index.html",
       "bytes": 14793,
-      "sha256": "d592820c8cd4c293a092b2332cab11d10b572beb197bcf8c11cd878d5da211c2"
+      "sha256": "b622ae646d9bd31e28433d02ea7f668e3eb9a54c76d9413f72bb960f34f20619"
     },
     {
       "path": "sources/synthetic-methods-corpus/index.html",
@@ -400,6 +400,6 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "d6e4fa580658702a094d5d20b05c2983a6aa048568f2560b9929e3a07046de09",
-  "approvalSha256": "5db6a8ddbe854c8ed2a3d79e9f91df1ded21439673439943f5025ba7bb3b6ccc"
+  "distSha256": "2ac96b3f17be05edaa149cb62077b0b6f6115abe31fcbd24e30922b215bc3849",
+  "approvalSha256": "35145988b186844eab2e8b39c101f42b36d7737795a76e9817374792f5c73322"
 }
