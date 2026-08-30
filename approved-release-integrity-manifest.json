@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "kind": "synthetic_public_verified_candidate",
+  "kind": "synthetic_public_release_candidate",
   "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
   "licenseStatus": "applied",
-  "fileCount": 52,
+  "fileCount": 51,
   "files": [
     {
       "path": ".gitignore",
@@ -12,8 +12,8 @@
     },
     {
       "path": "DATA-NOTICE.md",
-      "bytes": 1823,
-      "sha256": "d50a88033b7d7e873a49966b7b8f828eaac0609003a7252bdcc5dcf06c82c84d"
+      "bytes": 1854,
+      "sha256": "d3c4ab23577eea3f6afcc42b753a229b2691186c7d4ff493d36934e734027485"
     },
     {
       "path": "LICENSE",
@@ -22,13 +22,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7282,
-      "sha256": "8122aa5dbc1ad2057b94335e392e022d8070964ee4be063fa3e2cef5d83b19d6"
-    },
-    {
-      "path": "approved-release-integrity-manifest.json",
-      "bytes": 12794,
-      "sha256": "6699684d56d451555479dd0de6c9f4e626b81f504a03d9ba952caf66af1ab420"
+      "bytes": 6934,
+      "sha256": "19f2ea7693feebbf6e7c1650f23c2b1d81d013efcb8316d6cdaf92732d897c73"
     },
     {
       "path": "approved-review-manifest.json",
@@ -122,8 +117,8 @@
     },
     {
       "path": "docs/TESTING.md",
-      "bytes": 3811,
-      "sha256": "1a6901e12d1096eaf4e9fd16bc9eccb19083037874c6171558d1bb800641f756"
+      "bytes": 3758,
+      "sha256": "222c5b27a1b05adea50fdf3fe12472adfc7a1ae3eef3d94bd9d38cb51c4df2d4"
     },
     {
       "path": "index.html",
@@ -142,8 +137,8 @@
     },
     {
       "path": "release-manifest.json",
-      "bytes": 1173,
-      "sha256": "621f1d69d3c6668adbf4b9aac17bc0f16832632c98cba3fefca84981820fb929"
+      "bytes": 521,
+      "sha256": "f768a51312a5aef7ebc812512881efcc2e0bce74475b0aa77ab9617fda4c1775"
     },
     {
       "path": "scripts/build-contract.mjs",
@@ -266,7 +261,7 @@
       "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "cb2af16dd9818c3d5b4195414d52b6513a7626c1f97f419ad596e7e1bac0454e",
+  "contentSha256": "8cccf585910e4d6a39be25f38bc0bc0118ba227aabf00af5067c716e41dcf810",
   "distFileCount": 26,
   "distFiles": [
     {
@@ -401,5 +396,5 @@
     }
   ],
   "distSha256": "fbaac96b1c20a5b444c7dd6d387a83769f749011c90b5116aed30c4c46390241",
-  "approvalSha256": "2fa1408980d4687836c6650c54c69de473cd764dcf48a8db63695f9d2602e3ac"
+  "approvalSha256": "118aea583f567e37ad14c08726e894e0e21635a0bd8ec91bb800a1c69c663086"
 }
