@@ -8,7 +8,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
     />
-    <title>Research-Devices WebMCP 合成データデモ</title>
+    <title>Research-Devices WebMCP 架空データデモ</title>
     <link rel="stylesheet" href="/styles.css" />
     <script type="module" src="/src/app.js"></script>
   </head>
@@ -17,7 +17,7 @@
     <header class="site-header">
       <a class="brand" href="/ja/" aria-label="Research-Devices WebMCP ホーム">
         <span class="brand-mark" aria-hidden="true">RD</span>
-        <span><strong>Research-Devices</strong><small>WebMCP 合成データデモ</small></span>
+        <span><strong>Research-Devices</strong><small>WebMCP 架空データデモ</small></span>
       </a>
       <nav aria-label="言語">
         <a href="/" lang="en">English</a>
@@ -28,16 +28,16 @@
     <main id="main">
       <section class="hero shell" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">WEBMCP · 読み取り専用4ツール · 完全な架空データ</p>
-          <h1 id="hero-title">ブラウザAIが、ページを読むだけでなく機器候補を構造化して調査する。</h1>
+          <p class="eyebrow">WEBMCP · 読み取り専用4機能 · すべて架空のデモデータ</p>
+          <h1 id="hero-title">ブラウザAIが、研究機器を同じ項目で検索・比較できる。</h1>
           <p class="lede">
-            機器選定とは、書式の異なる仕様、基準の異なる価格、そして根拠に見えて根拠ではない
-            発見シグナルを突き合わせる作業です。ページを読むことしかできないAIが最初に誤るのが、
-            この突き合わせです。
+            研究機器を選ぶには、書き方の異なる仕様、前提の異なる価格、選定の決め手にはならない
+            参考情報を照らし合わせる必要があります。AIがページを読むだけでは、この対応関係を
+            取り違えやすくなります。
           </p>
           <p class="lede lede-sub">
-            そこで本ページは、その突き合わせ自体を4つの型付き関数としてブラウザのWebMCP APIへ
-            登録します。ページ内チャットボットではありません。
+            そこで本ページは、検索・仕様比較・価格確認・機器名言及数の確認を、ブラウザAIが直接使える
+            4つのWebMCP機能として提供します。ページ内チャットボットではありません。
           </p>
           <p class="lede lede-sub">
             別運用のResearch-Devices本番サービスは1,500件を超える研究機器情報を整理しています。
@@ -51,37 +51,37 @@
           </ul>
           <div class="status-strip" role="status" aria-live="polite">
             <span class="status-dot" aria-hidden="true"></span>
-            <span data-native-status>Native WebMCP対応状況を確認中…</span>
+            <span data-native-status>ブラウザAI連携（WebMCP）の対応状況を確認中…</span>
           </div>
           <details class="browser-setup">
-            <summary>Native WebMCP対応ブラウザの設定</summary>
+            <summary>WebMCP対応ブラウザでの使い方</summary>
             <p class="browser-hint">
               最新版<strong>ChatGPTデスクトップアプリの内蔵ブラウザ</strong>で本ページを開き、
               <strong>Settings › Browser › Permissions › Enable site tools</strong> を有効にします。
               Chromeでローカル確認する場合は <code>chrome://flags/#enable-webmcp-testing</code> を有効にして
-              再起動してください。提供状況はロールアウトにより異なるため、
+              再起動してください。この機能は段階的に提供されているため、
               <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">公式セットアップ</a>も確認してください。
-              WebMCP非対応でも下のボタンは同じハンドラーをローカル実行します。
+              WebMCP非対応でも、下のボタンで同じ処理結果をこのページ上で確認できます。
             </p>
           </details>
-          <p class="dataset-status" data-dataset-status>合成データを準備しています…</p>
+          <p class="dataset-status" data-dataset-status>架空のデモデータを準備しています…</p>
         </div>
         <aside class="prompt-card" aria-label="ブラウザAIへの依頼例">
           <span>ブラウザAIへの依頼例</span>
           <blockquote>
-            96ウェル、検出チャンネル数6、最大マルチプレックス数6、<code>audit_trail=true</code>、
-            予算600万円以内を条件として、架空のRD-SYN qPCR AとBを比較してください。正規化仕様、
-            架空のJPY価格シナリオ、このデモ用に作成した12件の架空研究記録内の機器名言及数を使い、
-            トレードオフとすべての出典を示してください。
+            96ウェル、検出チャンネル数6、同時に測定できるターゲット数6、監査証跡機能を備えていること、
+            予算600万円以内を条件として、架空のRD-SYN qPCR AとBを比較してください。項目名と単位を
+            そろえた仕様、架空の価格例、このデモ用に作成した12件の架空研究記録内の機器名言及数を使い、
+            両立しない条件とすべての出典を示してください。
           </blockquote>
-          <p>Native呼び出しでは、この文章のスクレイピングではなく構造化JSON入力を使います。</p>
+          <p>WebMCP経由ではページ本文を読み取らせるのではなく、項目ごとに整理された条件を渡します。</p>
         </aside>
       </section>
 
       <section class="metrics shell" aria-label="データ概要">
-        <article><strong>4</strong><span>WebMCPツール</span></article>
-        <article><strong data-product-count>8</strong><span>架空機器</span></article>
-        <article><strong data-category-count>3</strong><span>汎用カテゴリ</span></article>
+        <article><strong>4</strong><span>WebMCP機能</span></article>
+        <article><strong data-product-count>8</strong><span>架空の機器データ</span></article>
+        <article><strong data-category-count>3</strong><span>機器カテゴリ</span></article>
         <article><strong data-corpus-count>12</strong><span>架空研究記録</span></article>
       </section>
 
@@ -90,10 +90,10 @@
           <p class="eyebrow">検討条件</p>
           <h2 id="brief-title">それ自体では決着しない選定</h2>
           <p>
-            96ウェルのqPCR装置を、<strong>検出チャンネル数6</strong>・<strong>最大マルチプレックス数6</strong>・
-            <strong><code>audit_trail=true</code></strong>・<strong>予算600万円以内</strong>で選定する。
-            候補は架空レコード2件。数値はすべてデモ用の
-            架空値ですが、そこで生じる対立は、この仕組みが可視化しようとしている対立そのものです。
+            96ウェルのリアルタイムPCR（qPCR）装置を、<strong>検出チャンネル数6</strong>・
+            <strong>同時に測定できるターゲット数6</strong>・<strong>監査証跡機能を備えていること</strong>・
+            <strong>予算600万円以内</strong>で選定します。候補は架空の機器データ2件です。数値は
+            すべてデモ用ですが、機能と予算が両立しない状況を比較できます。
           </p>
           <p class="brief-summary">
             4条件をすべて満たす候補はありません。Bは機能条件を満たし、Aだけが架空の予算上限に収まります。
@@ -101,49 +101,49 @@
         </div>
         <ul class="brief-reqs">
           <li><span>96ウェル</span><strong>両方が該当</strong></li>
-          <li><span>検出6チャンネル／最大6ターゲット</span><strong>Bのみ</strong></li>
-          <li><span><code>audit_trail=true</code></span><strong>Bのみ</strong></li>
+          <li><span>検出6チャンネル／同時測定6ターゲット</span><strong>Bのみ</strong></li>
+          <li><span>監査証跡機能：あり</span><strong>Bのみ</strong></li>
           <li><span>600万円以内</span><strong>Aのみ</strong></li>
         </ul>
       </section>
 
       <section class="journey shell" aria-labelledby="journey-title">
         <div class="section-heading">
-          <p class="eyebrow">構造化されたエージェントの調査フロー</p>
-          <h2 id="journey-title">1つの候補比較を、4回の確認可能な呼び出しで実行</h2>
+          <p class="eyebrow">ブラウザAIによる調査手順</p>
+          <h2 id="journey-title">1つの候補比較を、4つの機能で確認</h2>
           <p>
-            順に実行し、各結果の上に出る平易な読み取りを確認してください。下のボタンは同じ検証済み
-            契約とハンドラーをローカル実行します。登録ツールがNative WebMCP経由で受け取った
-            execute callbackだけが、下部のNative証跡へ記録されます。呼出元はこの欄だけでは特定しません。
+            順に実行すると、各結果から分かることを日本語で確認できます。下のボタンはWebMCPと同じ
+            処理をこのページ上で実行します。WebMCP経由でツールが実行された回数だけを、下部の
+            実行履歴へ記録します。この表示だけでは、どのAI機能が呼び出したかは分かりません。
           </p>
         </div>
         <div class="tool-grid">
           <article class="tool-card">
             <span class="step">01 · 検索</span>
             <h3><code>search_devices</code></h3>
-            <p>8件の対象限定合成レコードを、テキスト、カテゴリ、作成者ラベル、状態から検索します。</p>
-            <code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code>
+            <p>このデモ内の架空機器8件から、機器名・カテゴリ・提供元名・掲載状態で検索します。</p>
+            <details class="input-example"><summary>技術詳細（入力例）</summary><code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code></details>
             <button type="button" data-run-tool="search_devices">検索結果を確認</button>
           </article>
           <article class="tool-card">
-            <span class="step">02 · 正規化</span>
+            <span class="step">02 · 仕様比較</span>
             <h3><code>compare_devices</code></h3>
-            <p>同一カテゴリの値を宣言済みスキーマへ整列し、欠損値と製品順を保持します。</p>
-            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <p>仕様の項目名と単位をそろえ、情報がない項目も隠さず比較します。</p>
+            <details class="input-example"><summary>技術詳細（入力例）</summary><code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code></details>
             <button type="button" data-run-tool="compare_devices">仕様比較を確認</button>
           </article>
           <article class="tool-card">
-            <span class="step">03 · 価格コンテキスト</span>
+            <span class="step">03 · 価格条件</span>
             <h3><code>get_price_range</code></h3>
-            <p>架空の通貨・価格basis・構成を分離し、存在しないレンジを推測しません。</p>
-            <code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code>
+            <p>通貨・価格の種類・構成条件を分け、記録が1件だけの場合は価格幅として扱いません。</p>
+            <details class="input-example"><summary>技術詳細（入力例）</summary><code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code></details>
             <button type="button" data-run-tool="get_price_range">価格シナリオを確認</button>
           </article>
           <article class="tool-card">
             <span class="step">04 · 記録内の言及数</span>
             <h3><code>get_literature_signal</code></h3>
             <p>このデモ用に作成した12件の架空研究記録内で、機器名が言及された件数を数えます。</p>
-            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <details class="input-example"><summary>技術詳細（入力例）</summary><code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code></details>
             <button type="button" data-run-tool="get_literature_signal">機器名言及数を確認</button>
           </article>
         </div>
@@ -152,41 +152,44 @@
       <section class="console shell" aria-labelledby="console-title">
         <div class="console-head">
           <div>
-            <p class="eyebrow">ローカル契約インスペクター</p>
+            <p class="eyebrow">ツールの入出力を確認</p>
             <h2 id="console-title" data-output-title tabindex="-1">4つの呼び出しから選択してください</h2>
           </div>
-          <span>同一の検証済みハンドラー · LLMシミュレーションなし</span>
+          <span>WebMCPと同じ処理 · AIが作った回答ではなく実際の処理結果</span>
         </div>
         <div class="console-grid">
-          <section aria-labelledby="input-title"><h3 id="input-title">構造化入力</h3><pre data-output-input>{}</pre></section>
-          <section aria-labelledby="output-title"><h3 id="output-title">対象限定の結果</h3><p class="output-note" data-output-note role="status" aria-live="polite" aria-atomic="true">いずれかの呼び出しを実行すると、その構造化結果が上の検討条件にとって何を意味するかを表示します。</p><pre data-output>{ "status": "waiting" }</pre></section>
+          <section aria-labelledby="input-title">
+            <h3 id="input-title">ツールへ渡した条件</h3>
+            <details class="technical-details"><summary>技術詳細（入力JSON）</summary><pre data-output-input>{}</pre></details>
+          </section>
+          <section aria-labelledby="output-title">
+            <h3 id="output-title">この結果から分かること</h3>
+            <p class="output-note" data-output-note role="status" aria-live="polite" aria-atomic="true">いずれかの機能を実行すると、結果を日本語で説明します。</p>
+            <details class="technical-details"><summary>技術詳細（出力JSON）</summary><pre data-output>{ "status": "waiting" }</pre></details>
+          </section>
         </div>
       </section>
 
       <section class="contrast shell" aria-labelledby="contrast-title">
         <div class="section-heading">
-          <p class="eyebrow">なぜ関数化が効くのか</p>
-          <h2 id="contrast-title">同じ事実が、値に付いているか離れているか</h2>
+          <p class="eyebrow">WebMCPを使う理由</p>
+          <h2 id="contrast-title">数値と、その前提を一緒に受け取る</h2>
         </div>
         <div class="contrast-grid">
           <article class="contrast-before">
             <h3>ページを読んだ場合</h3>
             <p>
-              限定条件はすべて公開されています。ただし文章として、レコードページ・価格シナリオ
-              ページ・架空研究記録の一覧に分散し、しかも2言語で書かれています。690万円を正しく扱うには、
-              AIは「単一観測はレンジではない」という注記を見つけ、それがその数値に適用されAの2件には
-              適用されないと判断し、さらに「No / なし」という語を真偽値へ変換しなければなりません。
-              どの段階も、静かに失敗しうる推測です。
+              必要な情報は公開されていても、機器ページ・価格ページ・架空研究記録に分かれています。
+              690万円を正しく扱うには、「価格記録が1件だけなので価格幅ではない」という注意がその金額に
+              対するものだと判断し、Aの2件の価格記録とは区別しなければなりません。
             </p>
-            <p class="contrast-verdict">結果：限定条件が値と別に流通し、脱落しても誰も報告しない。</p>
+            <p class="contrast-verdict">結果：数値だけが抜き出されると、前提が失われることがあります。</p>
           </article>
           <article class="contrast-after">
             <h3><code>get_price_range</code> と <code>compare_devices</code> を呼んだ場合</h3>
             <p>
-              限定条件が値に固定されて届きます。<code>basis</code>、<code>configuration</code>、
-              導出元の観測リスト、そして <code>rangeStatus: "single_observation"</code>。
-              690万円が自分の限界を自ら申告します。監査証跡は解釈が必要な語ではなく、
-              型付きの <code>false</code> として返ります。
+              価格の種類、構成、元になった価格記録、「価格記録が1件のみ」という注意が金額と一緒に
+              返ります。監査証跡機能の有無も、「あり」「なし」と明確に受け取れます。
             </p>
             <p class="contrast-verdict">結果：不確実性が、受け渡しの過程で失われない。</p>
           </article>
@@ -195,34 +198,34 @@
 
       <section class="evidence shell" aria-labelledby="evidence-title">
         <div>
-          <p class="eyebrow">NATIVE WEBMCP証跡</p>
-          <h2 id="evidence-title">登録と実行を混同しない</h2>
-          <p data-native-log>このページセッションではNative WebMCPのexecute callbackはまだ実行されていません。</p>
+          <p class="eyebrow">WebMCP経由のツール実行履歴</p>
+          <h2 id="evidence-title">機能を登録しただけでは、実行したことにならない</h2>
+          <p data-native-log>このページを開いてから、WebMCP経由のツール実行はまだありません。</p>
           <p class="evidence-note">
-            この欄は登録ツールが受け取ったcallbackだけを記録します。上のローカル確認ボタンでは
-            この回数は増えません。どのAIやブラウザ機能が呼び出したかは断定しません。
+            この欄は、WebMCP経由でツールが実行された回数だけを記録します。上のページ内確認ボタンは
+            この回数に含みません。この表示だけでは、どのAI機能が呼び出したかは分かりません。
           </p>
         </div>
-        <div class="counter" aria-label="登録ツールが受け取ったNative execute callback回数" role="status" aria-live="polite">
-          <strong data-native-count>—</strong><span>登録ツールのcallback</span>
+        <div class="counter" aria-label="WebMCP経由のツール実行回数" role="status" aria-live="polite">
+          <strong data-native-count>—</strong><span>WebMCP経由のツール実行</span>
         </div>
         <ol class="event-list" data-native-events aria-live="polite"></ol>
       </section>
 
       <section class="boundary shell" aria-labelledby="boundary-title">
         <div class="section-heading">
-          <p class="eyebrow">出典と安全境界</p>
-          <h2 id="boundary-title">意図的に狭くした公開範囲</h2>
+          <p class="eyebrow">このデモで扱う情報</p>
+          <h2 id="boundary-title">公開範囲を架空データに限定</h2>
         </div>
         <div class="boundary-grid">
-          <article><h3>含めるもの</h3><p>架空機器8件、架空価格観測9件、架空研究記録12件、同一オリジンに生成した出典ページ。</p></article>
-          <article><h3>含めないもの</h3><p>本番データ、会員レコード、投稿、アカウント、解析、Cookie、永続化、任意ネットワーク取得、製品画像、第三者製品商標。</p></article>
-          <article><h3>解釈上の制限</h3><p>構造化した根拠処理のデモであり、実仕様、販売価格、出版物、購入推奨、または研究室での実利用を示しません。</p></article>
+          <article><h3>含めるもの</h3><p>架空の機器データ8件、架空の価格記録9件、架空研究記録12件、このデモサイト内の出典ページ。</p></article>
+          <article><h3>含めないもの</h3><p>本番データ、会員情報、投稿、アカウント、アクセス解析、Cookie、データ保存、外部サイトへの自動アクセス、製品画像、第三者商標。</p></article>
+          <article><h3>注意点</h3><p>情報を同じ項目にそろえ、出典とともに比較する仕組みのデモです。実際の仕様、販売価格、論文、購入推奨、研究室での利用実績を示すものではありません。</p></article>
         </div>
-        <nav class="source-links" aria-label="合成出典ページ">
-          <a href="/sources/synthetic-price-scenarios/">価格シナリオ</a>
+        <nav class="source-links" aria-label="架空データの出典ページ">
+          <a href="/sources/synthetic-price-scenarios/">架空の価格例</a>
           <a href="/sources/synthetic-methods-corpus/">架空研究記録</a>
-          <a href="/data-notice/">合成データ通知</a>
+          <a href="/data-notice/">架空データについて</a>
         </nav>
       </section>
     </main>
@@ -232,9 +235,9 @@
       <nav class="footer-links" aria-label="プロジェクト関連リンク">
         <a href="https://github.com/nabe0930/research-devices-webmcp-demo" rel="noreferrer">ソースコード</a>
         <a href="https://youtu.be/VMb-7vmZe-E" rel="noreferrer">デモ動画</a>
-        <a href="/data-notice/">合成データ通知</a>
+        <a href="/data-notice/">架空データについて</a>
       </nav>
-      <span>読み取り専用 · 静的 · 完全な架空データ</span>
+      <span>読み取り専用 · データ保存なし · すべて架空のデモデータ</span>
     </footer>
   </body>
 </html>

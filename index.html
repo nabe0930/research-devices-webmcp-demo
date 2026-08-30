@@ -39,8 +39,8 @@
             are not. That reconciliation is what an agent gets wrong when it can only read a page.
           </p>
           <p class="lede lede-sub">
-            So this page hands the agent the reconciliation itself: four typed functions registered
-            with the browser’s WebMCP API. It is not an embedded chatbot.
+            So this page provides four WebMCP tools that a browser agent can call directly: search,
+            specification comparison, price context, and device-name mention counts. It is not an embedded chatbot.
           </p>
           <p class="lede lede-sub">
             The separate Research-Devices production service organizes information for more than
@@ -55,17 +55,17 @@
           </ul>
           <div class="status-strip" role="status" aria-live="polite">
             <span class="status-dot" aria-hidden="true"></span>
-            <span data-native-status>Checking Native WebMCP support…</span>
+            <span data-native-status>Checking WebMCP tool availability…</span>
           </div>
           <details class="browser-setup">
-            <summary>Native WebMCP browser setup</summary>
+            <summary>Using a WebMCP-enabled browser</summary>
             <p class="browser-hint">
               Open this page in the latest <strong>ChatGPT desktop app’s built-in browser</strong> and
               enable <strong>Settings › Browser › Permissions › Enable site tools</strong>. For local
               Chrome testing, enable <code>chrome://flags/#enable-webmcp-testing</code> and restart
               Chrome. Availability can vary by rollout; see the
               <a href="https://learn.chatgpt.com/docs/webmcp" rel="noreferrer">official setup guide</a>.
-              Without WebMCP, the buttons below still run the same handlers locally.
+              Without WebMCP, the buttons below still show the same processing on this page.
             </p>
           </details>
           <p class="dataset-status" data-dataset-status>Preparing the synthetic snapshot…</p>
@@ -74,12 +74,12 @@
           <span>Ask the browser agent</span>
           <blockquote>
             Compare fictional RD-SYN qPCR A and B for a 96-well workflow requiring 6 detection
-            channels, support for up to 6 multiplex targets, <code>audit_trail: true</code>, and a
+            channels, support for up to 6 multiplex targets, an <strong>audit-trail capability</strong>, and a
             ¥6,000,000 ceiling. Use normalized specifications, fictional JPY price scenarios, and
             device-name mention counts from twelve fictional research records created for this demo.
             Cite every source and explain the trade-off.
           </blockquote>
-          <p>Native calls use structured JSON inputs rather than scraping this prose.</p>
+          <p>WebMCP calls receive clearly separated input fields instead of scraping this prose.</p>
         </aside>
       </section>
 
@@ -96,7 +96,7 @@
           <h2 id="brief-title">A decision that does not resolve itself</h2>
           <p>
             A lab needs a 96-well qPCR instrument with <strong>6 detection channels</strong>, support
-            for <strong>up to 6 multiplex targets</strong>, <strong><code>audit_trail: true</code></strong>,
+            for <strong>up to 6 multiplex targets</strong>, an <strong>audit-trail capability</strong>,
             and a <strong>¥6,000,000</strong> ceiling. Two
             fictional records are in play. Every fact below is demonstration data, but the conflict
             between them is exactly the one this tooling exists to expose.
@@ -109,7 +109,7 @@
         <ul class="brief-reqs">
           <li><span>96-well format</span><strong>both qualify</strong></li>
           <li><span>6 detection channels / max 6 targets</span><strong>only B</strong></li>
-          <li><span><code>audit_trail: true</code></span><strong>only B</strong></li>
+          <li><span>Audit-trail capability: available</span><strong>only B</strong></li>
           <li><span>Under ¥6,000,000</span><strong>only A</strong></li>
         </ul>
       </section>
@@ -119,38 +119,38 @@
           <p class="eyebrow">STRUCTURED AGENT JOURNEY</p>
           <h2 id="journey-title">One shortlist, four inspectable calls</h2>
           <p>
-            Run the calls in order and read the plain-language reading above each result. These
-            buttons inspect the same validated handlers locally. Only calls made by a
-            WebMCP-enabled browser agent appear in the separate Native evidence panel below.
+            Run the calls in order and read the plain-language explanation above each result. These
+            buttons run the same processing on this page. Only calls made through WebMCP appear in
+            the separate WebMCP tool-activity panel below.
           </p>
         </div>
         <div class="tool-grid">
           <article class="tool-card">
             <span class="step">01 · DISCOVER</span>
             <h3><code>search_devices</code></h3>
-            <p>Search eight bounded synthetic records by text, category, author label, and status.</p>
-            <code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code>
+            <p>Search the demo’s eight fictional records by text, category, author label, and status.</p>
+            <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "query": "RD-SYN qPCR", "limit": 2 }</code></details>
             <button type="button" data-run-tool="search_devices">Inspect search result</button>
           </article>
           <article class="tool-card">
             <span class="step">02 · NORMALIZE</span>
             <h3><code>compare_devices</code></h3>
-            <p>Align same-category values to a declared schema; preserve nulls and product order.</p>
-            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <p>Align specification names and units while preserving unavailable values and product order.</p>
+            <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code></details>
             <button type="button" data-run-tool="compare_devices">Inspect comparison</button>
           </article>
           <article class="tool-card">
             <span class="step">03 · PRICE CONTEXT</span>
             <h3><code>get_price_range</code></h3>
-            <p>Keep fictional currencies, bases, and configurations separate. Never invent a range.</p>
-            <code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code>
+            <p>Keep currency, price type, and configuration separate. Do not treat one price record as a range.</p>
+            <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code></details>
             <button type="button" data-run-tool="get_price_range">Inspect price scenarios</button>
           </article>
           <article class="tool-card">
             <span class="step">04 · RECORD MENTIONS</span>
             <h3><code>get_literature_signal</code></h3>
             <p>Count device-name mentions in twelve fictional research records created for this demo.</p>
-            <code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code>
+            <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code></details>
             <button type="button" data-run-tool="get_literature_signal">Inspect mention counts</button>
           </article>
         </div>
@@ -159,22 +159,22 @@
       <section class="console shell" aria-labelledby="console-title">
         <div class="console-head">
           <div>
-            <p class="eyebrow">LOCAL CONTRACT INSPECTOR</p>
+            <p class="eyebrow">INSPECT TOOL INPUTS AND RESULTS</p>
             <h2 id="console-title" data-output-title tabindex="-1">Select one of the four calls</h2>
           </div>
-          <span>Same validated handler · no LLM simulation</span>
+          <span>Same WebMCP processing · actual result, not an AI-generated answer</span>
         </div>
         <div class="console-grid">
           <section aria-labelledby="input-title">
-            <h3 id="input-title">Structured input</h3>
-            <pre data-output-input>{}</pre>
+            <h3 id="input-title">Conditions sent to the tool</h3>
+            <details class="technical-details"><summary>Technical details (input JSON)</summary><pre data-output-input>{}</pre></details>
           </section>
           <section aria-labelledby="output-title">
-            <h3 id="output-title">Bounded result</h3>
+            <h3 id="output-title">What this result means</h3>
             <p class="output-note" data-output-note role="status" aria-live="polite" aria-atomic="true">
               Run a call to see what the structured result means for the brief above.
             </p>
-            <pre data-output>{ "status": "waiting" }</pre>
+            <details class="technical-details"><summary>Technical details (output JSON)</summary><pre data-output>{ "status": "waiting" }</pre></details>
           </section>
         </div>
       </section>
@@ -202,11 +202,9 @@
           <article class="contrast-after">
             <h3>Calling <code>get_price_range</code> and <code>compare_devices</code></h3>
             <p>
-              The qualifier arrives fastened to the value: <code>basis</code>,
-              <code>configuration</code>, the observation list it was derived from, and
-              <code>rangeStatus: "single_observation"</code> — so ¥6,900,000 states its own limit.
-              The audit trail comes back as a typed <code>false</code> rather than a word to
-              interpret.
+              Price type, configuration, source price records, and the warning “one price record
+              only” arrive with the amount. The audit-trail capability also returns clearly as
+              available or unavailable.
             </p>
             <p class="contrast-verdict">Result: the uncertainty survives the handoff.</p>
           </article>
@@ -215,19 +213,19 @@
 
       <section class="evidence shell" aria-labelledby="evidence-title">
         <div>
-          <p class="eyebrow">NATIVE WEBMCP EVIDENCE</p>
-          <h2 id="evidence-title">Registration is not execution</h2>
+          <p class="eyebrow">TOOL ACTIVITY THROUGH WEBMCP</p>
+          <h2 id="evidence-title">Making tools available is not the same as running them</h2>
           <p data-native-log>
-            No Native WebMCP execute callback has run in this page session.
+            No WebMCP tool execution has reached this page in this session.
           </p>
           <p class="evidence-note">
-            This panel records only callbacks received by registered tools. The local inspection
-            buttons above never increment this counter. It does not claim to identify which agent or
-            browser feature initiated a call.
+            This panel counts only tool calls received through WebMCP. The on-page inspection buttons
+            above do not increment it. This panel alone cannot identify which agent or browser feature
+            initiated a call.
           </p>
         </div>
-        <div class="counter" aria-label="Native execute callbacks received by registered tools" role="status" aria-live="polite">
-          <strong data-native-count>—</strong><span>registered-tool callbacks</span>
+        <div class="counter" aria-label="Tool calls received through WebMCP" role="status" aria-live="polite">
+          <strong data-native-count>—</strong><span>calls through WebMCP</span>
         </div>
         <ol class="event-list" data-native-events aria-live="polite"></ol>
       </section>
@@ -238,8 +236,8 @@
           <h2 id="boundary-title">A deliberately narrow public boundary</h2>
         </div>
         <div class="boundary-grid">
-          <article><h3>Included</h3><p>Eight fictional device records, nine fictional price observations, twelve fictional research records, and generated same-origin source pages.</p></article>
-          <article><h3>Excluded</h3><p>Production data, member records, user content, accounts, analytics, cookies, persistence, arbitrary network requests, product images, and third-party product marks.</p></article>
+          <article><h3>Included</h3><p>Eight fictional device records, nine fictional price records, twelve fictional research records, and source pages hosted on this demo site.</p></article>
+          <article><h3>Excluded</h3><p>Production data, member records, user content, accounts, analytics, cookies, stored data, automatic access to external sites, product images, and third-party product marks.</p></article>
           <article><h3>Interpretation</h3><p>Results are demonstrations of structured evidence handling—not specifications, offers, publications, purchasing recommendations, or proof of laboratory use.</p></article>
         </div>
         <nav class="source-links" aria-label="Synthetic source pages">

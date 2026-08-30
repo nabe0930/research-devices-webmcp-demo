@@ -2,7 +2,7 @@
 
 ## License status
 
-The synthetic JSON and generated dataset content in this candidate are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Source code, tests, and build logic are licensed separately under MIT. Public demo: https://research-devices-webmcp-demo.vercel.app/
+The synthetic JSON and generated dataset content in this candidate are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Source code, tests, and build logic are licensed separately under MIT. Planned public demo URL (not yet verified): https://research-devices-webmcp-demo.vercel.app/
 
 ## Covered data
 

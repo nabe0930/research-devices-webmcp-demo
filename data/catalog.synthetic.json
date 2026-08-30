@@ -7,7 +7,7 @@
     {
       "id": "rd-synthetic-lab",
       "nameEn": "Research-Devices Synthetic Lab",
-      "nameJa": "Research-Devices 合成データラボ",
+      "nameJa": "Research-Devices 架空データ作成チーム",
       "websitePath": "/data-notice/",
       "synthetic": true
     }
@@ -53,7 +53,7 @@
             {
               "key": "multiplex_targets",
               "labelEn": "Maximum multiplex targets",
-              "labelJa": "最大マルチプレックス数",
+              "labelJa": "同時測定できる最大ターゲット数",
               "type": "number"
             },
             {
@@ -68,18 +68,18 @@
         {
           "sectionId": "workflow",
           "nameEn": "Workflow",
-          "nameJa": "ワークフロー",
+          "nameJa": "運用機能",
           "specs": [
             {
               "key": "audit_trail",
-              "labelEn": "Audit trail mode",
-              "labelJa": "監査証跡モード",
+              "labelEn": "Audit-trail capability",
+              "labelJa": "監査証跡機能",
               "type": "boolean"
             },
             {
               "key": "remote_monitoring",
-              "labelEn": "Remote monitoring",
-              "labelJa": "遠隔モニタリング",
+              "labelEn": "Remote-monitoring capability",
+              "labelJa": "遠隔監視機能",
               "type": "boolean"
             },
             {
@@ -240,13 +240,13 @@
     {
       "id": "rd-syn-qpcr-a",
       "name": "RD-SYN qPCR A",
-      "nameJa": "RD-SYN qPCR A（合成デモ）",
+      "nameJa": "RD-SYN qPCR A（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "qpcr",
       "catalogNumber": "RD-SYN-QA-096",
       "status": "active",
       "summaryEn": "A fictional 96-well, four-channel qPCR record for bounded search and normalized comparison demonstrations.",
-      "summaryJa": "対象限定検索と正規化比較を実演するための、架空の96ウェル・4チャンネルqPCRレコードです。",
+      "summaryJa": "このデモ内での検索と、項目・単位をそろえた比較を実演する、架空の96ウェル・4チャンネルのリアルタイムPCR（qPCR）機器データです。",
       "specs": {
         "sample_capacity_wells": 96,
         "reaction_volume_min_ul": 10,
@@ -278,13 +278,13 @@
     {
       "id": "rd-syn-qpcr-b",
       "name": "RD-SYN qPCR B",
-      "nameJa": "RD-SYN qPCR B（合成デモ）",
+      "nameJa": "RD-SYN qPCR B（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "qpcr",
       "catalogNumber": "RD-SYN-QB-096",
       "status": "active",
       "summaryEn": "A fictional 96-well, six-channel qPCR record with audit and remote workflow features.",
-      "summaryJa": "監査証跡と遠隔ワークフロー機能を持つ、架空の96ウェル・6チャンネルqPCRレコードです。",
+      "summaryJa": "監査証跡機能と遠隔監視機能を持つ、架空の96ウェル・6チャンネルのリアルタイムPCR（qPCR）機器データです。",
       "specs": {
         "sample_capacity_wells": 96,
         "reaction_volume_min_ul": 5,
@@ -316,13 +316,13 @@
     {
       "id": "rd-syn-qpcr-c",
       "name": "RD-SYN qPCR 384",
-      "nameJa": "RD-SYN qPCR 384（合成デモ）",
+      "nameJa": "RD-SYN qPCR 384（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "qpcr",
       "catalogNumber": "RD-SYN-QC-384",
       "status": "active",
       "summaryEn": "A fictional 384-well qPCR record for demonstrating high-throughput search and comparison conditions.",
-      "summaryJa": "高スループット条件の検索と比較を実演するための、架空の384ウェルqPCRレコードです。",
+      "summaryJa": "多数の試料を扱う条件での検索と比較を実演する、架空の384ウェルのリアルタイムPCR（qPCR）機器データです。",
       "specs": {
         "sample_capacity_wells": 384,
         "reaction_volume_min_ul": 5,
@@ -354,13 +354,13 @@
     {
       "id": "rd-syn-qpcr-d",
       "name": "RD-SYN qPCR Compact",
-      "nameJa": "RD-SYN qPCR Compact（合成デモ）",
+      "nameJa": "RD-SYN qPCR Compact（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "qpcr",
       "catalogNumber": "RD-SYN-QD-048",
       "status": "active",
       "summaryEn": "A fictional compact 48-well qPCR record for demonstrating footprint and starting-price conditions.",
-      "summaryJa": "設置面積と開始価格条件を実演するための、架空の小型48ウェルqPCRレコードです。",
+      "summaryJa": "設置面積と最低価格条件を実演する、架空の小型48ウェルのリアルタイムPCR（qPCR）機器データです。",
       "specs": {
         "sample_capacity_wells": 48,
         "reaction_volume_min_ul": 10,
@@ -392,13 +392,13 @@
     {
       "id": "rd-syn-microvolume-a",
       "name": "RD-SYN Microvolume A",
-      "nameJa": "RD-SYN Microvolume A（合成デモ）",
+      "nameJa": "RD-SYN Microvolume A（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "microvolume-analysis",
       "catalogNumber": "RD-SYN-MA-001",
       "status": "active",
       "summaryEn": "A fictional absorbance-only microvolume record for category filtering and same-category comparison.",
-      "summaryJa": "カテゴリ絞り込みと同一カテゴリ比較を実演するための、架空の吸光専用微量分析レコードです。",
+      "summaryJa": "カテゴリでの絞り込みと同じカテゴリ内の比較を実演する、架空の吸光専用微量分析機器データです。",
       "specs": {
         "sample_volume_min_ul": 1,
         "sample_volume_max_ul": 2,
@@ -428,13 +428,13 @@
     {
       "id": "rd-syn-microvolume-b",
       "name": "RD-SYN Microvolume B",
-      "nameJa": "RD-SYN Microvolume B（合成デモ）",
+      "nameJa": "RD-SYN Microvolume B（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "microvolume-analysis",
       "catalogNumber": "RD-SYN-MB-001",
       "status": "active",
       "summaryEn": "A fictional absorbance-and-fluorescence microvolume record for modality trade-off demonstrations.",
-      "summaryJa": "測定モードの条件差を実演するための、架空の吸光・蛍光対応微量分析レコードです。",
+      "summaryJa": "測定方式の違いを比較するための、架空の吸光・蛍光対応微量分析機器データです。",
       "specs": {
         "sample_volume_min_ul": 0.5,
         "sample_volume_max_ul": 10,
@@ -464,13 +464,13 @@
     {
       "id": "rd-syn-cell-counter-a",
       "name": "RD-SYN Cell Counter A",
-      "nameJa": "RD-SYN Cell Counter A（合成デモ）",
+      "nameJa": "RD-SYN Cell Counter A（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "automated-cell-counting",
       "catalogNumber": "RD-SYN-CA-001",
       "status": "active",
       "summaryEn": "A fictional brightfield cell-counting record for active-status and modality demonstrations.",
-      "summaryJa": "現行状態と撮像モードの条件差を実演するための、架空の明視野セルカウンターレコードです。",
+      "summaryJa": "掲載状態と撮像方式の違いを比較するための、架空の明視野セルカウンター機器データです。",
       "specs": {
         "imaging_mode": "brightfield",
         "particle_size_min_um": 10,
@@ -500,13 +500,13 @@
     {
       "id": "rd-syn-cell-counter-b",
       "name": "RD-SYN Cell Counter B",
-      "nameJa": "RD-SYN Cell Counter B（合成デモ）",
+      "nameJa": "RD-SYN Cell Counter B（架空デモ）",
       "manufacturerId": "rd-synthetic-lab",
       "categoryId": "automated-cell-counting",
       "catalogNumber": "RD-SYN-CB-001",
       "status": "discontinued",
       "summaryEn": "A fictional discontinued dual-fluorescence cell-counting record for lifecycle filtering demonstrations.",
-      "summaryJa": "ライフサイクル絞り込みを実演するための、架空の販売終了・2蛍光セルカウンターレコードです。",
+      "summaryJa": "掲載状態での絞り込みを実演する、架空の販売終了・2蛍光セルカウンター機器データです。",
       "specs": {
         "imaging_mode": "brightfield_plus_dual_fluorescence",
         "particle_size_min_um": 5,
@@ -540,8 +540,8 @@
       "Values are designed only to exercise search and normalized comparison behavior."
     ],
     "ja": [
-      "メーカー、製品、カタログ番号、ライフサイクル、仕様の全レコードは架空です。",
-      "値は検索と正規化比較の動作を実演する目的だけで作成されています。"
+      "提供元、機器名、型番、掲載状態、仕様の全データは架空です。",
+      "値は検索と、項目名・単位をそろえた比較の動作を実演する目的だけで作成されています。"
     ]
   },
   "license": "CC-BY-4.0"

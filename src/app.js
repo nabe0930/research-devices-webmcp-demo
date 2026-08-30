@@ -5,66 +5,66 @@ import { createToolDefinitions, registerWebMCPTools, TOOL_NAMES } from "./webmcp
 const locale = document.documentElement.lang === "ja" ? "ja" : "en";
 const copy = {
   en: {
-    loading: "Loading the bounded synthetic dataset…",
-    ready: "Synthetic dataset ready",
-    localRun: "Local contract inspection",
+    loading: "Loading the fictional demo dataset…",
+    ready: "Fictional demo dataset ready",
+    localRun: "On-page check",
     running: "Running…",
-    failed: "The bounded demonstration call failed.",
-    nativeReady: "Native WebMCP ready — 4 read-only tools registered",
+    failed: "The demonstration call failed.",
+    nativeReady: "WebMCP tool access is ready — 4 read-only tools available",
     nativeUnavailable:
-      "Native WebMCP is not exposed by this browser. The local inspection buttons still show the same contracts and handlers.",
-    nativeFailed: "Native WebMCP registration failed safely.",
-    noNativeCalls: "No Native WebMCP execute callback has run in this page session.",
+      "This browser cannot call the WebMCP tools directly. The buttons below still show the same processing on this page.",
+    nativeFailed: "The WebMCP tools could not be made available in this browser.",
+    noNativeCalls: "No WebMCP tool execution has reached this page in this session.",
     nativeSummary: (registered, executed, callbacks) =>
-      `Registered tools: ${registered}/4 · Actually executed tools: ${executed}/4 · Execute callbacks: ${callbacks}`,
-    nativeLabel: "Native WebMCP",
-    evidenceLabel: "Structured input and bounded result",
-    executeOk: "execute: ok",
-    executeRejected: "execute: rejected",
+      `Tools available: ${registered}/4 · Tools called through WebMCP: ${executed}/4 · Total WebMCP calls: ${callbacks}`,
+    nativeLabel: "WebMCP call",
+    evidenceLabel: "Technical details (input and result JSON)",
+    executeOk: "Run succeeded",
+    executeRejected: "Could not run",
     noteIdle: "Run a call to see what the structured result means for the brief above.",
     notes: {
       search_devices:
         "Four qPCR records match. The bounded request returns RD-SYN qPCR A and B by stable ID and preserves where each record came from. Nothing is ranked or selected yet.",
       compare_devices:
-        "Both records have 96 wells. B has 6 detection channels and supports up to 6 multiplex targets, against A's 4 and 4. audit_trail is a typed true for B and false for A; neither value is missing.",
+        "Both records have 96 wells. B has 6 detection channels, supports up to 6 multiplex targets, and has an audit-trail capability. A has 4 channels, supports up to 4 targets, and does not have that capability.",
       get_price_range:
-        "A summarises two fictional observations, producing a bounded synthetic span of ¥4,800,000–5,100,000 under the ¥6,000,000 ceiling. B rests on one fictional observation at ¥6,900,000 — rangeStatus says single_observation, so it is a point, not a market price, and it breaches the ceiling.",
+        "A has two fictional price records, producing a demo range of ¥4,800,000–5,100,000 under the ¥6,000,000 ceiling. B has one fictional price record at ¥6,900,000, so it is a single example rather than a price range, and it exceeds the ceiling.",
       get_literature_signal:
         "A is named in 7 of the 12 fictional research records created for this demo and B in 6. These are device-name mention counts, not papers, citations, validation, or verified use, and they do not resolve the capability-budget trade-off.",
     },
     verdict:
-      "No record meets every constraint. B satisfies the six-channel, six-target, and audit_trail: true fields, but its single fictional price observation is ¥6,900,000, above the ceiling. A fits the ceiling based on two fictional observations, but has four channels, four maximum targets, and audit_trail: false. The tools expose the trade-off; the researcher decides.",
+      "No record meets every constraint. B has six channels, supports six targets, and has an audit-trail capability, but its single fictional price record is ¥6,900,000, above the ceiling. A fits the ceiling based on two fictional price records, but has four channels, supports four targets, and has no audit-trail capability. The tools expose the trade-off; the researcher decides.",
   },
   ja: {
-    loading: "対象限定の合成データを読み込んでいます…",
-    ready: "合成データの準備完了",
-    localRun: "ローカル契約確認",
+    loading: "架空のデモデータを読み込んでいます…",
+    ready: "架空のデモデータを準備しました",
+    localRun: "ページ内確認",
     running: "実行中…",
-    failed: "対象限定のデモ呼び出しに失敗しました。",
-    nativeReady: "Native WebMCP準備完了 — 読み取り専用4ツールを登録済み",
+    failed: "デモ機能を実行できませんでした。",
+    nativeReady: "WebMCP機能の準備完了 — 読み取り専用4機能を利用できます",
     nativeUnavailable:
-      "このブラウザではNative WebMCP APIが公開されていません。下の確認ボタンでは同じ契約とハンドラーをローカル実行できます。",
-    nativeFailed: "Native WebMCPの登録は安全に停止しました。",
-    noNativeCalls: "このページセッションではNative WebMCPのexecute callbackはまだ実行されていません。",
+      "このブラウザでは、AIからWebMCP機能を直接利用できません。下のボタンでは、WebMCPと同じ処理結果を確認できます。",
+    nativeFailed: "このブラウザではWebMCP機能を利用できません。",
+    noNativeCalls: "このページを開いてから、WebMCP経由のツール実行はまだありません。",
     nativeSummary: (registered, executed, callbacks) =>
-      `登録ツール: ${registered}/4 · 実行済みツール: ${executed}/4 · Execute callback: ${callbacks}`,
-    nativeLabel: "Native WebMCP",
-    evidenceLabel: "構造化入力と対象限定結果",
-    executeOk: "execute: 成功",
-    executeRejected: "execute: 拒否",
-    noteIdle: "いずれかの呼び出しを実行すると、その構造化結果が上の検討条件にとって何を意味するかを表示します。",
+      `利用可能な機能: ${registered}/4 · WebMCP経由で実行した機能: ${executed}/4 · WebMCP経由の実行回数: ${callbacks}`,
+    nativeLabel: "WebMCP経由の実行",
+    evidenceLabel: "技術詳細（入力・出力JSON）",
+    executeOk: "実行成功",
+    executeRejected: "実行できませんでした",
+    noteIdle: "いずれかの機能を実行すると、結果を日本語で説明します。",
     notes: {
       search_devices:
-        "qPCRレコードは4件該当します。対象限定の依頼により、RD-SYN qPCR AとBを安定IDで返し、各レコードの出所を保持します。この時点では順位付けも選定も行いません。",
+        "リアルタイムPCR（qPCR）の機器データは4件該当します。指定した2候補を一意の機器IDで返し、各データの出典も保持します。この時点では順位付けも選定も行いません。",
       compare_devices:
-        "両方とも96ウェルです。Bは検出チャンネル数6・最大マルチプレックス数6、Aは4・4です。audit_trailはBが型付きのtrue、Aがfalseで、いずれも欠損ではありません。",
+        "両方とも96ウェルです。Bは検出チャンネル数6・同時測定できるターゲット数6・監査証跡機能あり、Aは4・4・監査証跡機能なしです。",
       get_price_range:
-        "Aは架空観測2件の要約なので、480〜510万円は予算600万円以内に収まる対象限定の合成価格幅です。Bは690万円の架空観測1件のみで、rangeStatusはsingle_observation。レンジではなく単一の点であり、かつ予算を超過します。",
+        "Aは架空の価格記録2件に基づく480〜510万円で、予算600万円以内です。Bは690万円の架空の価格記録1件だけなので価格幅ではなく、予算も超えています。",
       get_literature_signal:
-        "Aはこのデモ用に作成した架空研究記録12件中7件、Bは6件で機器名が言及されています。論文数、引用数、妥当性検証、実利用の証拠ではなく、機能と予算のトレードオフを解消する基準でもありません。",
+        "Aはこのデモ用に作成した架空研究記録12件中7件、Bは6件で機器名が言及されています。これは論文数、引用数、性能の裏付け、実際の利用実績ではなく、機能と予算のどちらを優先するかを決める情報でもありません。",
     },
     verdict:
-      "すべての条件を満たす候補はありません。Bは検出6チャンネル・最大6ターゲット・audit_trail: trueを満たしますが、架空価格は単一観測の690万円で予算超過です。Aは架空観測2件に基づく480万〜510万円で予算内ですが、検出4チャンネル・最大4ターゲット・audit_trail: falseです。ツールはこの対立を可視化し、最終判断は研究者が行います。",
+      "すべての条件を満たす候補はありません。Bは検出6チャンネル・同時測定6ターゲット・監査証跡機能ありですが、架空の価格記録は690万円の1件だけで予算超過です。Aは架空の価格記録2件に基づく480万〜510万円で予算内ですが、検出4チャンネル・同時測定4ターゲット・監査証跡機能なしです。ツールは両立しない条件を示し、最終判断は研究者が行います。",
   },
 }[locale];
 

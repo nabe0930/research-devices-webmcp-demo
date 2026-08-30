@@ -340,15 +340,18 @@ for (const [label, html] of [["English", englishHome], ["Japanese", japaneseHome
   if (!/class="browser-setup"/.test(html) || !/data-output-note role="status" aria-live="polite" aria-atomic="true"/.test(html)) {
     throw new Error(`${label} home must keep the compact setup disclosure and accessible live result summary.`);
   }
-  if (!/data-native-count>—<\/strong>/.test(html) || !/local inspection|ローカル確認/.test(html)) {
-    throw new Error(`${label} home must distinguish local inspection from Native WebMCP callbacks.`);
+  if (!/data-native-count>—<\/strong>/.test(html) || !/on-page (?:inspection )?buttons|ページ内確認ボタン/.test(html)) {
+    throw new Error(`${label} home must distinguish on-page checks from calls received through WebMCP.`);
+  }
+  if ((html.match(/<details class="input-example">/g) ?? []).length !== 4 || /<details class="(?:input-example|technical-details)"\s+open/i.test(html)) {
+    throw new Error(`${label} home must keep all technical JSON examples collapsed by default.`);
   }
 }
 if (/\ba real range\b|実在のレンジ|range you can actually reason about|根拠として扱えるレンジ/i.test(applicationSource)) {
   throw new Error("Synthetic price copy must never imply an observed real-world range.");
 }
-if (!applicationSource.includes("two fictional observations") || !applicationSource.includes("架空観測2件")) {
-  throw new Error("Synthetic price copy must state the fictional observation basis in both languages.");
+if (!applicationSource.includes("two fictional price records") || !applicationSource.includes("架空の価格記録2件")) {
+  throw new Error("Synthetic price copy must state the fictional price-record basis in both languages.");
 }
 if (!stylesheet.includes(".contrast-before .contrast-verdict { color: #8a570e; }") || stylesheet.includes("#a96f18")) {
   throw new Error("The contrast verdict must keep its WCAG AA-safe color.");
