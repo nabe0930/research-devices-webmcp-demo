@@ -242,11 +242,11 @@
     },
     {
       "path": "vercel.json",
-      "bytes": 673,
-      "sha256": "4bba86133116a2f7c7235a011a8e51c0db02c25e93967405219ab38f7ddf91a8"
+      "bytes": 674,
+      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "1a3d570605124edc2532e9de0bdf80b6809f2a93a5f807de5d7edf8c9b9fd26f",
+  "contentSha256": "c4c65a032f8df64aab81a3212ba36fb6e72e9918fd75c05d39b6905a516db0b1",
   "sourceInputCount": 40,
   "sourceInputs": [
     {
@@ -256,8 +256,8 @@
     },
     {
       "path": "scripts/finalize-public-release.mjs",
-      "bytes": 28880,
-      "sha256": "e881b1124cefa707ee37c26ed482bb6ed9d55ce63a41efbacc0abcd409348bee"
+      "bytes": 29301,
+      "sha256": "e3772a24b28758e590b3923b5f22bd832c9a911d6d72fd2fa768663dcc55f4d7"
     },
     {
       "path": "scripts/prepare-public-release.mjs",
@@ -276,8 +276,8 @@
     },
     {
       "path": "submission-profile/PUBLICATION-RUNBOOK.md",
-      "bytes": 9049,
-      "sha256": "93662844b2b99930457750ff9cd186b73cf80f039d86783eee3b7831916d1095"
+      "bytes": 8967,
+      "sha256": "ab7040edec0b035d7348423ea0656280bd7309c918b277f80df690e6cb04c60c"
     },
     {
       "path": "submission-profile/TESTING.md",
@@ -426,8 +426,8 @@
     },
     {
       "path": "submission-profile/runtime/vercel.json",
-      "bytes": 673,
-      "sha256": "4bba86133116a2f7c7235a011a8e51c0db02c25e93967405219ab38f7ddf91a8"
+      "bytes": 674,
+      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     },
     {
       "path": "submission-profile/templates/data-notice.template.html",
@@ -450,7 +450,7 @@
       "sha256": "d1ea1ddbe86149e1372b93fa474f60b8a8b5dc33cc8ef4c8fa15ffc455c9d47a"
     }
   ],
-  "sourceInputSha256": "0524b970db407761510cadfaf7db87ad736aa04715a4e3908625d8f9e928a69d",
+  "sourceInputSha256": "7486fdeadaabf04afe04676a93104ce69a2f1fa4859d1cd2bff12672c6dcb514",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -585,10 +585,10 @@
     },
     {
       "path": "vercel.json",
-      "bytes": 673,
-      "sha256": "4bba86133116a2f7c7235a011a8e51c0db02c25e93967405219ab38f7ddf91a8"
+      "bytes": 674,
+      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "f3aab36b3612b0ba2edc3dbcdc9721d4cbd554f2a864bd4b2ef5a1ac16286a08",
-  "approvalSha256": "d351f33fcfc252d6177bd1c1b7ebdf3ca2e464861b8a002a8037c11772f047b7"
+  "distSha256": "f3f64074b708895b30387c363f748f02529c5265751b8ff762f2a1c43359e740",
+  "approvalSha256": "4f91c639f9d10bafe387c9822b06392c2bf7e8674c16e7bbfdc28d7b2baedf93"
 }

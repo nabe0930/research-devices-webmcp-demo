@@ -28,7 +28,7 @@
     {
       "path": "approved-review-manifest.json",
       "bytes": 19855,
-      "sha256": "31832c0aa7d339f4f4fd7e28e1f61280e64710759ce6dff74416949ec96f15ee"
+      "sha256": "0f422df86b280585aee5978d6f0c12e57a39907710d44ad0c225f5c350e00c61"
     },
     {
       "path": "assets/data-notice.css",
@@ -138,7 +138,7 @@
     {
       "path": "release-manifest.json",
       "bytes": 521,
-      "sha256": "5081a5bd4385f83d2d1ffc9935e3e3976c3ee1d63fa0c97f86826f6683b43339"
+      "sha256": "f9149b2f5835e693bb1bf8e48a80da9d05e8f43cd2e875c263580c212ff3614a"
     },
     {
       "path": "scripts/build-contract.mjs",
@@ -257,11 +257,11 @@
     },
     {
       "path": "vercel.json",
-      "bytes": 673,
-      "sha256": "4bba86133116a2f7c7235a011a8e51c0db02c25e93967405219ab38f7ddf91a8"
+      "bytes": 674,
+      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "contentSha256": "ef8f303933f41123922accf8bcb95ff72ed4320f2f33ab2c58d127a5ae02a00b",
+  "contentSha256": "426207ed1286923098869d519df4294ad9782cbcc1b30edae771220e816059b4",
   "distFileCount": 27,
   "distFiles": [
     {
@@ -396,10 +396,10 @@
     },
     {
       "path": "vercel.json",
-      "bytes": 673,
-      "sha256": "4bba86133116a2f7c7235a011a8e51c0db02c25e93967405219ab38f7ddf91a8"
+      "bytes": 674,
+      "sha256": "cd3c1dd4f80d05e183f57f3b2f207685315f1c542bf3d2b3fdb73e760b8b8243"
     }
   ],
-  "distSha256": "ac42b510432297283eb0320cdee11760b679c22c54773e09a1e03c6ba52eaff6",
-  "approvalSha256": "658487134f3abc4b85289a9e4499d5f9573de3130dcfa27b40e5a0ea11932460"
+  "distSha256": "5f13adbce8cdae8fe481ee9af11629c800066879497d087f5ca47e8fc2f9a4e0",
+  "approvalSha256": "e74ea385c2890c7a341d194706fb06ce5b51644a92b23e79d44fb064e1d2d68c"
 }
