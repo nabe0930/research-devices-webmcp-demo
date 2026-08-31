@@ -24,7 +24,7 @@ const copy = {
     noteIdle: "Run a call to see what the structured result means for the brief above.",
     notes: {
       search_devices:
-        "Four qPCR records match. The bounded request returns RD-SYN qPCR A and B by stable ID and preserves where each record came from. Nothing is ranked or selected yet.",
+        "Four qPCR records match. The requested two candidates return as RD-SYN qPCR A and B with stable IDs and their source pages. Nothing is ranked or selected yet.",
       compare_devices:
         "Both records have 96 wells. B has 6 detection channels, supports up to 6 multiplex targets, and has an audit-trail capability. A has 4 channels, supports up to 4 targets, and does not have that capability.",
       get_price_range:

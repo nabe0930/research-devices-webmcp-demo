@@ -44,7 +44,7 @@ test("registration uses document.modelContext-compatible registerTool calls", as
   assert.deepEqual(registration.registeredTools, [...TOOL_NAMES]);
   assert.equal(calls.length, 4);
   assert.ok(calls.every((call) => call.options.signal instanceof AbortSignal));
-  assert.match(calls[0].definition.title, /合成/);
+  assert.match(calls[0].definition.title, /架空/);
   registration.dispose();
   assert.ok(calls.every((call) => call.options.signal.aborted));
 });
@@ -156,7 +156,7 @@ test("compact summaries describe the returned rows and retain the A/B workflow e
     maxSpecs: 10,
   });
   assert.equal(comparison.specs.length, 6);
-  assert.match(comparison.summary, /6 normalized fields in this compact response/);
+  assert.match(comparison.summary, /6 fields using the same names and units/);
   assert.deepEqual(
     comparison.specs.map((row) => row.key),
     [

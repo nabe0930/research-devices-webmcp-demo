@@ -116,28 +116,28 @@ const inputSchemas = Object.freeze({
 
 const metadata = Object.freeze({
   search_devices: {
-    en: "Search synthetic research devices",
-    ja: "合成研究機器レコードを検索",
+    en: "Search fictional research devices",
+    ja: "架空の研究機器データを検索",
     description:
-      "Search a bounded, fully synthetic Research-Devices catalog. Returns concise records, same-origin sources, dataset version, and limitations.",
+      "Search eight fictional Research-Devices demonstration records. Returns concise records, source pages on this demo site, dataset version, and limitations.",
   },
   compare_devices: {
-    en: "Compare synthetic research devices",
-    ja: "合成研究機器レコードを比較",
+    en: "Compare fictional research devices",
+    ja: "架空の研究機器データを比較",
     description:
-      "Compare two to four same-category synthetic records with normalized specification labels. Missing values remain explicit and no winner is declared.",
+      "Compare two to four same-category fictional records using the same specification field names and units. Missing values remain explicit and no winner is declared.",
   },
   get_price_range: {
-    en: "Get synthetic price scenarios",
-    ja: "合成価格シナリオを確認",
+    en: "Get fictional price records",
+    ja: "架空の価格記録を確認",
     description:
-      "Retrieve fictional price observations grouped by original currency, basis, and configuration. Values are not offers, quotes, procurement evidence, or market prices.",
+      "Retrieve fictional price records grouped by original currency, pricing condition, and configuration. Values are not offers, quotes, procurement evidence, or market prices.",
   },
   get_literature_signal: {
     en: "Get fictional research-record mention counts",
     ja: "架空研究記録内の機器名言及数を確認",
     description:
-      "Retrieve device-name mention counts from twelve fictional research records created for this demo, with same-origin provenance and explicit interpretation limits.",
+      "Retrieve device-name mention counts from twelve fictional research records created for this demo, with source pages on this demo site and explicit interpretation limits.",
   },
 });
 
@@ -235,7 +235,7 @@ function shorten(value, max = 96) {
 function compactSearch(result) {
   const items = result.items.slice(0, 3);
   return {
-    summary: `${result.total} synthetic device records matched; ${items.length} returned in this compact response.`,
+    summary: `${result.total} fictional device records matched; ${items.length} returned in this compact response.`,
     total: result.total,
     items: items.map((item) => ({
       id: item.id,
@@ -256,7 +256,7 @@ function compactCompare(result) {
   const specLimit = result.products.length === 2 ? 6 : 4;
   const specs = result.items.slice(0, specLimit);
   return {
-    summary: `${result.products.length} synthetic records compared across ${specs.length} normalized fields in this compact response.`,
+    summary: `${result.products.length} fictional records compared across ${specs.length} fields using the same names and units.`,
     productUrls: result.products.map((item) => item.productUrl),
     specs: specs.map((row) => ({
       key: row.key,
@@ -295,7 +295,7 @@ function compactPrice(result) {
       })),
     })),
     provenance: result.sources.slice(0, 1).map((sourceUrl) => ({ sourceUrl })),
-    limitations: ["Fictional scenarios; no conversion, offer, quote, or market-price claim."],
+    limitations: ["Fictional price records; no conversion, offer, quote, or market-price claim."],
     datasetVersion: result.datasetVersion,
   };
 }

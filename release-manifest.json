@@ -1,28 +1,13 @@
 {
   "schemaVersion": 1,
-  "artifactState": "public_verified",
-  "liveVerification": "verified",
+  "artifactState": "public_ready",
+  "liveVerification": "not_performed",
   "datasetVersion": "rd-webmcp-synthetic-20260830-v1",
-  "approvedReviewCandidateSha256": "1d8da64f78a8d1504050e85059ba0f3fe28969694183e41ea2215092a90c68ef",
+  "approvedReviewCandidateSha256": "372c6b4d36c72a17913c1d0e24b60ff8bda55c2ddb12892433ad020fb64cd43b",
   "demoUrl": "https://research-devices-webmcp-demo.vercel.app/",
   "repositoryUrl": "https://github.com/nabe0930/research-devices-webmcp-demo",
   "codeLicense": "MIT",
   "dataLicense": "CC-BY-4.0",
   "copyrightYear": 2026,
-  "copyrightHolder": "Research-Devices",
-  "finalizedFromReleaseSha256": "bc9190805c7a5c41a9443118742aadd72f8f1a12332a6cbd39ce50201f72e3e8",
-  "repositoryVerification": {
-    "url": "https://github.com/nabe0930/research-devices-webmcp-demo",
-    "candidateCommitSha": "f3594aeb22dbef503beed119e323b1ec81d5b04d",
-    "verifiedAt": "2026-08-30T22:48:14.820Z",
-    "filesMatched": 52
-  },
-  "deploymentVerification": {
-    "url": "https://research-devices-webmcp-demo.vercel.app/",
-    "distSha256": "125a67101aa1a9ab49ccd53c78ddcfca50bde8b38f7b679490c7f742e0ecfca4",
-    "verifiedAt": "2026-08-30T22:48:14.820Z",
-    "httpFilesMatched": 26,
-    "webmcpDiscovered": 4,
-    "webmcpExecuted": 4
-  }
+  "copyrightHolder": "Research-Devices"
 }

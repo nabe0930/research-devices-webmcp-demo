@@ -283,12 +283,12 @@
     "en": [
       "The collection and every record in it are fictional and entrant-authored.",
       "Mention counts are not publication counts, citation counts, unique-paper counts, or evidence of real-world use.",
-      "The signal exists only to demonstrate structured provenance and bounded interpretation."
+      "The counts exist only to demonstrate structured source handling and explicit interpretation limits."
     ],
     "ja": [
       "この一覧とその全レコードは架空であり、応募者が作成したものです。",
       "言及件数は出版物数、引用数、重複排除済み論文数、または実利用の根拠ではありません。",
-      "このシグナルは構造化された出典と対象限定の解釈を実演するためだけに存在します。"
+      "この言及数は、出典を付けた構造化データと解釈上の注意点を実演するためだけに存在します。"
     ]
   },
   "license": "CC-BY-4.0"

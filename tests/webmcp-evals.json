@@ -5,7 +5,7 @@
       {
         "role": "user",
         "type": "message",
-        "content": "Compare fictional RD-SYN qPCR A and B for 96 wells, 6 detection channels, up to 6 multiplex targets, audit_trail true, and a JPY 6,000,000 ceiling. Use normalized specifications, fictional JPY price scenarios, and device-name mention counts from twelve fictional research records, with sources and limitations."
+        "content": "Compare fictional RD-SYN qPCR A and B for 96 wells, 6 detection channels, up to 6 multiplex targets, an audit-trail capability, and a JPY 6,000,000 ceiling. Use all four WebMCP tools, compare specifications using the same field names and units, check fictional JPY price records without mixing pricing conditions, and report device-name mention counts from twelve fictional research records, with sources and limitations."
       }
     ],
     "expectedCall": [

@@ -26,8 +26,8 @@
       "basis": "synthetic_scenario_price",
       "amount": 5100000,
       "configuration": "standard_demo_configuration",
-      "conditionsEn": "Second invented scenario value for deriving a bounded demonstration range; not an offer or quote.",
-      "conditionsJa": "対象限定のデモレンジを算出するための2件目の架空シナリオ値であり、販売価格または見積ではありません。",
+      "conditionsEn": "Second fictional price record for deriving a demonstration range; not an offer or quote.",
+      "conditionsJa": "デモ用の価格幅を算出するための2件目の架空価格記録であり、販売価格または見積ではありません。",
       "sourcePath": "/sources/synthetic-price-scenarios/#price-rd-syn-qpcr-a-02",
       "authoredDate": "2026-08-30",
       "confidence": "synthetic_authored"
@@ -137,12 +137,12 @@
     "en": [
       "All amounts, ranges, markets, configurations, and conditions are fictional.",
       "Values are not offers, quotes, procurement evidence, historical transactions, or market prices.",
-      "Currencies and price bases must remain separate; no conversion is performed."
+      "Currencies and pricing conditions must remain separate; no conversion is performed."
     ],
     "ja": [
       "金額、レンジ、市場、構成、条件はすべて架空です。",
       "販売価格、見積、調達根拠、取引履歴、または市場価格ではありません。",
-      "通貨と価格basisは分離したまま扱い、換算しません。"
+      "通貨と価格条件は分離したまま扱い、換算しません。"
     ]
   },
   "license": "CC-BY-4.0"

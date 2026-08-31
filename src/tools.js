@@ -176,7 +176,7 @@ export function createToolHandlers(dataLoader = loadDemoData) {
         };
       });
       return {
-        summary: `${matches.length} synthetic device records matched; ${items.length} returned.`,
+        summary: `${matches.length} fictional device records matched; ${items.length} returned.`,
         total: matches.length,
         items,
         sources: items.map((item) => item.productUrl),
@@ -216,7 +216,7 @@ export function createToolHandlers(dataLoader = loadDemoData) {
       const items = rows.slice(0, request.maxSpecs);
       const references = products.map((product) => productReference(product, data));
       return {
-        summary: `${products.length} synthetic ${category.nameEn} records compared across ${items.length} normalized fields.`,
+        summary: `${products.length} fictional ${category.nameEn} records compared across ${items.length} fields using the same names and units.`,
         products: references,
         items,
         sources: references.map((item) => item.productUrl),
@@ -289,13 +289,13 @@ export function createToolHandlers(dataLoader = loadDemoData) {
         };
       });
       return {
-        summary: `Synthetic price scenarios are available for ${items.filter((item) => item.available).length} of ${items.length} requested records.`,
+        summary: `Fictional price records are available for ${items.filter((item) => item.available).length} of ${items.length} requested records.`,
         products: products.map((product) => productReference(product, data)),
         items,
         sources: [...new Set(items.flatMap((item) => item.groups.flatMap((group) => group.observations.map((row) => row.sourceUrl))))],
         limitations: [
           ...data.prices.limitations.en,
-          "No currency conversion or cross-basis merging is performed.",
+          "No currency conversion or mixing across pricing conditions is performed.",
         ],
         datasetVersion: data.datasetVersion,
       };

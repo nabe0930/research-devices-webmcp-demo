@@ -245,7 +245,7 @@
       "categoryId": "qpcr",
       "catalogNumber": "RD-SYN-QA-096",
       "status": "active",
-      "summaryEn": "A fictional 96-well, four-channel qPCR record for bounded search and normalized comparison demonstrations.",
+      "summaryEn": "A fictional 96-well, four-channel qPCR record for search and same-field comparison demonstrations.",
       "summaryJa": "このデモ内での検索と、項目・単位をそろえた比較を実演する、架空の96ウェル・4チャンネルのリアルタイムPCR（qPCR）機器データです。",
       "specs": {
         "sample_capacity_wells": 96,
@@ -537,7 +537,7 @@
   "limitations": {
     "en": [
       "All manufacturer, product, catalog-number, lifecycle, and specification records are fictional.",
-      "Values are designed only to exercise search and normalized comparison behavior."
+      "Values are designed only to exercise search and comparison using the same field names and units."
     ],
     "ja": [
       "提供元、機器名、型番、掲載状態、仕様の全データは架空です。",

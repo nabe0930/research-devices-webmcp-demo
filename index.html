@@ -68,16 +68,16 @@
               Without WebMCP, the buttons below still show the same processing on this page.
             </p>
           </details>
-          <p class="dataset-status" data-dataset-status>Preparing the synthetic snapshot…</p>
+          <p class="dataset-status" data-dataset-status>Preparing the fictional demo data…</p>
         </div>
         <aside class="prompt-card" aria-label="Example browser-agent request">
           <span>Ask the browser agent</span>
           <blockquote>
             Compare fictional RD-SYN qPCR A and B for a 96-well workflow requiring 6 detection
             channels, support for up to 6 multiplex targets, an <strong>audit-trail capability</strong>, and a
-            ¥6,000,000 ceiling. Use normalized specifications, fictional JPY price scenarios, and
-            device-name mention counts from twelve fictional research records created for this demo.
-            Cite every source and explain the trade-off.
+            ¥6,000,000 ceiling. Compare specifications using the same field names and units, check
+            fictional JPY price records without mixing pricing conditions, and report device-name
+            mention counts from twelve fictional research records. Cite every source and explain the trade-off.
           </blockquote>
           <p>WebMCP calls receive clearly separated input fields instead of scraping this prose.</p>
         </aside>
@@ -133,7 +133,7 @@
             <button type="button" data-run-tool="search_devices">Inspect search result</button>
           </article>
           <article class="tool-card">
-            <span class="step">02 · NORMALIZE</span>
+            <span class="step">02 · COMPARE</span>
             <h3><code>compare_devices</code></h3>
             <p>Align specification names and units while preserving unavailable values and product order.</p>
             <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "productIds": ["rd-syn-qpcr-a", "rd-syn-qpcr-b"] }</code></details>
@@ -144,7 +144,7 @@
             <h3><code>get_price_range</code></h3>
             <p>Keep currency, price type, and configuration separate. Do not treat one price record as a range.</p>
             <details class="input-example"><summary>Technical input example</summary><code class="input-preview">{ "productIds": ["…a", "…b"], "currency": "JPY" }</code></details>
-            <button type="button" data-run-tool="get_price_range">Inspect price scenarios</button>
+            <button type="button" data-run-tool="get_price_range">Inspect fictional price records</button>
           </article>
           <article class="tool-card">
             <span class="step">04 · RECORD MENTIONS</span>
@@ -241,9 +241,9 @@
           <article><h3>Interpretation</h3><p>Results are demonstrations of structured evidence handling—not specifications, offers, publications, purchasing recommendations, or proof of laboratory use.</p></article>
         </div>
         <nav class="source-links" aria-label="Synthetic source pages">
-          <a href="/sources/synthetic-price-scenarios/">Price scenarios</a>
+          <a href="/sources/synthetic-price-scenarios/">Fictional price records</a>
           <a href="/sources/synthetic-methods-corpus/">Fictional research records</a>
-          <a href="/data-notice/">Synthetic data notice</a>
+          <a href="/data-notice/">Fictional data notice</a>
         </nav>
       </section>
     </main>
@@ -252,10 +252,10 @@
       <span>Research-Devices WebMCP challenge demo</span>
       <nav class="footer-links" aria-label="Project resources">
         <a href="https://github.com/nabe0930/research-devices-webmcp-demo" rel="noreferrer">Source code</a>
-        <a href="https://youtu.be/iBr1DNcb1H0" rel="noreferrer">Demo video</a>
-        <a href="/data-notice/">Synthetic data notice</a>
+        <a href="https://youtu.be/wVkbkuqYGdE" rel="noreferrer">Demo video</a>
+        <a href="/data-notice/">Fictional data notice</a>
       </nav>
-      <span>Read-only · static · fully synthetic</span>
+      <span>Read-only · static · fully fictional demo data</span>
     </footer>
   </body>
 </html>

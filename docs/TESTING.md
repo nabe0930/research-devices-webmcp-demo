@@ -14,7 +14,7 @@ inspector buttons will still run the same handlers, but that is not Native WebMC
 
 ## Live WebMCP test
 
-Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository and Native WebMCP checks completed 2026-08-30T22:48:14.820Z). For deterministic local verification, the loopback workflow below remains available.
+Use the planned live URL below only after deployment verification. For deterministic local verification, start the local server in the next section and use its loopback URL.
 
 1. Open https://research-devices-webmcp-demo.vercel.app/ in the challenge-provided WebMCP-enabled browser environment.
 2. Confirm that the page reports four registered tools:
@@ -24,16 +24,16 @@ Verified live URL: https://research-devices-webmcp-demo.vercel.app/ (repository 
    - `get_literature_signal`
 3. Give the browser agent this exact request:
 
-> Compare fictional RD-SYN qPCR A and B for a 96-well workflow requiring 6 detection channels, support for up to 6 multiplex targets, `audit_trail: true`, and a ¥6,000,000 ceiling. Use all four Research-Devices tools, normalized specifications, fictional JPY price scenarios, and device-name mention counts from twelve fictional research records created for this demo. Include record URLs and every source, preserve every limitation, and explain the trade-off.
+> Compare fictional RD-SYN qPCR A and B for a 96-well workflow that needs 6 detection channels, up to 6 multiplex targets, an audit-trail capability, and a ¥6,000,000 ceiling. Use all four Research-Devices WebMCP tools. Compare specifications using the same field names and units, check the fictional JPY price records without mixing currencies or pricing conditions, and report device-name mention counts in 12 fictional research records created for this demo. Include record URLs, all source links, and every limitation, and explain the trade-off without choosing a universal winner.
 
 4. Confirm that the agent invokes all four tools and returns:
    - both demonstration records;
-   - normalized specification differences;
-   - price observations kept separate by currency and basis;
+   - specification differences using the same field names and units;
+   - fictional price records kept separate by currency and pricing conditions;
    - device-name mention counts from twelve fictional research records, labeled as neither papers, citations, nor verified use;
    - record URLs, sources, dataset version, and limitations;
    - conditional guidance without an automatic winner.
-5. Inspect the Native WebMCP evidence panel after the request. It should show four callbacks and all four registered tool names, separately from human interactions and the guided preview. The panel proves callback receipt but does not identify the caller.
+5. Inspect the WebMCP activity panel after the request. It should show four WebMCP tool executions and all four registered tool names, separately from human interactions and the guided preview. The panel shows which tools reached the page but does not identify the calling AI feature.
 
 ## Deterministic local verification
 
